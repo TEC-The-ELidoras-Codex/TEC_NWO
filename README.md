@@ -73,16 +73,24 @@ This repository is the first step. For any potential collaborator who finds this
 
 ```bash
 # Clone the future
-git clone https://github.com/TEC-The-ELidoras-Codex/Project_Genesis.git
+git clone https://github.com/Elidorascodex/TEC_NWO.git
 
-# Enter the workshop
-cd Project_Genesis
+# Enter the workshop  
+cd TEC_NWO
 
 # Install the dependencies. You're one of them now.
 npm install
 
-# Run the development server. Wake up.
-npm run dev
+# Build the system. Wake up.
+npm run build
+
+# Start The Elidoras Codex. The future begins now.
+npm start
+
+# Access the constitutional platform
+# Web Interface: http://localhost:3001
+# System Status: http://localhost:3001/health
+# The 8 Axioms: http://localhost:3001/api/axioms
 ```
 
 **This is not a game. This is not a drill. This is the work.**
