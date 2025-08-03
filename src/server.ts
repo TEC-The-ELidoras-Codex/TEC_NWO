@@ -10,7 +10,8 @@ import cors from 'cors';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 import { createServer } from 'http';
-import { WebSocketServer } from 'ws';
+import { WebSocketServer, WebSocket } from 'ws';
+import { IncomingMessage } from 'http';
 import { TECSystem, TECConfig } from './core/TECSystem';
 
 const app = express();
@@ -143,7 +144,7 @@ app.post('/api/analyze', async (req, res) => {
   } catch (error) {
     res.status(500).json({
       error: 'Analysis failed',
-      details: error.message
+      details: error instanceof Error ? error.message : 'Unknown error'
     });
   }
 });
@@ -172,7 +173,7 @@ app.post('/api/validate', async (req, res) => {
   } catch (error) {
     res.status(500).json({
       error: 'Validation failed',
-      details: error.message
+      details: error instanceof Error ? error.message : 'Unknown error'
     });
   }
 });
@@ -198,7 +199,7 @@ app.post('/api/precedents', async (req, res) => {
   } catch (error) {
     res.status(500).json({
       error: 'Precedent search failed',
-      details: error.message
+      details: error instanceof Error ? error.message : 'Unknown error'
     });
   }
 });
@@ -224,7 +225,7 @@ app.post('/api/dialogue/start', async (req, res) => {
   } catch (error) {
     res.status(500).json({
       error: 'Failed to start dialogue',
-      details: error.message
+      details: error instanceof Error ? error.message : 'Unknown error'
     });
   }
 });
@@ -251,16 +252,16 @@ app.post('/api/dialogue/:sessionId/continue', async (req, res) => {
   } catch (error) {
     res.status(500).json({
       error: 'Failed to continue dialogue',
-      details: error.message
+      details: error instanceof Error ? error.message : 'Unknown error'
     });
   }
 });
 
 // WebSocket handling for real-time collaboration
-wss.on('connection', (ws, req) => {
+wss.on('connection', (ws: WebSocket, req: IncomingMessage) => {
   console.log('New WebSocket connection established');
   
-  ws.on('message', async (data) => {
+  ws.on('message', async (data: Buffer) => {
     try {
       const message = JSON.parse(data.toString());
       
@@ -305,7 +306,7 @@ wss.on('connection', (ws, req) => {
       ws.send(JSON.stringify({
         type: 'error',
         message: 'Failed to process message',
-        details: error.message
+        details: error instanceof Error ? error.message : 'Unknown error'
       }));
     }
   });

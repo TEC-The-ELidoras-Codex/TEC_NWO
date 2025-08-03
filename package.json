@@ -4,7 +4,8 @@
   "description": "A revolutionary Human-AI collaboration platform serving as a dynamic constitutional framework",
   "main": "dist/server.js",
   "scripts": {
-    "dev": "nodemon --exec ts-node src/server.ts",
+    "dev": "nodemon --exec ts-node src/server-simple.ts",
+    "dev:full": "nodemon --exec ts-node src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
     "start:prod": "npm run build && npm start",
@@ -47,6 +48,7 @@
     "@types/jest": "^29.5.12",
     "@types/node": "^20.12.12",
     "@types/pg": "^8.11.6",
+    "@types/ws": "^8.18.1",
     "@typescript-eslint/eslint-plugin": "^7.9.0",
     "@typescript-eslint/parser": "^7.9.0",
     "concurrently": "^8.2.2",
