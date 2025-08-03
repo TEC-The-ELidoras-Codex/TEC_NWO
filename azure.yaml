@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+
+name: tec-nwo
+metadata:
+  template: tec-nwo@0.0.1-beta
+  
+infra:
+  provider: bicep
+  path: infra
+
+services:
+  api:
+    project: .
+    language: ts
+    host: containerapp
+    docker:
+      path: Dockerfile
+      context: .
+      target: production
+    env:
+      - AZURE_OPENAI_ENDPOINT
+      - AZURE_OPENAI_API_KEY
+      - DATABASE_URL
+      - JWT_SECRET
+      - NODE_ENV=production
+
+hooks:
+  postprovision:
+    shell: pwsh
+    run: |
+      Write-Host "Infrastructure provisioned successfully"
+      
+  predeploy:
+    shell: pwsh
+    run: |
+      Write-Host "Running pre-deployment checks"
+      npm run build
+      
+  postdeploy:
+    shell: pwsh
+    run: |
+      Write-Host "TEC NWO platform deployed successfully"
+      Write-Host "Access your application at: $env:AZURE_CONTAINER_APPS_ENDPOINT"

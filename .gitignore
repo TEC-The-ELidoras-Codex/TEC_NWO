@@ -3,12 +3,13 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+package-lock.json
+yarn.lock
 
-# Production builds
+# Build outputs
 dist/
 build/
-*.tgz
-*.tar.gz
+*.tsbuildinfo
 
 # Environment variables
 .env
@@ -18,7 +19,7 @@ build/
 .env.production.local
 
 # IDE and editor files
-.vscode/settings.json
+.vscode/
 .idea/
 *.swp
 *.swo
@@ -45,22 +46,15 @@ pids/
 
 # Coverage directory used by tools like istanbul
 coverage/
-.nyc_output/
+*.lcov
 
-# Azure specific
+# nyc test coverage
+.nyc_output
+
+# Azure
 .azure/
-
-# Database
-*.sqlite
-*.db
+*.zip
 
 # Temporary files
 tmp/
 temp/
-
-# Local development
-.cache/
-.parcel-cache/
-
-# TypeScript
-*.tsbuildinfo

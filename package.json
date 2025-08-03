@@ -65,10 +65,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/elidoras-codex.git"
+    "url": "https://github.com/TEC-The-ELidoras-Codex/TEC_NWO.git"
   },
   "bugs": {
-    "url": "https://github.com/your-username/elidoras-codex/issues"
+    "url": "https://github.com/TEC-The-ELidoras-Codex/TEC_NWO/issues"
   },
-  "homepage": "https://github.com/your-username/elidoras-codex#readme"
+  "homepage": "https://github.com/TEC-The-ELidoras-Codex/TEC_NWO#readme"
 }
