@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Elidoras Codex | Constitutional Platform</title>
+    <style>
+        :root {
+            --primary-color: #1a1a2e;
+            --secondary-color: #16213e;
+            --accent-color: #0f3460;
+            --highlight-color: #e94560;
+            --text-light: #f5f5f5;
+            --text-muted: #b0b0b0;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+            --error-color: #e74c3c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--text-light);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 2px solid var(--accent-color);
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, var(--text-light), var(--highlight-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .status-bar {
+            background: var(--accent-color);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .status-dot.online {
+            background-color: var(--success-color);
+        }
+
+        .status-dot.offline {
+            background-color: var(--error-color);
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .panel {
+            background: var(--secondary-color);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid var(--accent-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .panel h2 {
+            color: var(--highlight-color);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .input-group textarea,
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--accent-color);
+            border-radius: 8px;
+            background: var(--primary-color);
+            color: var(--text-light);
+            font-size: 14px;
+            resize: vertical;
+        }
+
+        .input-group textarea {
+            min-height: 120px;
+        }
+
+        .btn {
+            background: linear-gradient(45deg, var(--highlight-color), #c0392b);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(233, 69, 96, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(233, 69, 96, 0.4);
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .results {
+            background: var(--primary-color);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid var(--accent-color);
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .results h3 {
+            color: var(--highlight-color);
+            margin-bottom: 15px;
+        }
+
+        .result-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: var(--secondary-color);
+            border-radius: 8px;
+            border-left: 4px solid var(--highlight-color);
+        }
+
+        .result-score {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .score-bar {
+            background: var(--accent-color);
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+
+        .score-fill {
+            height: 100%;
+            transition: width 0.3s ease;
+        }
+
+        .score-fill.high {
+            background: var(--success-color);
+        }
+
+        .score-fill.medium {
+            background: var(--warning-color);
+        }
+
+        .score-fill.low {
+            background: var(--error-color);
+        }
+
+        .axioms-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .axiom-card {
+            background: var(--secondary-color);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+
+        .axiom-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .axiom-card h3 {
+            color: var(--highlight-color);
+            margin-bottom: 10px;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .loading.active {
+            display: block;
+        }
+
+        .spinner {
+            border: 3px solid var(--accent-color);
+            border-top: 3px solid var(--highlight-color);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid var(--accent-color);
+            margin-top: 60px;
+            color: var(--text-muted);
+        }
+
+        .quote {
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+            margin: 20px 0;
+            background: var(--accent-color);
+            border-radius: 10px;
+            border-left: 4px solid var(--highlight-color);
+        }
+
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>The Elidoras Codex</h1>
+            <p class="subtitle">Constitutional Platform for Civilizational Architecture</p>
+        </header>
+
+        <div class="status-bar">
+            <div class="status-indicator">
+                <div class="status-dot online" id="statusDot"></div>
+                <span id="statusText">Initializing...</span>
+            </div>
+            <div id="systemMetrics">
+                <span>Sessions: <strong id="totalSessions">0</strong></span> |
+                <span>Exchanges: <strong id="totalExchanges">0</strong></span> |
+                <span>Uptime: <strong id="systemUptime">0m</strong></span>
+            </div>
+        </div>
+
+        <div class="quote">
+            "We are not building an app. We are architecting a civilization." - The Architect
+        </div>
+
+        <div class="main-grid">
+            <div class="panel">
+                <h2>🧠 Content Analysis</h2>
+                <form id="analysisForm">
+                    <div class="input-group">
+                        <label for="contentInput">Content to Analyze:</label>
+                        <textarea id="contentInput" placeholder="Enter your content for axiom validation and analysis..."></textarea>
+                    </div>
+                    <div class="input-group">
+                        <label for="analysisType">Analysis Type:</label>
+                        <select id="analysisType">
+                            <option value="validate">Axiom Validation</option>
+                            <option value="analyze">Deep Analysis</option>
+                            <option value="narrative">Narrative Strength</option>
+                            <option value="precedent">Historical Precedents</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="contextInput">Context (Optional):</label>
+                        <input type="text" id="contextInput" placeholder="Additional context...">
+                    </div>
+                    <button type="submit" class="btn">Analyze Content</button>
+                </form>
+
+                <div class="loading" id="analysisLoading">
+                    <div class="spinner"></div>
+                    <p>Analyzing through The Asimov...</p>
+                </div>
+
+                <div class="results" id="analysisResults" style="display: none;">
+                    <h3>Analysis Results</h3>
+                    <div id="analysisContent"></div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h2>💬 Dialogue Interface</h2>
+                <form id="dialogueForm">
+                    <div class="input-group">
+                        <label for="dialogueTopic">Topic/Question:</label>
+                        <input type="text" id="dialogueTopic" placeholder="What constitutional question shall we explore?">
+                    </div>
+                    <div class="input-group">
+                        <label for="dialogueInput">Your Input:</label>
+                        <textarea id="dialogueInput" placeholder="Share your thoughts, questions, or ideas..."></textarea>
+                    </div>
+                    <button type="submit" class="btn">Engage Dialogue</button>
+                </form>
+
+                <div class="loading" id="dialogueLoading">
+                    <div class="spinner"></div>
+                    <p>The Ellison and Asimov are collaborating...</p>
+                </div>
+
+                <div class="results" id="dialogueResults" style="display: none;">
+                    <h3>Synthesis</h3>
+                    <div id="dialogueContent"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h2>⚖️ The Eight Foundational Axioms</h2>
+            <div class="axioms-list" id="axiomsList">
+                <!-- Axioms will be loaded here -->
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2024 The Elidoras Codex | "This is not a game. This is not a drill. This is the work."</p>
+        </footer>
+    </div>
+
+    <script>
+        class TECInterface {
+            constructor() {
+                this.apiBase = 'http://localhost:3001/api';
+                this.currentSession = null;
+                this.init();
+            }
+
+            async init() {
+                await this.checkSystemStatus();
+                await this.loadAxioms();
+                this.setupEventListeners();
+                this.startStatusUpdates();
+            }
+
+            async checkSystemStatus() {
+                try {
+                    const response = await fetch('http://localhost:3001/health');
+                    const status = await response.json();
+                    
+                    this.updateStatusDisplay(status);
+                } catch (error) {
+                    this.updateStatusDisplay({ status: 'offline' });
+                }
+            }
+
+            updateStatusDisplay(status) {
+                const statusDot = document.getElementById('statusDot');
+                const statusText = document.getElementById('statusText');
+                
+                if (status.status === 'operational') {
+                    statusDot.className = 'status-dot online';
+                    statusText.textContent = 'System Operational';
+                } else {
+                    statusDot.className = 'status-dot offline';
+                    statusText.textContent = 'System Offline';
+                }
+
+                if (status.metrics) {
+                    document.getElementById('totalSessions').textContent = status.metrics.totalSessions;
+                    document.getElementById('totalExchanges').textContent = status.metrics.totalExchanges;
+                    document.getElementById('systemUptime').textContent = 
+                        Math.floor(status.metrics.systemUptime / 60000) + 'm';
+                }
+            }
+
+            async loadAxioms() {
+                try {
+                    const response = await fetch(`${this.apiBase}/axioms`);
+                    const data = await response.json();
+                    
+                    const axiomsList = document.getElementById('axiomsList');
+                    axiomsList.innerHTML = '';
+
+                    Object.entries(data.axioms).forEach(([key, axiom]) => {
+                        const axiomCard = document.createElement('div');
+                        axiomCard.className = 'axiom-card';
+                        axiomCard.innerHTML = `
+                            <h3>${key.replace('_', ' ').toUpperCase()}</h3>
+                            <p>${axiom.description}</p>
+                        `;
+                        axiomsList.appendChild(axiomCard);
+                    });
+                } catch (error) {
+                    console.error('Failed to load axioms:', error);
+                }
+            }
+
+            setupEventListeners() {
+                document.getElementById('analysisForm').addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    this.performAnalysis();
+                });
+
+                document.getElementById('dialogueForm').addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    this.startDialogue();
+                });
+            }
+
+            async performAnalysis() {
+                const content = document.getElementById('contentInput').value;
+                const type = document.getElementById('analysisType').value;
+                const context = document.getElementById('contextInput').value;
+
+                if (!content.trim()) {
+                    alert('Please enter content to analyze');
+                    return;
+                }
+
+                const loading = document.getElementById('analysisLoading');
+                const results = document.getElementById('analysisResults');
+                
+                loading.classList.add('active');
+                results.style.display = 'none';
+
+                try {
+                    const response = await fetch(`${this.apiBase}/analyze`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ content, type, context })
+                    });
+
+                    const result = await response.json();
+                    this.displayAnalysisResults(result);
+                    
+                } catch (error) {
+                    this.displayError('Analysis failed: ' + error.message);
+                } finally {
+                    loading.classList.remove('active');
+                }
+            }
+
+            displayAnalysisResults(result) {
+                const resultsDiv = document.getElementById('analysisResults');
+                const contentDiv = document.getElementById('analysisContent');
+                
+                contentDiv.innerHTML = `
+                    <div class="result-item">
+                        <div class="result-score">
+                            <span>Overall Score:</span>
+                            <span>${Math.round(result.analysis.overallScore * 100)}%</span>
+                        </div>
+                        <div class="score-bar">
+                            <div class="score-fill ${this.getScoreClass(result.analysis.overallScore)}" 
+                                 style="width: ${result.analysis.overallScore * 100}%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="result-item">
+                        <h4>Axiom Compliance: ${Math.round(result.analysis.axiomCompliance * 100)}%</h4>
+                        <div class="score-bar">
+                            <div class="score-fill ${this.getScoreClass(result.analysis.axiomCompliance)}" 
+                                 style="width: ${result.analysis.axiomCompliance * 100}%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="result-item">
+                        <h4>Historical Grounding: ${Math.round(result.analysis.historicalGrounding * 100)}%</h4>
+                        <div class="score-bar">
+                            <div class="score-fill ${this.getScoreClass(result.analysis.historicalGrounding)}" 
+                                 style="width: ${result.analysis.historicalGrounding * 100}%"></div>
+                        </div>
+                    </div>
+
+                    ${result.warnings.length > 0 ? `
+                        <div class="result-item">
+                            <h4>Warnings:</h4>
+                            <ul>
+                                ${result.warnings.map(w => `<li>${w}</li>`).join('')}
+                            </ul>
+                        </div>
+                    ` : ''}
+
+                    ${result.recommendations.length > 0 ? `
+                        <div class="result-item">
+                            <h4>Recommendations:</h4>
+                            <ul>
+                                ${result.recommendations.map(r => `<li>${r}</li>`).join('')}
+                            </ul>
+                        </div>
+                    ` : ''}
+
+                    <div class="result-item">
+                        <h4>AI Analysis:</h4>
+                        <p>${result.content}</p>
+                    </div>
+                `;
+                
+                resultsDiv.style.display = 'block';
+            }
+
+            async startDialogue() {
+                const topic = document.getElementById('dialogueTopic').value;
+                const input = document.getElementById('dialogueInput').value;
+
+                if (!topic.trim() || !input.trim()) {
+                    alert('Please enter both topic and input');
+                    return;
+                }
+
+                const loading = document.getElementById('dialogueLoading');
+                const results = document.getElementById('dialogueResults');
+                
+                loading.classList.add('active');
+                results.style.display = 'none';
+
+                try {
+                    // Start dialogue session
+                    const sessionResponse = await fetch(`${this.apiBase}/dialogue/start`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ 
+                            userId: 'user_' + Date.now(),
+                            topic,
+                            context: { initialInput: input }
+                        })
+                    });
+
+                    const sessionResult = await sessionResponse.json();
+                    this.currentSession = sessionResult.session.id;
+
+                    // Continue with initial input
+                    const continueResponse = await fetch(`${this.apiBase}/dialogue/${this.currentSession}/continue`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ input, inputType: 'question' })
+                    });
+
+                    const result = await continueResponse.json();
+                    this.displayDialogueResults(result.response);
+                    
+                } catch (error) {
+                    this.displayError('Dialogue failed: ' + error.message);
+                } finally {
+                    loading.classList.remove('active');
+                }
+            }
+
+            displayDialogueResults(response) {
+                const resultsDiv = document.getElementById('dialogueResults');
+                const contentDiv = document.getElementById('dialogueContent');
+                
+                contentDiv.innerHTML = `
+                    <div class="result-item">
+                        <h4>The Ellison (Creative Insight):</h4>
+                        <p>${response.ellisonResponse || 'Creative analysis pending...'}</p>
+                    </div>
+                    
+                    <div class="result-item">
+                        <h4>The Asimov (Logical Analysis):</h4>
+                        <p>${response.asimovResponse || 'Logical framework analysis...'}</p>
+                    </div>
+                    
+                    <div class="result-item">
+                        <h4>Synthesis:</h4>
+                        <p>${response.synthesis}</p>
+                    </div>
+
+                    ${response.nextQuestions && response.nextQuestions.length > 0 ? `
+                        <div class="result-item">
+                            <h4>Suggested Next Questions:</h4>
+                            <ul>
+                                ${response.nextQuestions.map(q => `<li>${q}</li>`).join('')}
+                            </ul>
+                        </div>
+                    ` : ''}
+                `;
+                
+                resultsDiv.style.display = 'block';
+            }
+
+            getScoreClass(score) {
+                if (score >= 0.7) return 'high';
+                if (score >= 0.4) return 'medium';
+                return 'low';
+            }
+
+            displayError(message) {
+                const resultsDiv = document.getElementById('analysisResults');
+                const contentDiv = document.getElementById('analysisContent');
+                
+                contentDiv.innerHTML = `<div class="result-item" style="border-left-color: var(--error-color);">
+                    <h4>Error:</h4>
+                    <p>${message}</p>
+                </div>`;
+                
+                resultsDiv.style.display = 'block';
+            }
+
+            startStatusUpdates() {
+                // Update status every 30 seconds
+                setInterval(() => {
+                    this.checkSystemStatus();
+                }, 30000);
+            }
+        }
+
+        // Initialize the interface when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            new TECInterface();
+        });
+    </script>
+</body>
+</html>
