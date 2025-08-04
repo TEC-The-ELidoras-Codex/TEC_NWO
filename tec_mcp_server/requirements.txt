@@ -5,6 +5,9 @@
 Flask==3.0.0
 Flask-CORS==4.0.0
 
+# Model Context Protocol
+mcp==1.0.0
+
 # Database Integration
 # Using SQLite for development (no PostgreSQL needed)
 # psycopg2-binary==2.9.9  # Uncomment for PostgreSQL production

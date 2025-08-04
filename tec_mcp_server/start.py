@@ -36,18 +36,33 @@ def install_dependencies():
         return False
 
 def start_server():
-    """Start the Asimov Engine server"""
-    print("🏛️  Starting TEC MCP Server - The Asimov Engine...")
-    print("🚀 Server will be available at http://localhost:5000")
-    print("📊 Health check: http://localhost:5000/health")
-    print()
+    """Start the TEC server in the appropriate mode"""
+    mode = os.getenv('TEC_MODE', 'flask').lower()
     
-    try:
-        subprocess.run([sys.executable, 'app.py'], check=True)
-    except KeyboardInterrupt:
-        print("\n🛑 Server stopped by user")
-    except subprocess.CalledProcessError as e:
-        print(f"❌ Server failed to start: {e}")
+    if mode == 'mcp':
+        print("🏛️  Starting TEC MCP Server - The Asimov Engine (MCP Mode)...")
+        print("🚀 MCP Server ready for stdin/stdout communication")
+        print("📡 Model Context Protocol interface active")
+        print()
+        
+        try:
+            subprocess.run([sys.executable, 'mcp_server.py'], check=True)
+        except KeyboardInterrupt:
+            print("\n🛑 MCP Server stopped by user")
+        except subprocess.CalledProcessError as e:
+            print(f"❌ MCP Server failed to start: {e}")
+    else:
+        print("🏛️  Starting TEC MCP Server - The Asimov Engine (Flask Mode)...")
+        print("🚀 Server will be available at http://localhost:5000")
+        print("📊 Health check: http://localhost:5000/health")
+        print()
+        
+        try:
+            subprocess.run([sys.executable, 'app.py'], check=True)
+        except KeyboardInterrupt:
+            print("\n🛑 Server stopped by user")
+        except subprocess.CalledProcessError as e:
+            print(f"❌ Server failed to start: {e}")
 
 def main():
     """Main startup sequence"""

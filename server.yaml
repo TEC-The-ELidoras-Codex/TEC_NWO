@@ -1,0 +1,70 @@
+name: tec-asimov-engine
+image: tec/asimov-engine
+type: server
+meta:
+  category: ai
+  tags:
+    - tec
+    - axiom-validation
+    - lore-generation
+    - memory-core
+    - sovereign-intelligence
+    - elidoras-codex
+about:
+  title: TEC Asimov Engine
+  description: The sovereign intelligence and core toolkit for The Elidoras Codex. Provides tools for axiom validation, lore generation, memory queries, and asset management within the TEC ecosystem. Named after Isaac Asimov, this engine embodies the wisdom of systematic knowledge organization and ethical AI principles.
+  icon: https://avatars.githubusercontent.com/u/TEC-The-ELidoras-Codex
+source:
+  project: https://github.com/TEC-The-ELidoras-Codex/TEC_NWO
+  branch: main
+  dockerfile: tec_mcp_server/Dockerfile
+run:
+  command:
+    - python
+    - start.py
+  volumes:
+    - '{{tec.assets}}:/app/assets'
+    - '{{tec.memory}}:/app/memory'
+config:
+  description: Configure the TEC Asimov Engine with Azure OpenAI integration and asset management capabilities. This server requires API keys for Azure OpenAI and ElevenLabs for full functionality. The assets directory contains all TEC media files, while the memory directory maintains the persistent knowledge base.
+  secrets:
+    - name: tec.azure_openai_api_key
+      env: AZURE_OPENAI_API_KEY
+      example: <YOUR_AZURE_OPENAI_API_KEY>
+    - name: tec.elevenlabs_api_key
+      env: ELEVENLABS_API_KEY
+      example: <YOUR_ELEVENLABS_API_KEY>
+    - name: tec.encryption_key
+      env: ENCRYPTION_KEY
+      example: tec_encryption_key_axiom_guardian_digital_cathedral
+  parameters:
+    type: object
+    properties:
+      assets:
+        type: string
+        description: Path to TEC assets directory containing audio, video, and other media files
+        default: $HOME/data/tec/assets
+      memory:
+        type: string
+        description: Path to TEC memory core directory for persistent knowledge base
+        default: $HOME/data/tec/memory
+      azure_openai_endpoint:
+        type: string
+        description: Azure OpenAI endpoint URL
+        default: https://your-resource.openai.azure.com/
+      azure_openai_model:
+        type: string
+        description: Azure OpenAI model deployment name
+        default: gpt-4
+      tec_environment:
+        type: string
+        description: TEC environment mode
+        default: production
+        enum:
+          - development
+          - staging
+          - production
+    required:
+      - assets
+      - memory
+      - azure_openai_endpoint
