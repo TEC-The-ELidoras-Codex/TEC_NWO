@@ -18,6 +18,16 @@ build/
 .env.test.local
 .env.production.local
 
+# TEC MCP Server environment files
+tec_mcp_server/.env
+tec_mcp_server/.env.local
+tec_mcp_server/.env.production
+
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+
 # IDE and editor files
 .vscode/
 .idea/
