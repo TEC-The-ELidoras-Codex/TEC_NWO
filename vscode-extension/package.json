@@ -1,0 +1,151 @@
+{
+  "name": "tec-mcp-client",
+  "displayName": "TEC Asimov Engine - MCP Client",
+  "description": "VS Code extension for interfacing with The Elidoras Codex MCP Server",
+  "version": "1.0.0",
+  "publisher": "tec-the-elidoras-codex",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "AI",
+    "Other"
+  ],
+  "keywords": [
+    "mcp",
+    "ai",
+    "tec",
+    "asimov",
+    "sovereign",
+    "intelligence"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "tec.validateAxioms",
+        "title": "TEC: Validate Content Against Axioms"
+      },
+      {
+        "command": "tec.queryMemory",
+        "title": "TEC: Query Memory Core"
+      },
+      {
+        "command": "tec.processAsset",
+        "title": "TEC: Process Asset Through Hybrid Intelligence"
+      },
+      {
+        "command": "tec.generateLore",
+        "title": "TEC: Generate Lore Fragment"
+      },
+      {
+        "command": "tec.hybridSynthesis",
+        "title": "TEC: Hybrid Synthesis Processing"
+      },
+      {
+        "command": "tec.connectToServer",
+        "title": "TEC: Connect to Asimov Engine"
+      },
+      {
+        "command": "tec.serverStatus",
+        "title": "TEC: Check Server Status"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "tec.validateAxioms",
+          "when": "editorHasSelection",
+          "group": "tec@1"
+        },
+        {
+          "command": "tec.hybridSynthesis",
+          "when": "editorHasSelection",
+          "group": "tec@2"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "tec.processAsset",
+          "when": "resourceExtname =~ /\\.(m4a|mp4|txt|md|json)$/",
+          "group": "tec@1"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "TEC MCP Client",
+      "properties": {
+        "tec.serverUrl": {
+          "type": "string",
+          "default": "http://localhost:8000",
+          "description": "URL of the TEC MCP Server"
+        },
+        "tec.serverMode": {
+          "type": "string",
+          "enum": ["mcp", "flask"],
+          "default": "mcp",
+          "description": "Server communication mode"
+        },
+        "tec.autoConnect": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically connect to server on startup"
+        },
+        "tec.enableHybridIntelligence": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable hybrid intelligence processing"
+        },
+        "tec.axiomValidationLevel": {
+          "type": "string",
+          "enum": ["strict", "moderate", "lenient"],
+          "default": "moderate",
+          "description": "Level of axiom validation enforcement"
+        }
+      }
+    },
+    "views": {
+      "tec": [
+        {
+          "id": "tecMemoryCore",
+          "name": "TEC Memory Core",
+          "when": "tec.serverConnected",
+          "icon": "$(database)"
+        },
+        {
+          "id": "tecNarrativeThreads", 
+          "name": "Narrative Threads",
+          "when": "tec.serverConnected",
+          "icon": "$(git-branch)"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "tec",
+          "title": "TEC Asimov Engine",
+          "icon": "$(symbol-misc)"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "18.x",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "@modelcontextprotocol/sdk": "^0.5.0",
+    "ws": "^8.14.0"
+  }
+}
