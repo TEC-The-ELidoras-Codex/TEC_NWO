@@ -1,0 +1,93 @@
+# TEC Asimov Engine - Docker Compose for Development & Testing
+version: "3.8"
+
+services:
+  tec-asimov-engine:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: tec/asimov-engine:latest
+    container_name: tec-asimov-engine
+    
+    environment:
+      - TEC_MODE=mcp
+      - PYTHONPATH=/app
+      - TEC_LOG_LEVEL=INFO
+      - DATABASE_URL=sqlite:///app/data/tec_memory.db
+      
+    # Secrets (for development - use Docker secrets in production)
+    env_file:
+      - .env.local
+      
+    ports:
+      - "3000:3000"  # MCP Protocol
+      - "8080:8080"  # HTTP API
+      
+    volumes:
+      - tec-assets:/app/assets
+      - tec-memory:/app/data
+      - ./assets:/app/assets/local  # Mount local assets for development
+      
+    restart: unless-stopped
+    
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:8080/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+      
+    networks:
+      - tec-network
+
+  # Optional: PostgreSQL for production-like testing
+  tec-database:
+    image: postgres:15-alpine
+    container_name: tec-database
+    environment:
+      - POSTGRES_DB=tec_memory
+      - POSTGRES_USER=tec_user
+      - POSTGRES_PASSWORD=tec_sovereign_key
+      
+    volumes:
+      - tec-postgres-data:/var/lib/postgresql/data
+      
+    ports:
+      - "5432:5432"
+      
+    networks:
+      - tec-network
+    
+    restart: unless-stopped
+
+  # Optional: Redis for caching
+  tec-cache:
+    image: redis:7-alpine
+    container_name: tec-cache
+    command: redis-server --appendonly yes
+    
+    volumes:
+      - tec-redis-data:/data
+      
+    ports:
+      - "6379:6379"
+      
+    networks:
+      - tec-network
+    
+    restart: unless-stopped
+
+volumes:
+  tec-assets:
+    driver: local
+  tec-memory:
+    driver: local
+  tec-postgres-data:
+    driver: local
+  tec-redis-data:
+    driver: local
+
+networks:
+  tec-network:
+    driver: bridge
+    name: tec-sovereign-network

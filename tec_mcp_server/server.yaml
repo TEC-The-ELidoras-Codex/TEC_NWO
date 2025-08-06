@@ -1,0 +1,273 @@
+# TEC Asimov Engine - Docker MCP Registry Configuration
+# The Hand of the Goddess - Sovereign MCP Server
+name: tec-asimov-engine
+version: "1.0.0"
+description: "The Elidoras Codex Asimov Engine - Sovereign intelligence through hybrid digital-analog synthesis with constitutional axiom validation"
+
+# Docker Configuration
+image: 
+  repository: tec/asimov-engine
+  tag: latest
+  pullPolicy: Always
+
+# MCP Server Configuration
+mcp:
+  protocol_version: "2024-11-05"
+  implementation:
+    name: "tec-asimov-engine"
+    version: "1.0.0"
+  
+  # Server Capabilities
+  capabilities:
+    logging: {}
+    prompts: {}
+    resources: {}
+    tools: {}
+
+  # Available Tools
+  tools:
+    - name: "validate_axioms"
+      description: "Validate content against Eight Foundational Axioms of The Elidoras Codex"
+      inputSchema:
+        type: "object"
+        properties:
+          content:
+            type: "string"
+            description: "Content to validate"
+          content_type:
+            type: "string"
+            enum: ["story", "decision", "policy", "dialogue", "narrative", "lore", "asset"]
+            description: "Type of content being validated"
+        required: ["content", "content_type"]
+
+    - name: "query_memory"
+      description: "Query the TEC Memory Core for historical precedent and semantic search"
+      inputSchema:
+        type: "object"
+        properties:
+          query:
+            type: "string"
+            description: "Search query for memory retrieval"
+          query_type:
+            type: "string"
+            enum: ["semantic", "historical", "precedent", "entity", "narrative"]
+            description: "Type of query to perform"
+          limit:
+            type: "integer"
+            description: "Maximum number of results to return"
+            default: 10
+        required: ["query"]
+
+    - name: "generate_lore"
+      description: "Generate structured lore entries for The Elidoras Codex universe"
+      inputSchema:
+        type: "object"
+        properties:
+          prompt:
+            type: "string"
+            description: "Creative prompt for lore generation"
+          lore_type:
+            type: "string"
+            enum: ["character", "faction", "location", "technology", "event", "philosophy"]
+            description: "Type of lore to generate"
+          context:
+            type: "string"
+            description: "Additional context from existing lore"
+        required: ["prompt", "lore_type"]
+
+    - name: "process_asset"
+      description: "Process multimedia assets (audio, video, text) through TEC pipeline"
+      inputSchema:
+        type: "object"
+        properties:
+          asset_path:
+            type: "string"
+            description: "Path to asset file or URL"
+          asset_type:
+            type: "string"
+            enum: ["audio", "video", "text", "url", "document"]
+            description: "Type of asset to process"
+          extract_type:
+            type: "string"
+            enum: ["transcript", "concepts", "entities", "narrative", "all"]
+            description: "What to extract from the asset"
+        required: ["asset_path", "asset_type"]
+
+    - name: "hybrid_synthesis"
+      description: "Perform hybrid digital-analog synthesis through neuromorphic processing"
+      inputSchema:
+        type: "object"
+        properties:
+          input_data:
+            type: "string"
+            description: "Input data for hybrid processing"
+          synthesis_type:
+            type: "string"
+            enum: ["creative", "analytical", "narrative", "decision", "philosophical"]
+            description: "Type of synthesis to perform"
+          analog_influence:
+            type: "number"
+            minimum: 0.0
+            maximum: 1.0
+            description: "Weight of analog vs digital processing"
+            default: 0.7
+        required: ["input_data", "synthesis_type"]
+
+  # Available Resources
+  resources:
+    - uri: "tec://memory/axioms"
+      name: "Eight Foundational Axioms"
+      description: "Constitutional principles of The Elidoras Codex"
+      mimeType: "application/json"
+
+    - uri: "tec://memory/lore"
+      name: "TEC Universe Lore"
+      description: "Complete lore database including characters, factions, and narratives"
+      mimeType: "application/json"
+
+    - uri: "tec://assets/manifest"
+      name: "Asset Manifest"
+      description: "Catalog of all TEC multimedia assets"
+      mimeType: "application/json"
+
+    - uri: "tec://hybrid/status"
+      name: "Hybrid Intelligence Status"
+      description: "Real-time status of neuromorphic processing engine"
+      mimeType: "application/json"
+
+# Container Runtime Configuration
+runtime:
+  # Environment Variables
+  env:
+    - name: "TEC_MODE"
+      value: "mcp"
+    - name: "PYTHONPATH"
+      value: "/app"
+    - name: "TEC_LOG_LEVEL"
+      value: "INFO"
+
+  # Secrets (managed by Docker MCP)
+  secrets:
+    - name: "azure_openai_api_key"
+      secretName: "tec.azure_openai_api_key"
+      env: "AZURE_OPENAI_API_KEY"
+      
+    - name: "elevenlabs_api_key"
+      secretName: "tec.elevenlabs_api_key"
+      env: "ELEVENLABS_API_KEY"
+      
+    - name: "database_url"
+      secretName: "tec.database_url"
+      env: "DATABASE_URL"
+
+  # Volume Mounts
+  volumes:
+    - name: "tec-assets"
+      mountPath: "/app/assets"
+      size: "10Gi"
+      accessModes: ["ReadWriteOnce"]
+      
+    - name: "tec-memory"
+      mountPath: "/app/data"
+      size: "5Gi"
+      accessModes: ["ReadWriteOnce"]
+
+  # Resource Limits
+  resources:
+    requests:
+      memory: "512Mi"
+      cpu: "250m"
+    limits:
+      memory: "2Gi"
+      cpu: "1000m"
+
+  # Health Checks
+  healthCheck:
+    httpGet:
+      path: "/health"
+      port: 8080
+    initialDelaySeconds: 30
+    periodSeconds: 10
+    timeoutSeconds: 5
+    successThreshold: 1
+    failureThreshold: 3
+
+  # Ports
+  ports:
+    - name: "mcp"
+      containerPort: 3000
+      protocol: "TCP"
+    - name: "http"
+      containerPort: 8080
+      protocol: "TCP"
+
+# Metadata
+metadata:
+  labels:
+    app: "tec-asimov-engine"
+    version: "1.0.0"
+    component: "mcp-server"
+    sovereignty: "autonomous"
+    
+  annotations:
+    description: "The Elidoras Codex sovereign intelligence server"
+    maintainer: "The Architect <architect@elidoras.codex>"
+    documentation: "https://github.com/TEC-The-ELidoras-Codex/TEC_NWO"
+    axiom-compliance: "true"
+    hybrid-intelligence: "enabled"
+
+# Security Configuration
+security:
+  runAsNonRoot: true
+  runAsUser: 1000
+  runAsGroup: 1000
+  fsGroup: 1000
+  
+  securityContext:
+    allowPrivilegeEscalation: false
+    readOnlyRootFilesystem: false
+    capabilities:
+      drop:
+        - ALL
+
+# Networking
+networking:
+  type: "ClusterIP"
+  ports:
+    - port: 3000
+      targetPort: 3000
+      name: "mcp"
+    - port: 8080
+      targetPort: 8080
+      name: "http"
+
+# Deployment Strategy
+deployment:
+  replicas: 1
+  strategy:
+    type: "RollingUpdate"
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+
+# Monitoring & Observability
+monitoring:
+  enabled: true
+  prometheus:
+    enabled: true
+    path: "/metrics"
+    port: 8080
+  
+  logging:
+    level: "INFO"
+    format: "json"
+    
+  tracing:
+    enabled: false
+
+# Auto-scaling (future enhancement)
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 3
+  targetCPUUtilizationPercentage: 70
