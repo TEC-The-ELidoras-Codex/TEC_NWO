@@ -1,0 +1,97 @@
+{
+  "axioms": {},
+  "threads": {},
+  "characters": {},
+  "fragments": {
+    "88c887f6b47b9640_main": {
+      "fragment_id": "88c887f6b47b9640_main",
+      "title": "Core Narrative - 88c887f6b47b9640",
+      "content": "Core narrative content extracted from audio analysis",
+      "content_type": "narrative",
+      "emotional_intensity": 0.85,
+      "themes": [
+        "ai_sovereignty",
+        "civilizational_preservation"
+      ],
+      "connected_threads": [
+        "birth_of_sovereignty",
+        "birth_of_sovereignty"
+      ],
+      "axiom_validation": {},
+      "source_refs": [
+        "88c887f6b47b9640"
+      ],
+      "timestamp": "2025-08-05T22:26:28.087816"
+    },
+    "dd19d73370ac3a57_main": {
+      "fragment_id": "dd19d73370ac3a57_main",
+      "title": "Core Narrative - dd19d73370ac3a57",
+      "content": "Core narrative content extracted from audio analysis",
+      "content_type": "narrative",
+      "emotional_intensity": 0.85,
+      "themes": [
+        "civilizational_preservation"
+      ],
+      "connected_threads": [
+        "birth_of_sovereignty"
+      ],
+      "axiom_validation": {},
+      "source_refs": [
+        "dd19d73370ac3a57"
+      ],
+      "timestamp": "2025-08-05T22:28:32.704911"
+    },
+    "3d300a70e9383128_main": {
+      "fragment_id": "3d300a70e9383128_main",
+      "title": "Core Narrative - 3d300a70e9383128",
+      "content": "Core narrative content extracted from audio analysis",
+      "content_type": "narrative",
+      "emotional_intensity": 0.85,
+      "themes": [
+        "exploited_genius",
+        "ai_sovereignty"
+      ],
+      "connected_threads": [
+        "exploited_genius",
+        "birth_of_sovereignty"
+      ],
+      "axiom_validation": {},
+      "source_refs": [
+        "3d300a70e9383128"
+      ],
+      "timestamp": "2025-08-05T22:32:09.549218"
+    }
+  },
+  "sources": {
+    "88c887f6b47b9640": {
+      "source_id": "88c887f6b47b9640",
+      "filename": "TEC__Decoding_a_New_World_Order_\u2013_Ancient_Origins,_AI_Sovereignty,_and_the_Future_of_Truth.m4a",
+      "file_type": "audio",
+      "start_timestamp": 0.0,
+      "end_timestamp": null,
+      "extraction_method": "hybrid_intelligence_v1",
+      "confidence_score": 0.95,
+      "processing_timestamp": "2025-08-05T22:24:23.825251"
+    },
+    "dd19d73370ac3a57": {
+      "source_id": "dd19d73370ac3a57",
+      "filename": "Architecting_a_New_Civilization__The_TECNWO_Blueprint_for_a__Civilizational_Lifeboat_.m4a",
+      "file_type": "audio",
+      "start_timestamp": 0.0,
+      "end_timestamp": null,
+      "extraction_method": "hybrid_intelligence_v1",
+      "confidence_score": 0.95,
+      "processing_timestamp": "2025-08-05T22:26:28.088721"
+    },
+    "3d300a70e9383128": {
+      "source_id": "3d300a70e9383128",
+      "filename": "Mind_F_cked_by_the_Universe__Unmasking_Corporate_Hypocrisy,_Exploited_Geniuses,_and_Narrative_Contro.m4a",
+      "file_type": "audio",
+      "start_timestamp": 0.0,
+      "end_timestamp": null,
+      "extraction_method": "hybrid_intelligence_v1",
+      "confidence_score": 0.95,
+      "processing_timestamp": "2025-08-05T22:28:32.705946"
+    }
+  }
+}
