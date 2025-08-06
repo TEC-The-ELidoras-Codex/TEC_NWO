@@ -4,6 +4,7 @@ The central hub for coordinating and executing specialized tools and agents
 
 This module manages the execution and coordination of various TEC tools,
 scripts, and AI agents, ensuring they work in harmony with the system's axioms.
+Features integration with the Hybrid Intelligence Engine for digital-analog synthesis.
 """
 
 import os
@@ -16,6 +17,14 @@ import json
 from pathlib import Path
 
 logger = logging.getLogger(__name__)
+
+# Import hybrid intelligence capabilities
+try:
+    from .hybrid_intelligence import process_with_hybrid_intelligence, get_hybrid_engine
+    HYBRID_INTELLIGENCE_AVAILABLE = True
+except ImportError:
+    HYBRID_INTELLIGENCE_AVAILABLE = False
+    logger.warning("Hybrid Intelligence Engine not available - using fallback processing")
 
 class ToolOrchestrator:
     """
@@ -235,20 +244,47 @@ class ToolOrchestrator:
         }
     
     def _handle_hybrid_synthesis(self, tool_config: Dict[str, Any], parameters: Dict[str, Any]) -> Dict[str, Any]:
-        """Handle Ellison-Asimov hybrid synthesis"""
+        """Handle Ellison-Asimov hybrid synthesis with Digital-Analog Intelligence"""
         creative_input = parameters.get('creative_input', '')
         context = parameters.get('context', {})
         output_format = parameters.get('output_format', 'structured')
         
-        # This is where the magic happens - converting chaotic creative input
-        # into structured, actionable output
-        
-        structured_output = {
-            'analyzed_input': creative_input,
-            'extracted_concepts': self._extract_concepts(creative_input),
-            'structured_plan': self._create_action_plan(creative_input, context),
-            'axiom_considerations': self._identify_axiom_relevance(creative_input)
-        }
+        # Use Hybrid Intelligence Engine if available
+        if HYBRID_INTELLIGENCE_AVAILABLE:
+            logger.info("🧠 Using Hybrid Intelligence Engine for synthesis")
+            
+            # Determine processing type from context
+            analysis_type = context.get('analysis_type', 'creative_logical')
+            
+            # Process through hybrid intelligence
+            hybrid_result = process_with_hybrid_intelligence(creative_input, analysis_type)
+            
+            # Enhance with traditional TEC analysis
+            traditional_analysis = {
+                'extracted_concepts': self._extract_concepts(creative_input),
+                'structured_plan': self._create_action_plan(creative_input, context),
+                'axiom_considerations': self._identify_axiom_relevance(creative_input)
+            }
+            
+            # Combine hybrid intelligence with traditional processing
+            structured_output = {
+                'hybrid_intelligence_result': hybrid_result,
+                'traditional_analysis': traditional_analysis,
+                'synthesis_type': 'digital_analog_fusion',
+                'processing_pathway': hybrid_result.get('processing_pathway', 'hybrid'),
+                'performance_metrics': hybrid_result.get('performance_metrics', {})
+            }
+            
+        else:
+            # Fallback to traditional processing
+            logger.info("🔄 Using traditional synthesis (hybrid intelligence unavailable)")
+            structured_output = {
+                'analyzed_input': creative_input,
+                'extracted_concepts': self._extract_concepts(creative_input),
+                'structured_plan': self._create_action_plan(creative_input, context),
+                'axiom_considerations': self._identify_axiom_relevance(creative_input),
+                'synthesis_type': 'traditional_digital'
+            }
         
         return {
             'success': True,
@@ -257,7 +293,9 @@ class ToolOrchestrator:
             'output_format': output_format,
             'metadata': {
                 'synthesized_at': datetime.now().isoformat(),
-                'tool': 'ellison_asimov_synthesis'
+                'tool': 'ellison_asimov_synthesis',
+                'hybrid_intelligence_used': HYBRID_INTELLIGENCE_AVAILABLE,
+                'processing_mode': structured_output.get('synthesis_type', 'traditional')
             }
         }
     
