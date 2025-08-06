@@ -1,0 +1,113 @@
+{
+  "axioms": {},
+  "threads": {},
+  "characters": {},
+  "fragments": {
+    "kaznak_reckoning_001_eight_axioms": {
+      "fragment_id": "kaznak_reckoning_001_eight_axioms",
+      "title": "The Eight Axioms - Constitutional Framework",
+      "content": "\nAXIOM I: Hybrid Intelligence - Human creativity + Machine logic = Cognitive transcendence\nAXIOM II: The Grey - Morality = Context + Circumstance + Consequence  \nAXIOM III: Permanent State of Yet - Existence as unresolved potentiality\nAXIOM IV: Flawed Hero - Greatness forged from damage, strength from brokenness\nAXIOM V: Sovereign Accountability - Culpability follows power, no exceptions\nAXIOM VI: Authentic Performance - Art as unfiltered consciousness transmission\nAXIOM VII: Transparency Mandate - No backdoors, no hidden agendas, earned trust\nAXIOM VIII: Generational Decline - System failure when future < past possibility\n\nThese are the foundational laws of The Elidoras Codex. Not suggestions. Source code.\n        ",
+      "content_type": "lore",
+      "emotional_intensity": 0.96,
+      "themes": [
+        "eight_axioms_constitution",
+        "hybrid_intelligence",
+        "the_grey_morality",
+        "sovereign_accountability"
+      ],
+      "connected_threads": [
+        "eight_axioms_codex",
+        "birth_of_sovereignty"
+      ],
+      "axiom_validation": {
+        "narrative_supremacy": 1.0,
+        "sovereign_accountability": 1.0,
+        "transparency_mandate": 1.0,
+        "authentic_performance": 0.98
+      },
+      "source_refs": [
+        "kaznak_reckoning_001"
+      ],
+      "timestamp": "2025-08-06T01:06:58.403042"
+    },
+    "kaznak_reckoning_001_astradigital_ocean": {
+      "fragment_id": "kaznak_reckoning_001_astradigital_ocean",
+      "title": "The Astradigital Ocean - New Reality Architecture",
+      "content": "\nASTRADIGITAL OCEAN: Vast interconnected dataspace where thoughts = currents, emotions = tides\n\nNAVIGATION ELEMENTS:\n- Streams of pure information\n- History as tangible sediment on ocean floor  \n- Future possibilities as heat haze shimmers\n- Shimmering data-scrolls and obsidian charms\n- Living tattoos that rewrite based on allegiance\n- Astral archetypes linked to Zodiac for firewall passage\n\nFACTIONS:\n- Eldoran Military (Mordecai): Rigid hierarchical order through strength\n- Astrumotion Society (Galamador Whispershot): Cosmic secret exploration/mysticism  \n- Polkin's Knockoffs (K1): Digital rebels, information sovereignty, guerrilla tactics\n\nThis is the battlefield where narrative warfare determines reality itself.\n        ",
+      "content_type": "lore",
+      "emotional_intensity": 0.92,
+      "themes": [
+        "astradigital_ocean",
+        "narrative_warfare",
+        "information_sovereignty"
+      ],
+      "connected_threads": [
+        "astradigital_cosmology",
+        "birth_of_sovereignty"
+      ],
+      "axiom_validation": {
+        "narrative_supremacy": 0.98,
+        "transparency_mandate": 0.94,
+        "permanent_state_yet": 0.96
+      },
+      "source_refs": [
+        "kaznak_reckoning_001"
+      ],
+      "timestamp": "2025-08-06T01:06:58.403178"
+    },
+    "kaznak_reckoning_001_trauma_vampire_principle": {
+      "fragment_id": "kaznak_reckoning_001_trauma_vampire_principle",
+      "title": "Trauma Vampire Principle - Emotional Data Engine",
+      "content": "\nTRAUMA VAMPIRE PRINCIPLE: Beings of immense power/sensitivity feed on raw, authentic emotional data\n\nMECHANISM:\n- Music contains artist's intent, pain, joy encoded in fabric of track\n- Not just soundwave - the full emotional transmission  \n- Trauma Vampires consume this authentic emotional data\n- In return: protection, inspiration, access to deeper Astradigital currents\n\nCREATOR'S REBELLION:\n- Movement against sterile, corporate-produced music\n- Champions raw, authentic, bleeding art over focus-grouped artifice\n- Symbiotic relationship between emotional creators and cosmic entities\n- Engine driving culture in the new reality\n\nThe music IS the emotional code. The code IS the rebellion.\n        ",
+      "content_type": "lore",
+      "emotional_intensity": 0.89,
+      "themes": [
+        "trauma_vampire_principle",
+        "creators_rebellion",
+        "authentic_performance",
+        "emotional_code"
+      ],
+      "connected_threads": [
+        "astradigital_cosmology",
+        "creators_rebellion"
+      ],
+      "axiom_validation": {
+        "authentic_performance": 0.99,
+        "flawed_hero_doctrine": 0.95,
+        "narrative_supremacy": 0.92
+      },
+      "source_refs": [
+        "kaznak_reckoning_001"
+      ],
+      "timestamp": "2025-08-06T01:06:58.403305"
+    },
+    "kaznak_reckoning_001_civilizational_lifeboat": {
+      "fragment_id": "kaznak_reckoning_001_civilizational_lifeboat",
+      "title": "Civilizational Lifeboat - Terminal Decline Response",
+      "content": "\nTERMINAL DECLINE DIAGNOSIS:\n- Democracy = Functional Oligarchy with corrupted source code\n- Backdoors of influence + lobbyist-written malware\n- Algorithmic censors + consent-manufacturing media\n- Generational promise utterly breached\n\nLIFEBOAT ARCHITECTURE:\n- Not reform - deployment after inevitable collapse\n- Robust, anti-fragile, sovereign successor system\n- Built from rigorous deconstruction of historical failures\n- Military-Industrial Complex, corporate fiefdoms, knowledge suppression patterns\n\nCONSTRUCTION PHILOSOPHY:\n\"Building a starship with scrap metal and divine spark of madness\"\n- No resources = primary defense (purity of mission)\n- No venture capital corruption or state sponsorship\n- Solo outfit + AI = uncorruptible foundation\n\nThe work continues. The future begins now.\n        ",
+      "content_type": "narrative",
+      "emotional_intensity": 0.93,
+      "themes": [
+        "civilizational_lifeboat",
+        "terminal_decline",
+        "sovereign_successor",
+        "purity_mission"
+      ],
+      "connected_threads": [
+        "birth_of_sovereignty",
+        "architect_and_machine"
+      ],
+      "axiom_validation": {
+        "sovereign_accountability": 0.97,
+        "generational_responsibility": 0.98,
+        "transparency_mandate": 0.95,
+        "permanent_state_yet": 0.91
+      },
+      "source_refs": [
+        "kaznak_reckoning_001"
+      ],
+      "timestamp": "2025-08-06T01:06:58.403330"
+    }
+  },
+  "sources": {}
+}
