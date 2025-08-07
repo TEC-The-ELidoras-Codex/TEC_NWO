@@ -1,0 +1,161 @@
+{
+  "analysis": {
+    "timestamp": "2025-08-07T02:23:06.107275",
+    "total_files": 13,
+    "total_size_mb": 296.67198753356934,
+    "large_files": [
+      {
+        "name": "Architecting_a_New_Civilization__The_TECNWO_Blueprint_for_a__Civilizational_Lifeboat_.m4a",
+        "path": "assets\\audio\\Architecting_a_New_Civilization__The_TECNWO_Blueprint_for_a__Civilizational_Lifeboat_.m4a",
+        "size_mb": 34.52,
+        "extension": ".m4a"
+      },
+      {
+        "name": "Architecting_a__Civilizational_Lifeboat__Deconstructing_Power,_Redefining_Knowledge,_and_Forging_a_N.m4a",
+        "path": "assets\\audio\\Architecting_a__Civilizational_Lifeboat__Deconstructing_Power,_Redefining_Knowledge,_and_Forging_a_N.m4a",
+        "size_mb": 44.65,
+        "extension": ".m4a"
+      },
+      {
+        "name": "Mind_F_cked_by_the_Universe__Unmasking_Corporate_Hypocrisy,_Exploited_Geniuses,_and_Narrative_Contro.m4a",
+        "path": "assets\\audio\\Mind_F_cked_by_the_Universe__Unmasking_Corporate_Hypocrisy,_Exploited_Geniuses,_and_Narrative_Contro.m4a",
+        "size_mb": 29.79,
+        "extension": ".m4a"
+      },
+      {
+        "name": "TEC__Decoding_a_New_World_Order_\u2013_Ancient_Origins,_AI_Sovereignty,_and_the_Future_of_Truth.m4a",
+        "path": "assets\\audio\\TEC__Decoding_a_New_World_Order_\u2013_Ancient_Origins,_AI_Sovereignty,_and_the_Future_of_Truth.m4a",
+        "size_mb": 63.7,
+        "extension": ".m4a"
+      },
+      {
+        "name": "The_Elidoras_Codex__Building_a__Civilizational_Lifeboat__with_Hybrid_AI_in_a_World_on_the_Brink.m4a",
+        "path": "assets\\audio\\The_Elidoras_Codex__Building_a__Civilizational_Lifeboat__with_Hybrid_AI_in_a_World_on_the_Brink.m4a",
+        "size_mb": 63.48,
+        "extension": ".m4a"
+      }
+    ],
+    "audio_files": [
+      {
+        "name": "Architecting_a_New_Civilization__The_TECNWO_Blueprint_for_a__Civilizational_Lifeboat_.m4a",
+        "path": "assets\\audio\\Architecting_a_New_Civilization__The_TECNWO_Blueprint_for_a__Civilizational_Lifeboat_.m4a",
+        "size_mb": 34.52,
+        "extension": ".m4a"
+      },
+      {
+        "name": "Architecting_a__Civilizational_Lifeboat__Deconstructing_Power,_Redefining_Knowledge,_and_Forging_a_N.m4a",
+        "path": "assets\\audio\\Architecting_a__Civilizational_Lifeboat__Deconstructing_Power,_Redefining_Knowledge,_and_Forging_a_N.m4a",
+        "size_mb": 44.65,
+        "extension": ".m4a"
+      },
+      {
+        "name": "Mind_F_cked_by_the_Universe__Unmasking_Corporate_Hypocrisy,_Exploited_Geniuses,_and_Narrative_Contro.m4a",
+        "path": "assets\\audio\\Mind_F_cked_by_the_Universe__Unmasking_Corporate_Hypocrisy,_Exploited_Geniuses,_and_Narrative_Contro.m4a",
+        "size_mb": 29.79,
+        "extension": ".m4a"
+      },
+      {
+        "name": "TEC__Decoding_a_New_World_Order_\u2013_Ancient_Origins,_AI_Sovereignty,_and_the_Future_of_Truth.m4a",
+        "path": "assets\\audio\\TEC__Decoding_a_New_World_Order_\u2013_Ancient_Origins,_AI_Sovereignty,_and_the_Future_of_Truth.m4a",
+        "size_mb": 63.7,
+        "extension": ".m4a"
+      },
+      {
+        "name": "The_Elidoras_Codex__Building_a__Civilizational_Lifeboat__with_Hybrid_AI_in_a_World_on_the_Brink.m4a",
+        "path": "assets\\audio\\The_Elidoras_Codex__Building_a__Civilizational_Lifeboat__with_Hybrid_AI_in_a_World_on_the_Brink.m4a",
+        "size_mb": 63.48,
+        "extension": ".m4a"
+      }
+    ],
+    "video_files": [
+      {
+        "name": "Mind_Fucked_by_the_Universe_Enterprises.mp4",
+        "path": "assets\\video\\Mind_Fucked_by_the_Universe_Enterprises.mp4",
+        "size_mb": 17.06,
+        "extension": ".mp4"
+      },
+      {
+        "name": "TEC_NWO__Blueprint_for_a_Civilizational_Lifeboat.mp4",
+        "path": "assets\\video\\TEC_NWO__Blueprint_for_a_Civilizational_Lifeboat.mp4",
+        "size_mb": 21.95,
+        "extension": ".mp4"
+      },
+      {
+        "name": "The_Elidoras_Codex__Blueprint_of_a_Digital_Rebellion.mp4",
+        "path": "assets\\video\\The_Elidoras_Codex__Blueprint_of_a_Digital_Rebellion.mp4",
+        "size_mb": 21.52,
+        "extension": ".mp4"
+      }
+    ],
+    "text_files": [
+      {
+        "name": "ASSET_MANIFEST.md",
+        "path": "assets\\ASSET_MANIFEST.md",
+        "size_mb": 0.0,
+        "extension": ".md"
+      },
+      {
+        "name": "README.md",
+        "path": "assets\\README.md",
+        "size_mb": 0.0,
+        "extension": ".md"
+      },
+      {
+        "name": "TEC_Podcast_The_Kaznak_Reckoning_Clean_Script.txt",
+        "path": "assets\\text\\TEC_Podcast_The_Kaznak_Reckoning_Clean_Script.txt",
+        "size_mb": 0.0,
+        "extension": ".txt"
+      },
+      {
+        "name": "TEC_Podcast_The_Kaznak_Reckoning_Foundational_Thesis.txt",
+        "path": "assets\\text\\TEC_Podcast_The_Kaznak_Reckoning_Foundational_Thesis.txt",
+        "size_mb": 0.0,
+        "extension": ".txt"
+      }
+    ],
+    "optimization_potential": 141.68432121276857
+  },
+  "optimization_plan": {
+    "immediate_actions": [],
+    "compression_targets": [
+      {
+        "type": "AUDIO",
+        "file": "Architecting_a_New_Civilization__The_TECNWO_Blueprint_for_a__Civilizational_Lifeboat_.m4a",
+        "current_size_mb": 34.52,
+        "estimated_compressed_mb": 13.808000000000002,
+        "estimated_savings_mb": 20.712
+      },
+      {
+        "type": "AUDIO",
+        "file": "Architecting_a__Civilizational_Lifeboat__Deconstructing_Power,_Redefining_Knowledge,_and_Forging_a_N.m4a",
+        "current_size_mb": 44.65,
+        "estimated_compressed_mb": 17.86,
+        "estimated_savings_mb": 26.79
+      },
+      {
+        "type": "AUDIO",
+        "file": "Mind_F_cked_by_the_Universe__Unmasking_Corporate_Hypocrisy,_Exploited_Geniuses,_and_Narrative_Contro.m4a",
+        "current_size_mb": 29.79,
+        "estimated_compressed_mb": 11.916,
+        "estimated_savings_mb": 17.874
+      },
+      {
+        "type": "AUDIO",
+        "file": "TEC__Decoding_a_New_World_Order_\u2013_Ancient_Origins,_AI_Sovereignty,_and_the_Future_of_Truth.m4a",
+        "current_size_mb": 63.7,
+        "estimated_compressed_mb": 25.480000000000004,
+        "estimated_savings_mb": 38.22
+      },
+      {
+        "type": "AUDIO",
+        "file": "The_Elidoras_Codex__Building_a__Civilizational_Lifeboat__with_Hybrid_AI_in_a_World_on_the_Brink.m4a",
+        "current_size_mb": 63.48,
+        "estimated_compressed_mb": 25.392,
+        "estimated_savings_mb": 38.087999999999994
+      }
+    ],
+    "organization_moves": [],
+    "space_savings_estimate_mb": 141.68399999999997
+  },
+  "timestamp": "2025-08-07T02:23:06.132254"
+}
