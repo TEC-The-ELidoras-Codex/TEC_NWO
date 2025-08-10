@@ -9,9 +9,11 @@
     "build": "tsc",
     "start": "node dist/server.js",
     "start:prod": "npm run build && npm start",
-    "test": "jest",
+  "test": "jest",
+  "test:smoke": "echo 'placeholder smoke test'",
     "lint": "eslint src/**/*.ts",
-    "format": "prettier --write src/**/*.{ts,tsx}",
+  "format": "prettier --write src/**/*.{ts,tsx}",
+  "hooks:refresh": "chmod +x .git/hooks/pre-commit tools/precommit/large-file-guard.sh",
     "axiom:validate": "ts-node src/scripts/validateAxioms.ts",
     "db:migrate": "ts-node src/server/database/migrate.ts",
     "db:seed": "ts-node src/server/database/seed.ts"
