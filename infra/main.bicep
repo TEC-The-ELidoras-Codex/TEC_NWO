@@ -41,6 +41,7 @@ var tags = {
 
 var resourceNames = {
   containerApp: '${applicationName}-app-${resourceToken}'
+  airthContainerApp: '${applicationName}-airth-${resourceToken}'
   containerAppsEnvironment: '${applicationName}-env-${resourceToken}'
   containerRegistry: 'tecregistry${resourceToken}'
   keyVault: '${applicationName}-kv-${resourceToken}'
@@ -351,6 +352,91 @@ resource containerApp 'Microsoft.App/containerApps@2023-05-01' = {
   }
 }
 
+// Airth Agent Container App
+resource airthContainerApp 'Microsoft.App/containerApps@2023-05-01' = {
+  name: resourceNames.airthContainerApp
+  location: location
+  tags: tags
+  identity: {
+    type: 'UserAssigned'
+    userAssignedIdentities: {
+      '${managedIdentity.id}': {}
+    }
+  }
+  properties: {
+    managedEnvironmentId: containerAppsEnvironment.id
+    configuration: {
+      ingress: {
+        external: true
+        targetPort: 8000
+        allowInsecure: false
+        traffic: [
+          {
+            weight: 100
+            latestRevision: true
+          }
+        ]
+      }
+      registries: [
+        {
+          server: containerRegistry.properties.loginServer
+          identity: managedIdentity.id
+        }
+      ]
+      secrets: [
+        {
+          name: 'openai-api-key'
+          value: openAiApiKey
+        }
+        {
+          name: 'db-connection-string'
+          value: 'postgresql://${dbAdminUsername}:${dbAdminPassword}@${postgreSQL.properties.fullyQualifiedDomainName}:5432/tecdb'
+        }
+      ]
+    }
+    template: {
+      containers: [
+        {
+          image: '${containerRegistry.properties.loginServer}/elidoras-airth:${containerImageTag}'
+          name: 'airth'
+          resources: {
+            cpu: json(environmentName == 'prod' ? '0.75' : '0.5')
+            memory: environmentName == 'prod' ? '1.5Gi' : '1Gi'
+          }
+          env: [
+            {
+              name: 'PORT'
+              value: '8000'
+            }
+            {
+              name: 'OPENAI_API_KEY'
+              secretRef: 'openai-api-key'
+            }
+            {
+              name: 'DATABASE_URL'
+              secretRef: 'db-connection-string'
+            }
+          ]
+        }
+      ]
+      scale: {
+        minReplicas: environmentName == 'prod' ? 2 : 1
+        maxReplicas: environmentName == 'prod' ? 5 : 2
+        rules: [
+          {
+            name: 'http-scaler'
+            http: {
+              metadata: {
+                concurrentRequests: '80'
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
+
 // Role Assignments
 resource acrPullRole 'Microsoft.Authorization/roleAssignments@2022-04-01' = {
   scope: containerRegistry
@@ -385,6 +471,7 @@ resource keyVaultSecretsRole 'Microsoft.Authorization/roleAssignments@2022-04-01
 // Outputs
 output containerAppFQDN string = containerApp.properties.configuration.ingress.fqdn
 output containerAppUrl string = 'https://${containerApp.properties.configuration.ingress.fqdn}'
+output airthAppUrl string = 'https://${airthContainerApp.properties.configuration.ingress.fqdn}'
 output keyVaultName string = keyVault.name
 output storageAccountName string = storageAccount.name
 output postgreSQLHostname string = postgreSQL.properties.fullyQualifiedDomainName

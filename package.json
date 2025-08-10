@@ -9,14 +9,19 @@
     "build": "tsc",
     "start": "node dist/server.js",
     "start:prod": "npm run build && npm start",
-  "test": "jest",
-  "test:smoke": "echo 'placeholder smoke test'",
+    "test": "jest",
+    "test:smoke": "echo 'placeholder smoke test'",
+    "thoughtmap:run": "python tec_mcp_server/thoughtmap.py",
+    "py:selftest": "python tec_mcp_server/self_test.py",
     "lint": "eslint src/**/*.ts",
-  "format": "prettier --write src/**/*.{ts,tsx}",
-  "hooks:refresh": "chmod +x .git/hooks/pre-commit tools/precommit/large-file-guard.sh",
+    "format": "prettier --write src/**/*.{ts,tsx}",
+    "hooks:refresh": "chmod +x .git/hooks/pre-commit tools/precommit/large-file-guard.sh",
     "axiom:validate": "ts-node src/scripts/validateAxioms.ts",
     "db:migrate": "ts-node src/server/database/migrate.ts",
-    "db:seed": "ts-node src/server/database/seed.ts"
+    "db:seed": "ts-node src/server/database/seed.ts",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev --name init",
+    "prisma:format": "prisma format"
   },
   "keywords": [
     "ai",
@@ -30,8 +35,7 @@
   "license": "GPL-3.0",
   "dependencies": {
     "@azure/openai": "^1.0.0-beta.12",
-    "@types/bcrypt": "^5.0.2",
-    "@types/jsonwebtoken": "^9.0.6",
+    "@prisma/client": "^5.16.1",
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
@@ -60,6 +64,7 @@
     "jest": "^29.7.0",
     "nodemon": "^3.1.0",
     "prettier": "^3.2.5",
+    "prisma": "^5.16.1",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"

@@ -15,19 +15,19 @@ The Guardian’s Burden anchors moral axis; Order of the Fuck-Up Fathers supplie
 | Repo Size | ⚠️ ~764MB | History bloat unresolved |
 | Sovereign Assets | Partial | Indexed, not fully cross-linked |
 
-## Decision Log (Pending)
-1. Nuclear history purge: DEFERRED (needs explicit go/no-go)
-2. Phase 2 priority: ThoughtMap AI expansion vs deeper MCP enrichment – NOT CHOSEN
-3. Local model (Ollama) vs remote API (Azure OpenAI) – NOT CHOSEN
+## Decision Log (Pending / Executed)
+1. Nuclear history purge: APPROVED (user confirmed) – NOT YET EXECUTED (awaiting final safety confirmation)
+2. Phase 2 priority: Proceed with ThoughtMap AI expansion first, then MCP enrichment
+3. Local model vs remote API: DEFER – stub stays deterministic until architecture choice
 
 ## Next Task Checklist
-- [ ] Decide purge now vs later (record in this file under Decisions Executed)
-- [ ] Implement ThoughtMap Phase 2 AI expansion (expand_node, synthesize_branch)
-- [ ] Wire Ctrl+Space hotkey to expansion
-- [ ] Persist save format version bump (add `schemaVersion: 2`)
-- [ ] MCP adapter: export node graph to Memory Core ingestion stub
-- [ ] Pre-commit large file guard (>10MB unless LFS tracked)
-- [ ] Lightweight Jest smoke test for TS utils + Python self-test
+- [x] Decide purge now vs later (recorded APPROVED, execution pending)
+- [x] Implement ThoughtMap Phase 2 AI expansion stubs (Python module extraction pending commit)
+- [ ] Wire Ctrl+Space hotkey to expansion (pending module extraction)
+- [ ] Persist save format version bump (schemaVersion: 2 in new save routine)
+- [ ] MCP adapter: connect to real graph instead of dummy
+- [x] Pre-commit large file guard (>10MB unless LFS tracked)
+- [ ] Lightweight Jest smoke test + Python self-test script
 
 ## Interfaces Planned
 ### Python Expansion Stub
@@ -48,11 +48,11 @@ Returns list of plausible child node titles (mock until model configured).
 | Model hallucination in expansion | Keep stub deterministic until validation layer added |
 
 ## Suggested Order of Operations (If Continuing Immediately)
-1. Commit this handoff file
-2. Implement stubs (done partially in repo once committed)
-3. Choose purge strategy; if YES, perform after verifying new stubs committed
-4. Integrate expansion UI + persistence version bump
-5. Add tests + hook install script
+1. Extract ThoughtMap notebook code into module + hotkey
+2. Execute nuclear purge (after commit) OR postpone
+3. Replace MCP adapter dummy with live exporter
+4. Add synthesis UI action (branch summary)
+5. Decide model integration path (Azure vs local) and implement
 
 ## Handoff Prompt (For New Chat Seed)
 ```

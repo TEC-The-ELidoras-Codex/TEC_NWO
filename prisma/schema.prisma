@@ -1,0 +1,74 @@
+// Prisma schema – Master Lore Database (Phase 1)
+// Acts as constitutional data layer. pgvector extension required.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model LoreEntry {
+  id                 String       @id @default(cuid())
+  slug               String       @unique
+  title              String
+  type               String
+  canonicalVersionId String?      @map("canonical_version_id")
+  createdAt          DateTime     @default(now()) @map("created_at")
+  versions           LoreVersion[]
+  embeddings         Embedding[]
+  memories           AgentMemory[] @relation("LoreMemory")
+  relationsFrom      Relation[]   @relation("FromRelations")
+  relationsTo        Relation[]   @relation("ToRelations")
+}
+
+model LoreVersion {
+  id          String    @id @default(cuid())
+  loreEntry   LoreEntry @relation(fields: [loreEntryId], references: [id])
+  loreEntryId String    @map("lore_entry_id")
+  content     String
+  author      String?
+  hash        String    @unique
+  createdAt   DateTime  @default(now()) @map("created_at")
+}
+
+model Embedding {
+  id          String    @id @default(cuid())
+  loreEntry   LoreEntry @relation(fields: [loreEntryId], references: [id])
+  loreEntryId String    @map("lore_entry_id")
+  vector      Unsupported("vector")
+  model       String
+  dim         Int
+  createdAt   DateTime @default(now()) @map("created_at")
+}
+
+model AgentMemory {
+  id          String     @id @default(cuid())
+  agent       String
+  content     String
+  importance  Float      @default(0)
+  loreEntry   LoreEntry? @relation("LoreMemory", fields: [loreEntryId], references: [id])
+  loreEntryId String?    @map("lore_entry_id")
+  createdAt   DateTime   @default(now()) @map("created_at")
+}
+
+model Relation {
+  id        String    @id @default(cuid())
+  from      LoreEntry @relation("FromRelations", fields: [fromId], references: [id])
+  fromId    String    @map("from_id")
+  to        LoreEntry @relation("ToRelations", fields: [toId], references: [id])
+  toId      String    @map("to_id")
+  kind      String
+  createdAt DateTime  @default(now()) @map("created_at")
+}
+
+model TaskLog {
+  id        String   @id @default(cuid())
+  agent     String
+  input     String
+  outputRef String?  @map("output_ref")
+  status    String   @default("pending")
+  createdAt DateTime @default(now()) @map("created_at")
+}
