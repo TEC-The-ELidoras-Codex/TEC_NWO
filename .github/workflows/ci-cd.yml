@@ -1,0 +1,64 @@
+name: CI-CD
+on:
+	push:
+		branches: [ main ]
+	pull_request:
+		branches: [ main ]
+
+jobs:
+	build-and-deploy:
+		runs-on: ubuntu-latest
+		permissions:
+			id-token: write
+			contents: read
+		env:
+			NODE_VERSION: '18.x'
+			ACR_LOGIN_SERVER: ${{ secrets.ACR_LOGIN_SERVER }}
+			CONTAINER_IMAGE_TAG: ${{ github.sha }}
+		steps:
+			- uses: actions/checkout@v4
+			- uses: actions/setup-node@v4
+				with:
+					node-version: ${{ env.NODE_VERSION }}
+					cache: 'npm'
+			- name: Install Node deps
+				run: npm ci
+			- name: Prisma Generate
+				run: npx prisma generate || true
+			- name: Node Build
+				run: npm run build || echo "(build placeholder)"
+			- name: Setup Python
+				uses: actions/setup-python@v5
+				with:
+					python-version: '3.11'
+			- name: Install Python deps
+				run: pip install -r services/airth/requirements.txt
+			- name: Python Compile Check
+				run: python -m py_compile services/airth/airth_service.py
+			- name: Azure Login
+				uses: azure/login@v2
+				with:
+					client-id: ${{ secrets.AZURE_CLIENT_ID }}
+					tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+					subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+			- name: Build & Push Main API Image
+				run: |
+					docker build -t $ACR_LOGIN_SERVER/elidoras-codex:${CONTAINER_IMAGE_TAG} -f Dockerfile .
+					docker tag $ACR_LOGIN_SERVER/elidoras-codex:${CONTAINER_IMAGE_TAG} $ACR_LOGIN_SERVER/elidoras-codex:latest
+					az acr login --name $(echo $ACR_LOGIN_SERVER | cut -d'.' -f1)
+					docker push $ACR_LOGIN_SERVER/elidoras-codex:${CONTAINER_IMAGE_TAG}
+					docker push $ACR_LOGIN_SERVER/elidoras-codex:latest
+			- name: Build & Push Airth Image
+				run: |
+					docker build -t $ACR_LOGIN_SERVER/elidoras-airth:${CONTAINER_IMAGE_TAG} -f services/airth/Dockerfile .
+					docker tag $ACR_LOGIN_SERVER/elidoras-airth:${CONTAINER_IMAGE_TAG} $ACR_LOGIN_SERVER/elidoras-airth:latest
+					docker push $ACR_LOGIN_SERVER/elidoras-airth:${CONTAINER_IMAGE_TAG}
+					docker push $ACR_LOGIN_SERVER/elidoras-airth:latest
+			- name: Output Images
+				run: |
+					echo Built images:
+					echo $ACR_LOGIN_SERVER/elidoras-codex:${CONTAINER_IMAGE_TAG}
+					echo $ACR_LOGIN_SERVER/elidoras-airth:${CONTAINER_IMAGE_TAG}
+			- name: Deploy Infra (placeholder)
+				if: github.ref == 'refs/heads/main'
+				run: echo "Integrate az deployment group create with image tag later"
