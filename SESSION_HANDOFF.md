@@ -16,18 +16,27 @@ The Guardian’s Burden anchors moral axis; Order of the Fuck-Up Fathers supplie
 | Sovereign Assets | Partial | Indexed, not fully cross-linked |
 
 ## Decision Log (Pending / Executed)
-1. Nuclear history purge: APPROVED (user confirmed) – NOT YET EXECUTED (awaiting final safety confirmation)
-2. Phase 2 priority: Proceed with ThoughtMap AI expansion first, then MCP enrichment
-3. Local model vs remote API: DEFER – stub stays deterministic until architecture choice
+1. Nuclear history purge: APPROVED – NOT YET EXECUTED (defer until post-RAG validation)
+2. ThoughtMap Phase 2 AI expansion: IMPLEMENTED (deterministic + RAG scaffold)
+3. Local model vs remote API: DEFER (OpenAI embeddings optional via ENABLE_RAG)
+4. Cost control scripts (start/stop env): ADDED (tools/ops)
+5. RAG gating flag: ENABLE_RAG introduced (default OFF)
+6. Embedding ingestion + similarity endpoint: ADDED (guarded by flag)
 
 ## Next Task Checklist
-- [x] Decide purge now vs later (recorded APPROVED, execution pending)
-- [x] Implement ThoughtMap Phase 2 AI expansion stubs (Python module extraction pending commit)
-- [ ] Wire Ctrl+Space hotkey to expansion (pending module extraction)
-- [ ] Persist save format version bump (schemaVersion: 2 in new save routine)
-- [ ] MCP adapter: connect to real graph instead of dummy
-- [x] Pre-commit large file guard (>10MB unless LFS tracked)
-- [ ] Lightweight Jest smoke test + Python self-test script
+- [x] Decide purge now vs later (approved; execution pending)
+- [x] ThoughtMap Phase 2 expansion stub
+- [x] Ctrl+Space expansion hotkey
+- [x] Save format version bump (schemaVersion=2)
+- [ ] Replace MCP adapter dummy with live exporter (IN PROGRESS)
+- [x] Pre-commit large file guard
+- [x] Lightweight smoke tests baseline
+- [x] Airth Dockerfile & CI image build
+- [x] Embedding pipeline scaffold (flag gated)
+- [x] ThoughtMap ingestion endpoint
+- [ ] Full answer synthesis (LLM) implementation
+- [ ] Key Vault secret retrieval refactor
+- [ ] History purge execution (scheduled after synthesis + deploy)
 
 ## Interfaces Planned
 ### Python Expansion Stub
@@ -47,12 +56,12 @@ Returns list of plausible child node titles (mock until model configured).
 | Large binary accidentally committed | Pre-commit size + ensure LFS patterns |
 | Model hallucination in expansion | Keep stub deterministic until validation layer added |
 
-## Suggested Order of Operations (If Continuing Immediately)
-1. Extract ThoughtMap notebook code into module + hotkey
-2. Execute nuclear purge (after commit) OR postpone
-3. Replace MCP adapter dummy with live exporter
-4. Add synthesis UI action (branch summary)
-5. Decide model integration path (Azure vs local) and implement
+## Suggested Order of Operations (Updated)
+1. Live MCP adapter export wiring
+2. Embed job queue + answer synthesis (LLM) + confidence scoring
+3. Key Vault integration for secrets (OPENAI_API_KEY removal from direct env on deploy)
+4. Nuclear purge (post verification + tag)
+5. Frontend ThoughtMap ingestion UI + governance dashboards
 
 ## Handoff Prompt (For New Chat Seed)
 ```

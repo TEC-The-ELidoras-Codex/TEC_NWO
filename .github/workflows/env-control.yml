@@ -1,0 +1,55 @@
+name: Environment Control
+on:
+  workflow_dispatch:
+    inputs:
+      resource_group:
+        description: 'Azure Resource Group'
+        required: true
+      operation:
+        description: 'start or stop'
+        required: true
+        default: 'stop'
+        type: choice
+        options: [stop, start]
+
+jobs:
+  control:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      - name: Discover resources
+        id: discover
+        run: |
+          RG='${{ github.event.inputs.resource_group }}'
+          PG=$(az postgres flexible-server list -g $RG --query "[0].name" -o tsv || true)
+          APPS=$(az containerapp list -g $RG --query "[].name" -o tsv || true)
+          echo "pg=$PG" >> $GITHUB_OUTPUT
+          echo "apps<<EOF" >> $GITHUB_OUTPUT
+          echo "$APPS" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+      - name: Stop resources
+        if: github.event.inputs.operation == 'stop'
+        run: |
+          RG='${{ github.event.inputs.resource_group }}'
+          if [ -n '${{ steps.discover.outputs.pg }}' ]; then az postgres flexible-server stop -g $RG -n '${{ steps.discover.outputs.pg }}'; fi
+          for app in ${{ steps.discover.outputs.apps }}; do
+            az containerapp update -g $RG -n "$app" --min-replicas 0 --max-replicas 0 || true
+          done
+      - name: Start resources
+        if: github.event.inputs.operation == 'start'
+        run: |
+          RG='${{ github.event.inputs.resource_group }}'
+          if [ -n '${{ steps.discover.outputs.pg }}' ]; then az postgres flexible-server start -g $RG -n '${{ steps.discover.outputs.pg }}'; fi
+          for app in ${{ steps.discover.outputs.apps }}; do
+            az containerapp update -g $RG -n "$app" --min-replicas 1 --max-replicas 2 || true
+          done
+      - name: Summary
+        run: echo "Operation ${{ github.event.inputs.operation }} completed."

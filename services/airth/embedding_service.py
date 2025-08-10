@@ -14,6 +14,14 @@ except ImportError:  # pragma: no cover
 
 EMBED_MODEL = os.getenv("EMBED_MODEL", "text-embedding-3-small")
 
+def rag_enabled() -> bool:
+  """Returns True if RAG / embedding generation is enabled via env flag.
+
+  Default OFF to avoid unintended token spend.
+  Set ENABLE_RAG=1 to activate.
+  """
+  return os.getenv("ENABLE_RAG", "0") in ("1", "true", "TRUE", "yes")
+
 def _get_openai_client():
   if OpenAI is None:
     raise RuntimeError("openai package not installed")
@@ -25,6 +33,8 @@ def _get_openai_client():
 def generate_embedding(text: str) -> List[float]:
   t = text.strip()
   if not t:
+    return []
+  if not rag_enabled():  # Skip remote call when disabled
     return []
   client = _get_openai_client()
   resp = client.embeddings.create(input=[t], model=EMBED_MODEL)
@@ -42,6 +52,8 @@ def _format_vector(vec: Sequence[float]) -> str:
 def ensure_embedding(lore_entry_id: str, content: str, model: str = EMBED_MODEL) -> bool:
   if not content.strip():
     return False
+  if not rag_enabled():  # Do not generate while disabled
+    return False
   with db_conn() as conn, conn.cursor() as cur:
     cur.execute("SELECT id FROM \"Embedding\" WHERE \"loreEntryId\"=%s AND model=%s LIMIT 1", (lore_entry_id, model))
     if cur.fetchone():
@@ -56,6 +68,8 @@ def ensure_embedding(lore_entry_id: str, content: str, model: str = EMBED_MODEL)
     return True
 
 def similarity_search(query: str, k: int = 5) -> list[dict]:
+  if not rag_enabled():
+    return []
   try:
     q_vec = generate_embedding(query)
     if not q_vec:
@@ -100,10 +114,11 @@ def ingest_thoughtmap(payload: dict) -> dict:
         "INSERT INTO \"LoreVersion\" (id, \"loreEntryId\", content, author, hash, \"created_at\") VALUES (gen_random_uuid(), %s, %s, %s, %s, NOW())",
         (lore_id, combined, "system", hashv),
       )
-    try:
-      ensure_embedding(lore_id, combined)
-    except Exception:
-      pass
+    if rag_enabled():
+      try:
+        ensure_embedding(lore_id, combined)
+      except Exception:
+        pass
   return {"lore_entry_id": lore_id, "slug": slug, "hash": hashv, "nodes_ingested": len(nodes)}
 
 def _slugify(text: str) -> str:
