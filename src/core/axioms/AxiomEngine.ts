@@ -175,7 +175,7 @@ export class AxiomEngine {
     let totalWeight = 0;
 
     // Validate against each axiom
-    for const [key, axiom] of Object.entries(AXIOMS)) {
+    for (const [key, axiom] of Object.entries(AXIOMS)) {
       const axiomResult = await this.validateAgainstAxiom(analysis, axiom);
       totalScore += axiomResult.score * axiom.weight;
       totalWeight += axiom.weight;

@@ -196,7 +196,7 @@ export class TECSystem {
       results.confidence = (axiomResult.score + precedentResult.confidence + aiAnalysis.confidence) / 3;
 
     } catch (error) {
-      results.warnings!.push(`Analysis error: ${error.message}`);
+      results.warnings!.push(`Analysis error: ${error instanceof Error ? error.message : String(error)}`);
       results.confidence = 0.3;
       results.content = 'Analysis completed with errors. See warnings for details.';
       results.analysis = {

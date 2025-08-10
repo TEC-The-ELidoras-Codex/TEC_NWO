@@ -115,7 +115,7 @@ Respond with clarity, precision, and historical grounding. When uncertain, expre
       return this.parseAnalysisResponse(content);
     } catch (error) {
       console.error('Asimov Service analysis error:', error);
-      throw new Error(`AI analysis failed: ${error.message}`);
+      throw new Error(`AI analysis failed: ${error instanceof Error ? error.message : String(error)}`);
     }
   }
 
@@ -137,7 +137,7 @@ Respond with clarity, precision, and historical grounding. When uncertain, expre
       return response.choices[0]?.message?.content || '';
     } catch (error) {
       console.error('Asimov Service completion error:', error);
-      throw new Error(`AI completion failed: ${error.message}`);
+      throw new Error(`AI completion failed: ${error instanceof Error ? error.message : String(error)}`);
     }
   }
 

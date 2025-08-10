@@ -188,7 +188,7 @@ export class DialogueInterface {
       try {
         const axiomResult = await this.axiomEngine.validateContent({
           content: humanInput.content,
-          contentType: humanInput.type === 'story' ? 'story' : 'general'
+          contentType: humanInput.type === 'story' ? 'story' : 'narrative'
         });
         responses.axiomAlignment = axiomResult;
         
