@@ -1,0 +1,10 @@
+{
+  "name": "tec-rag",
+  "version": "0.1.0",
+  "commands": {
+    "search": {
+      "description": "Semantic search over TEC datastore",
+      "args": { "q": {"type":"string"}, "k": {"type":"number", "default": 8} }
+    }
+  }
+}

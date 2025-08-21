@@ -1,0 +1,11 @@
+sources:
+  - type: fs
+    path: ./data/raw
+    patterns: ["**/*.md","**/*.txt","**/*.pdf","**/*.docx"]
+dedupe:
+  min_similarity: 0.92
+embedding:
+  model_env: MODEL_EMBED
+chunking:
+  tokens_env: CHUNK_TOKENS
+  overlap_env: CHUNK_OVERLAP

@@ -1,0 +1,21 @@
+openai>=1.40
+chromadb>=0.5
+pypdf
+python-docx
+markdown-it-py
+tiktoken
+rapidfuzz
+fastapi
+uvicorn
+pydantic
+python-dotenv
+pyyaml
+numpy
+# Optional speech-to-text (choose one)
+# whisperx
+# faster-whisper
+# Google + GitHub integrations (optional)
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+PyGithub
