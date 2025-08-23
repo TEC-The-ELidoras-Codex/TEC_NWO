@@ -1,0 +1,3694 @@
+<!DOCTYPE html>
+<!-- saved from url=(0121)https://learn.microsoft.com/en-us/credentials/applied-skills/?wt.mc_id=appliedskills_marketingspot_webpage_wwl_learnpromo -->
+<html class="layout layout-single marketing show-breadcrumb default-focus chromane-sonic-dark theme-dark  lang-en" lang="en-us" dir="ltr" data-authenticated="true" data-auth-status-determined="true" data-target="docs" x-ms-format-detection="none" style="--window-inner-height: 564px !important; --atlas-header-height: 173px !important; --atlas-footer-height: 174px !important; --atlas-header-visible-height: 0px !important; --atlas-footer-visible-height: 173.88540649414062px !important;" data-hubspot-theme="canvas-light"><style>/* !Email Widget */
+.ch-sonic-email-box-wrap {
+  position: relative;
+  z-index: 2;
+}
+
+.ch-sonic-email-widget {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  column-gap: 10px;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.ch-sonic-email-widget-gen {
+  position: relative;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 108px;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #705cf6;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.ch-sonic-email-widget-close {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0px;
+  top: 0px;
+  transform: translate(50%, -50%);
+  background: white;
+  z-index: 2;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  border-radius: 50%;
+}
+
+.ch-sonic-email-widget-close svg {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.ch-sonic-email-widget-close svg path {
+  stroke: #705cf6 !important;
+}
+
+.ch-sonic-email-widget:hover .ch-sonic-email-widget-close {
+  visibility: visible;
+  opacity: 1;
+}
+
+.ch-sonic-email-widget:has(.chromane-sonic-active) .ch-sonic-email-widget-close {
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+.ch-sonic-email-widget-gen:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.ch-sonic-email-widget-gen-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #705cf6;
+}
+.ch-sonic-email-widget-gen-icon + span:not(:empty) {
+  margin-left: 8px;
+}
+
+.ch-sonic-email-widget-gen-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.ch-sonic-email-widget-gen span {
+  color: #705cf6;
+  font-weight: 500;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: "Inter";
+  user-select: none;
+}
+
+.ch-sonic-email-widget-box {
+  flex: 0 1 auto;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.ch-sonic-email-widget-box span {
+  position: absolute;
+  top: 4px;
+  left: -1px;
+  width: fit-content;
+  padding: 0px 6px;
+  height: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e5e7eb;
+  border-radius: 6px;
+  border-bottom-left-radius: 0px;
+  font-family: Inter;
+  font-size: inherit;
+  font-weight: 600;
+  line-height: inherit;
+  color: #1f2937;
+  white-space: nowrap;
+}
+
+.ch-sonic-email-widget-textarea {
+  width: 100%;
+  border: 0px;
+  border-bottom: 1px solid #d1d5db;
+  outline: none !important;
+  resize: none;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  font-family: Inter;
+  font-size: inherit;
+  font-weight: 400;
+  line-height: 19px;
+  padding: 6px 0px;
+  color: #1f2937;
+  text-indent: 114px;
+  word-break: break-all;
+}
+
+.ch-sonic-email-widget-textarea > * {
+  text-indent: 0px !important;
+}
+
+.ch-sonic-email-widget-textarea[contenteditable][aria-placeholder]:empty:before {
+  content: attr(aria-placeholder);
+  position: absolute;
+  background-color: transparent;
+  color: rgb(75 85 99);
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: 400;
+  cursor: text;
+  text-indent: 0px;
+  max-width: var(--cwidth);
+  visibility: hidden;
+  visibility: var(--cvis);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* !Select mood */
+
+/*! Mood Component */
+.ch-sonic-email-widget-mood {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+  margin-top: 10px;
+  background: #e5e7eb;
+  padding: 4px 6px 4px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 17px;
+  box-sizing: border-box;
+  color: #1f2937;
+}
+.ch-sonic-email-widget-mood > span {
+  font-family: "Inter";
+  font-weight: 600;
+}
+
+.ch-sonic-mood-select {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  column-gap: 3px;
+  padding: 0px 4px;
+  cursor: pointer;
+  font-family: "Inter";
+  font-weight: 400;
+  height: 28px;
+  position: relative;
+  z-index: 2;
+  user-select: none;
+}
+
+.ch-sonic-email-widget-mood.chips {
+  width: 100%;
+  align-items: baseline;
+  padding: 6px;
+  background: transparent;
+  margin-top: 0px;
+}
+
+.ch-sonic-chip-default {
+  overflow-x: scroll;
+  padding-bottom: 6px;
+}
+
+/* *Scrollbar */
+.ch-sonic-chip-default::-webkit-scrollbar {
+  width: 5px;
+  height: 4px;
+}
+.ch-sonic-chip-default::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ch-sonic-chip-default::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 13px;
+  cursor: pointer;
+}
+
+.ch-sonic-mood-select > svg {
+  margin: -3px;
+  width: 19px;
+  height: 19px;
+  fill: black;
+  transition: all 0.3s ease;
+}
+
+.ch-sonic-mood-select-items {
+  position: absolute;
+  background: white;
+  left: 0px;
+  top: 32px;
+  z-index: 999999;
+  min-width: calc(100% + 6px);
+  padding: 7px 4px;
+  display: flex;
+  flex-direction: column;
+  color: #1f2937;
+  font-size: inherit;
+  row-gap: 4px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  font-family: "Inter";
+  cursor: default;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.ch-sonic-mood-select-item {
+  padding: 3px 2px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  width: 100%;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.ch-sonic-mood-select-item:hover {
+  background: #e5e7eb;
+}
+
+.ch-sonic-mood-select.chromane-sonic-active .ch-sonic-mood-select-items {
+  visibility: visible;
+  opacity: 1;
+}
+.ch-sonic-mood-select.chromane-sonic-active > svg {
+  transform: rotate(180deg);
+}
+.ch-sonic-email-widget-mood.emotion {
+  background: transparent;
+  padding: 0px;
+  margin-top: 12px;
+}
+
+/*!Chip Emotions Component-------------------------------------------------------------  */
+.ch-sonic-chip-emotions,
+.ch-sonic-chip-default {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+}
+
+.ch-sonic-chip-default {
+  padding: 3px 0px 3px 0px;
+}
+
+.ch-sonic-chip-emotions-chip,
+.ch-sonic-chip-default-chip {
+  background: #e5e7eb;
+  border-radius: 6px;
+  padding: 2px 4px;
+  color: #1f2937;
+  font-family: Inter;
+  font-size: inherit;
+  font-weight: 400;
+  line-height: inherit;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+.ch-sonic-chip-default-chip {
+  white-space: nowrap;
+  padding: 4px 6px;
+}
+
+.ch-sonic-chip-emotions-chip.chromane-sonic-active,
+.ch-sonic-chip-default-chip.chromane-sonic-active {
+  background: #d7d6fe;
+}
+
+/* !WIDGET DARK MODE STYLESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS ----------------------------------------------------------*/
+.ch-sonic-email-widget-mood.dark .ch-sonic-chip-default::-webkit-scrollbar-thumb {
+  background: #6b7280;
+}
+
+.ch-sonic-email-widget-mood.dark .ch-sonic-chip-emotions-chip,
+.ch-sonic-email-widget-mood.dark .ch-sonic-chip-default-chip {
+  background: #1f2937;
+  color: #e5e7eb;
+}
+.ch-sonic-email-widget-mood.dark .ch-sonic-chip-emotions-chip.chromane-sonic-active,
+.ch-sonic-email-widget-mood.dark .ch-sonic-chip-default-chip.chromane-sonic-active {
+  background: #6b7280;
+}
+
+.ch-sonic-email-widget.dark .ch-sonic-email-widget-box span {
+  background: #34383f;
+  color: #e5e7eb;
+}
+
+.ch-sonic-email-widget.dark .ch-sonic-email-widget-textarea {
+  color: #e5e7eb;
+  border-bottom-color: #34383f;
+}
+.ch-sonic-email-widget.dark .ch-sonic-email-widget-close {
+  background: #1f2937;
+}
+
+.ch-sonic-email-widget.dark .ch-sonic-email-widget-textarea[contenteditable][aria-placeholder]:empty:before {
+  color: #4b5563;
+}
+
+.ch-sonic-email-widget-mood.dark {
+  background: #34383f;
+  color: #e5e7eb;
+}
+
+.ch-sonic-email-widget-mood.dark.chips {
+  background: transparent;
+}
+.ch-sonic-email-widget-mood.dark .ch-sonic-mood-select {
+  background: #4b5563;
+}
+.ch-sonic-email-widget-mood.dark .ch-sonic-mood-select-input {
+  color: #e5e7eb;
+}
+.ch-sonic-email-widget-mood.dark .ch-sonic-mood-select-items {
+  background: #34383f;
+  color: #e5e7eb;
+}
+.ch-sonic-email-widget-mood.dark .ch-sonic-mood-select-item:hover {
+  background: #4b5563;
+}
+
+/* !SIZE MODIFIERS------------------------------------------------------------------------------------------------------------ */
+.ch-sonic-email-widget.s-small {
+  font-size: 12px;
+  line-height: 14px;
+  column-gap: 4px;
+}
+
+.ch-sonic-email-widget.s-small .ch-sonic-email-widget-gen {
+  flex: 0 0 80px;
+  width: 80px;
+  font-size: 11px;
+  line-height: 14px;
+}
+.ch-sonic-email-widget.s-small .ch-sonic-email-widget-gen-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.ch-sonic-email-widget.s-small .ch-sonic-email-widget-gen-icon svg {
+  width: 9px;
+  height: 9px;
+}
+
+.ch-sonic-email-widget.s-small .ch-sonic-email-widget-close {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+.ch-sonic-email-widget.s-small .ch-sonic-email-widget-box {
+  flex: 0 0 auto;
+  width: calc(100% - 85px);
+  max-width: calc(100% - 85px);
+}
+.ch-sonic-email-widget.s-small .ch-sonic-email-widget-box span {
+  height: 19px;
+  top: 3px;
+  padding: 0px 6px;
+}
+
+.ch-sonic-email-widget.s-small .ch-sonic-email-widget-textarea {
+  font-size: 12px;
+  line-height: 18px;
+  text-indent: 112px;
+  padding: 3px 0px;
+}
+
+.ch-sonic-email-widget-mood.s-small {
+  font-size: 11px;
+  line-height: 14px;
+  margin-top: 5px;
+  padding: 6px;
+}
+
+.ch-sonic-email-widget-mood.s-small.chips {
+  padding: 3px 6px 0px 6px;
+  margin-top: 0px;
+}
+
+.ch-sonic-email-widget-mood.s-small .ch-sonic-mood-select {
+  height: 20px;
+}
+.ch-sonic-email-widget-mood.s-small .ch-sonic-mood-select > svg {
+  width: 16px;
+  height: 16px;
+}
+.ch-sonic-email-widget-mood.s-small .ch-sonic-chip-default-chip {
+  padding: 3px 5px;
+  font-size: 10px;
+}
+
+/* !MAIL TYPE MODIFIERS------------------------------------------------------------------- */
+
+/* ?Default-size */
+.ch-sonic-email-widget.reply .ch-sonic-email-widget-textarea {
+  text-indent: 88px;
+}
+
+.ch-sonic-email-widget.message .ch-sonic-email-widget-textarea {
+  text-indent: 129px;
+}
+.ch-sonic-email-widget.short .ch-sonic-email-widget-textarea {
+  text-indent: 62px;
+}
+
+/* ?Smaill-size */
+.ch-sonic-email-widget.s-small .ch-sonic-email-widget-textarea {
+  text-indent: 112px;
+}
+ /* !Widget BTN */
+#sonic-chromane-btn-widget {
+  width: fit-content;
+  padding: 0px 6px;
+  height: 36px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  justify-content: center;
+  z-index: 99999999999999999999999;
+  bottom: 30px;
+  left: 30px;
+  background: #111827;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  visibility: visible;
+  opacity: 0.1;
+  cursor: pointer;
+  transition: visibility 0.2s ease, opacity 0.2s ease;
+}
+
+#sonic-chromane-btn-widget .sonic-chromane-btn-widget-img {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sonic-chromane-btn-widget .sonic-chromane-btn-widget-text {
+  user-select: none;
+  font-family: "Inter", sans-serif !important;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 600;
+  color: #f4f4f6;
+}
+#sonic-chromane-btn-widget .sonic-chromane-btn-widget-close {
+  position: absolute;
+  flex: 0 0 15px;
+  width: 15px !important;
+  height: 15px !important;
+  top: 0px;
+  right: 0px;
+  transform: translate(50%, -50%);
+  border-radius: 50%;
+  background: #ff76df;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+#sonic-chromane-btn-widget:hover {
+  opacity: 1;
+}
+#sonic-chromane-btn-widget:hover .sonic-chromane-btn-widget-close {
+  visibility: visible;
+  opacity: 1;
+}
+#sonic-chromane-btn-widget .sonic-chromane-btn-widget-close svg {
+  width: 10px !important;
+  height: 10px !important;
+}
+
+#sonic-chromane-btn-widget.sonic-chromane-btn-widget-hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* !BUTTON GENERETIONS MANAGE */
+
+.ch-sonic-gen-man {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+}
+
+button.ch-sonic-gen-man-btn {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: #705cf6;
+  border-radius: 50%;
+  border: none !important;
+  padding: 0px !important;
+  margin: 0px !important;
+  border: none !important;
+  outline: none;
+}
+
+button.ch-sonic-gen-man-stop {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+.ch-sonic-gen-man.chromane-sonic-active button.ch-sonic-gen-man-stop {
+  transform: translate(-120%, -50%);
+}
+button.ch-sonic-gen-man-stop svg.ch-sonic-gen-man-icon {
+  height: 22px !important;
+  width: 22px !important;
+}
+
+.ch-sonic-gen-man-rewrite {
+  z-index: 2;
+  transition: all 0.2s ease;
+}
+.ch-sonic-gen-man-rewrite .ch-sonic-gen-man-icon {
+  width: 14px !important;
+  height: 14px !important;
+  flex: 0 0 14px;
+}
+.ch-sonic-gen-man-rewrite .ch-sonic-gen-man-icon * {
+  stroke: white !important;
+}
+
+svg.ch-sonic-gen-man-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  height: 100% !important;
+  width: 100% !important;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.ch-sonic-gen-man.chromane-sonic-active .ch-sonic-gen-man-rewrite svg.ch-sonic-gen-man-loader {
+  visibility: visible;
+  opacity: 1;
+}
+
+.ch-sonic-gen-man.chromane-sonic-active .ch-sonic-gen-man-rewrite .ch-sonic-gen-man-icon {
+  opacity: 0;
+  visibility: hidden !important;
+}
+.ch-sonic-gen-man.chromane-sonic-active .ch-sonic-gen-man-rewrite {
+  background: transparent !important;
+  cursor: default;
+  box-shadow: none !important;
+}
+
+.ch-sonic-gen-man-ttip {
+  color: white;
+  background: rgb(99 102 241);
+  white-space: nowrap;
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  z-index: 99999999;
+  border-radius: 6px;
+  padding: 4px 6px;
+  font-family: "Satoshi";
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 10px;
+  color: white;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.ch-sonic-gen-man-ttip svg {
+  width: 11px;
+  height: 5px;
+  position: absolute;
+  bottom: 1px;
+  transform: translate(-50%, 100%) rotate(180deg);
+  left: 50%;
+}
+
+.ch-sonic-gen-man-ttip.chromane-sonic-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.ch-sonic-gen-man.chromane-sonic-active .ch-sonic-gen-man-rewrite .ch-sonic-gen-man-ttip {
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/*! CHROMANE SONIC LOGO BTN */
+.ch-sonic-logo-btn {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 0px;
+  cursor: pointer;
+  border: none !important;
+  outline: none !important;
+}
+
+.ch-sonic-logo-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* !NOTIFICATION */
+.chat-sonic-chromane-notification-wrap {
+  height: fit-content;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  row-gap: 10px;
+  bottom: 30px;
+  right: 0px;
+  width: 400px;
+  background: transparent;
+  z-index: 999999999;
+  pointer-events: none;
+}
+
+.chat-sonic-chromane-notification {
+  margin-right: 20px;
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
+  background-color: #111827;
+  border-radius: 12px;
+  padding: 10px 16px;
+  z-index: 99999999999;
+  transform: translateX(0px);
+  transition: all 0.3s ease;
+  width: fit-content;
+  height: fit-content;
+}
+
+.chat-sonic-chromane-notification span {
+  padding: 0px !important;
+  margin: 0px !important;
+  color: white !important;
+  font-weight: 700 !important;
+  font-family: "Satoshi" !important;
+  font-size: 13px !important;
+  line-height: 20px !important;
+  letter-spacing: 0.2px;
+}
+
+.chat-sonic-chromane-notification svg {
+  width: 24px !important;
+  height: 24px !important;
+  flex: 0 0 24px;
+}
+
+.chat-sonic-chromane-notification.chromane-hide {
+  transform: translateX(calc(100% + 20px));
+}
+
+/* !Chromane More btn */
+.ch-sonic-ad-more-btn {
+  height: 35px;
+  color: #705cf6;
+  padding: 10px 20px 10px 10px;
+  border-radius: 6px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  background: transparent;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #705cf6 !important;
+  outline: none !important;
+  transition: all 0.2s ease;
+}
+
+.ch-sonic-ad-more-btn-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #705cf6;
+}
+
+.ch-sonic-ad-more-btn-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.ch-sonic-ad-more-btn:hover {
+  background: rgba(26, 115, 232, 0.1);
+}
+
+/* !CUSTOM TOOLTIP */
+
+.ch-sonic-tooltip {
+  color: white;
+  background: rgb(99 102 241);
+  white-space: nowrap;
+  position: fixed;
+  top: 194px;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  z-index: 99999999;
+  border-radius: 6px;
+  padding: 4px 6px;
+  font-family: "Satoshi";
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 10px;
+  color: white;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.3s ease;
+  animation: tooltipkeys 0.5s 1;
+}
+
+.ch-sonic-tooltip svg {
+  position: absolute;
+  bottom: 1px;
+  transform: translate(-50%, 100%) rotate(180deg);
+  left: 50%;
+  width: 11px !important;
+  height: 5px !important;
+}
+
+@keyframes tooltipkeys {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+ /* !SONIC Iframe */
+.ch-sonic-iframe {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 670px;
+  max-height: calc(100vh - 30px);
+  z-index: 99999999999999;
+  visibility: visible;
+  opacity: 1;
+  border: 1px solid #e5e7eb;
+  min-height: 48px;
+  box-shadow: rgb(17 17 26 / 20%) 0px 4px 16px, rgb(17 17 26 / 20%) 0px 8px 24px, rgb(17 17 26 / 20%) 0px 16px 56px;
+  border-radius: 12px;
+  background: white;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.3s ease;
+}
+
+.ch-sonic-iframe.chromane-hide {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  transform: translate(-50%, 20%) scale(0) !important;
+}
+
+html.chromane-sonic-dark .ch-sonic-iframe {
+  border-color: #1f2937;
+}
+
+/* !Iframe Command */
+#chat-sonic-command-iframe,
+#chromane-sonic-google-home-iframe {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 670px;
+  max-height: calc(100vh - 30px);
+  z-index: 99999999999999;
+  visibility: visible;
+  opacity: 1;
+  border: 1px solid #e5e7eb;
+  min-height: 48px;
+  box-shadow: rgb(17 17 26 / 20%) 0px 4px 16px, rgb(17 17 26 / 20%) 0px 8px 24px, rgb(17 17 26 / 20%) 0px 16px 56px;
+  border-radius: 12px;
+  background: white;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.3s ease;
+}
+
+#chat-sonic-command-iframe.chromane-hide {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  transform: translate(-50%, 20%) scale(0) !important;
+}
+
+#chat-sonic-command-iframe.chat-sonic-unauth {
+  width: 489px;
+}
+
+html.chromane-sonic-dark #chat-sonic-command-iframe {
+  border-color: #1f2937;
+}
+
+.chat-sonic-command-iframe-hide {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  transform: translate(-50%, 20%) scale(0) !important;
+}
+
+/* !Invisible paste input */
+.chromane-sonic-input-invisible {
+  position: fixed;
+  /* left: -1000000px; */
+  left: 100px;
+  top: 100px;
+  z-index: 999999999999999999999;
+}
+
+/* !Social IFrame */
+#ch-sonic-social-iframe {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 560px;
+  height: 306px;
+  max-height: calc(100vh - 30px);
+  z-index: 99999999999999;
+  visibility: visible;
+  opacity: 1;
+  border: 1px solid #e5e7eb;
+  box-shadow: rgb(17 17 26 / 20%) 0px 4px 16px, rgb(17 17 26 / 20%) 0px 8px 24px, rgb(17 17 26 / 20%) 0px 16px 56px;
+  border-radius: 12px;
+  background: white;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.3s ease, height 0.1s;
+  background: rgb(17 24 39);
+}
+
+#ch-sonic-social-iframe.chromane-hide {
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(-50%, 20%) scale(0);
+}
+
+html.chromane-sonic-dark #ch-sonic-social-iframe {
+  border-color: #1f2937;
+}
+
+/* !Summarise Iframe */
+#chromane-sonic-summarise-iframe {
+  position: fixed;
+  bottom: 0px;
+  right: 30px;
+  width: 504px;
+  height: 444px;
+  transform: translate(0px, 0px);
+  z-index: 99999999;
+  transition: all 0.2s ease;
+  border: none;
+  box-shadow: -8px -11px 68px rgba(0, 0, 0, 0.25);
+}
+
+#chromane-sonic-summarise-iframe.chromane-hide {
+  transform: translate(0px, calc(100% + 20px));
+}
+
+/* !Summarise widget open styles*/
+body.chromane-sonic-summarise-iframe-open .ch-sonic-email-widget-gen {
+  opacity: 0.6 !important;
+  cursor: default;
+}
+
+body.chromane-sonic-summarise-iframe-open .ch-sonic-logo-btn img {
+  filter: grayscale(100%);
+  opacity: 0.5 !important;
+}
+body.chromane-sonic-summarise-iframe-open .ch-sonic-logo-btn {
+  cursor: default;
+}
+body.chromane-sonic-summarise-iframe-open .ch-sonic-logo-btn:hover {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* !Multi Iframe */
+
+.ch-sonic-multi-iframe-overlay.chromane-hide {
+  visibility: hidden;
+  opacity: 0;
+}
+.ch-sonic-multi-iframe-overlay {
+  position: fixed;
+  z-index: 9999999;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  bottom: 0px;
+  background: #111827;
+  visibility: visible;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+/* !Summarise thread iframe  */
+#chromane-sonic-sumtext-iframe[data-page="summarize"] {
+  height: 300px;
+}
+#chromane-sonic-sumtext-iframe[data-page="word_count"] {
+  height: 175px;
+  width: 450px;
+}
+
+/* !Styles When words expired  */
+/* search */
+
+html.ch-words-expired #ch-sonic-search-iframe:not(.ch-sonic-search-iframe-manual) {
+  height: 495px !important;
+}
+html.ch-words-expired #ch-sonic-search-iframe iframe,
+html.ch-words-expired #ch-sonic-youtube-cmd-iframe {
+  border-color: #e5e7eb !important;
+}
+html.ch-words-expired #ch-sonic-search-iframe.ch-sonic-search-iframe-close {
+  background: transparent;
+}
+
+html.ch-words-expired #ch-sonic-youtube-cmd-iframe {
+  border-radius: 12px;
+}
+
+/* command and other */
+html.ch-words-expired .ch-sonic-iframe,
+html.ch-words-expired #chromane-sonic-summarise-iframe,
+html.ch-words-expired #chat-sonic-command-iframe {
+  width: 400px !important;
+  height: 495px !important;
+  border-color: transparent !important;
+}
+/* !Styles When user unauth  */
+
+html.ch-sonic-unauth .ch-sonic-iframe {
+  height: 630px !important;
+  width: 489px !important;
+}
+
+html.ch-sonic-unauth #chat-sonic-command-iframe {
+  height: 630px !important;
+}
+</style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style data-hubspot-styled-components=""></style><style data-hubspot-styled-components=""></style>
+			<title>Microsoft Applied Skills | Microsoft Learn</title>
+			
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta name="color-scheme" content="light dark">
+
+			<meta name="description" content="Empower your organization with Microsoft training and certification. Access free courses, on-demand videos, certification resources, and skills development.">
+			<link rel="canonical" href="https://learn.microsoft.com/en-us/credentials/applied-skills/"> 
+
+			<!-- Non-customizable open graph and sharing-related metadata -->
+			<meta name="twitter:card" content="summary_large_image">
+			<meta name="twitter:site" content="@MicrosoftLearn">
+			<meta property="og:type" content="website">
+			<meta property="og:image:alt" content="Microsoft Learn">
+			<meta property="og:image" content="https://learn.microsoft.com/en-us/media/open-graph-image.png">
+			<!-- Page specific open graph and sharing-related metadata -->
+			<meta property="og:title" content="Microsoft Applied Skills">
+			<meta property="og:url" content="https://learn.microsoft.com/en-us/credentials/applied-skills/">
+			<meta property="og:description" content="Empower your organization with Microsoft training and certification. Access free courses, on-demand videos, certification resources, and skills development.">
+			<meta name="platform_id" content="0abaa5c8-03fc-ab9b-73b6-c66918a39bbe"> 
+			<meta name="locale" content="en-us">
+			 
+			<meta name="uhfHeaderId" content="MSDocsHeader-Certifications">
+
+			<meta name="page_type" content="marketing">
+
+			<!--page specific meta tags-->
+			
+
+			<!-- custom meta tags -->
+			
+		<meta name="schema" content="Marketing">
+	
+		<meta name="breadcrumb_path" content="/breadcrumb/toc.json">
+	
+		<meta name="feedback_system" content="None">
+	
+		<meta name="ms.topic" content="hub-page">
+	
+		<meta name="ms.service" content="azure-certified-device">
+	
+		<meta name="author" content="bipach">
+	
+		<meta name="document_id" content="60ef0828-7899-0b88-5465-9d25500e0c0a">
+	
+		<meta name="document_version_independent_id" content="60ef0828-7899-0b88-5465-9d25500e0c0a">
+	
+		<meta name="updated_at" content="2025-06-06T18:23:00Z">
+	
+		<meta name="original_content_git_url" content="https://github.com/MicrosoftDocs/learn-certs-pr/blob/live/learn-certs-pr/applied-skills/index.yml">
+	
+		<meta name="gitcommit" content="https://github.com/MicrosoftDocs/learn-certs-pr/blob/ccc30a91934f5fe807b8c2d18fd7b0e285768fda/learn-certs-pr/applied-skills/index.yml">
+	
+		<meta name="git_commit_id" content="ccc30a91934f5fe807b8c2d18fd7b0e285768fda">
+	
+		<meta name="site_name" content="Docs">
+	
+		<meta name="depot_name" content="MSDN.learn-certs-pr">
+	
+		<meta name="feedback_product_url" content="">
+	
+		<meta name="feedback_help_link_type" content="">
+	
+		<meta name="feedback_help_link_url" content="">
+	
+		<meta name="asset_id" content="applied-skills/index">
+	
+		<meta name="moniker_range_name" content="">
+	
+		<meta name="item_type" content="Content">
+	
+		<meta name="source_path" content="learn-certs-pr/applied-skills/index.yml">
+	
+		<meta name="github_feedback_content_git_url" content="https://github.com/MicrosoftDocs/learn-certs-pr/blob/live/learn-certs-pr/applied-skills/index.yml">
+	 
+
+			<!-- assets and js globals -->
+			
+			<link rel="stylesheet" href="./Microsoft Applied Skills _ Microsoft Learn_files/site-ltr.css">
+			
+			<script src="./Microsoft Applied Skills _ Microsoft Learn_files/wcp-consent.js.download"></script>
+			<script src="./Microsoft Applied Skills _ Microsoft Learn_files/ms.jsll-4.min.js.download"></script>
+			<script src="./Microsoft Applied Skills _ Microsoft Learn_files/deprecation.js.download"></script>
+
+			<!-- msdocs global object -->
+			<script id="msdocs-script">
+		var msDocs = {
+  "environment": {
+    "accessLevel": "online",
+    "azurePortalHostname": "portal.azure.com",
+    "reviewFeatures": false,
+    "supportLevel": "production",
+    "systemContent": true,
+    "siteName": "learn",
+    "legacyHosting": false
+  },
+  "data": {
+    "contentLocale": "en-us",
+    "contentDir": "ltr",
+    "userLocale": "en-us",
+    "userDir": "ltr",
+    "pageTemplate": "Marketing",
+    "brand": "",
+    "context": {},
+    "standardFeedback": false,
+    "showFeedbackReport": false,
+    "feedbackHelpLinkType": "",
+    "feedbackHelpLinkUrl": "",
+    "feedbackSystem": "None",
+    "feedbackGitHubRepo": "",
+    "feedbackProductUrl": "",
+    "extendBreadcrumb": false,
+    "isEditDisplayable": false,
+    "isPrivateUnauthorized": false,
+    "hideViewSource": false,
+    "isPermissioned": false,
+    "hasRecommendations": false,
+    "contributors": []
+  },
+  "functions": {}
+};;
+	</script>
+
+			<!-- base scripts, msdocs global should be before this -->
+			<script src="./Microsoft Applied Skills _ Microsoft Learn_files/index-docs.js.download"></script><style></style>
+			
+
+			<!-- json-ld -->
+			
+		<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"name":"Learn","position":1,"@type":"ListItem","item":"https://learn.microsoft.com/en-us/"}]}</script><link rel="stylesheet" href="chrome-extension://ihcjicgdanjaechkgeegckofjjedodee/app/content-style.css"></head>
+	
+			<body id="body" data-bi-name="body" class="layout-body clickup-chrome-ext_installed hubspot-disable-focus-styles" lang="en-us" dir="ltr" data-new-gr-c-s-check-loaded="14.1250.0" data-gr-ext-installed="" data-gr-aaa-loaded="true" data-gr-aaa-notch-connection-id="1755944738904-0.7007688692484383">
+				<header class="layout-body-header">
+		<div class="header-holder has-default-focus">
+			
+		<a href="https://learn.microsoft.com/en-us/credentials/applied-skills/?wt.mc_id=appliedskills_marketingspot_webpage_wwl_learnpromo#main" style="z-index: 1070" class="outline-color-text visually-hidden-until-focused position-fixed inner-focus focus-visible top-0 left-0 right-0 padding-xs text-align-center background-color-body">
+			Skip to main content
+		</a>
+	
+
+			<div hidden="" id="cookie-consent-holder" data-test-id="cookie-consent-container" title="Blocked (id): cookie-consent-holder" class="A2O4W8X6IK"></div><div id="banner-holder" class="has-default-focus has-overflow-hidden display-none-visual-diff"><!---->
+		<section data-dismissable="disappearing" class="banner border-bottom padding-inline-none" id="1069505 live-banner" data-bi-name="1069505 live-event">
+			<div class="banner-content uhf-container display-flex align-items-center font-size-sm">
+				<span class="flex-grow-1">
+					<span class="font-weight-semibold"><!---->Microsoft AI Tour<!----></span>:
+					<span class="margin-right-xs"><!---->Take your business to the AI frontier—join our free Microsoft event!<!----></span>
+					
+					<a class="font-weight-semibold" data-bi-name="CTA" id="1069505 live-banner-banner-anchor" href="https://aka.ms/MSLearn_AITour26">
+						<span><!---->Learn more<!----></span>
+						<span class="icon" aria-hidden="true">
+							<span class="docon docon-chevron-right-light"></span>
+						</span>
+					</a>
+			  
+				</span>
+				<button type="button" class="delete delete-lg margin-left-xs" data-dismiss="" data-bi-name="close">
+					<span class="visually-hidden"><!---->Dismiss alert<!----></span>
+				</button>
+			</div>
+		</section>
+	<!----></div>
+			<!-- Unsupported browser warning -->
+			<div id="unsupported-browser" style="background-color: white; color: black; padding: 16px; border-bottom: 1px solid grey;" hidden="">
+				<div style="max-width: 800px; margin: 0 auto;">
+					<p style="font-size: 24px">This browser is no longer supported.</p>
+					<p style="font-size: 16px; margin-top: 16px;">
+						Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+					</p>
+					<div style="margin-top: 12px;">
+						<a href="https://go.microsoft.com/fwlink/p/?LinkID=2092881" style="background-color: #0078d4; border: 1px solid #0078d4; color: white; padding: 6px 12px; border-radius: 2px; display: inline-block;">
+							Download Microsoft Edge
+						</a>
+						<a href="https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge" style="background-color: white; padding: 6px 12px; border: 1px solid #505050; color: #171717; border-radius: 2px; display: inline-block;">
+							More info about Internet Explorer and Microsoft Edge
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- site header -->
+			<header id="ms--site-header" data-test-id="site-header-wrapper" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+				<div id="ms--mobile-nav" class="site-header display-none-tablet padding-inline-none gap-none" data-bi-name="mobile-header" data-test-id="mobile-header"><!---->
+		<div id="ms--site-header-hamburger" data-test-id="site-header-hamburger">
+			<button type="button" class="button button-clear inner-focus" data-test-id="mobile-nav-open-button" data-bi-name="mobile-nav-open-button" title="Global navigation" aria-label="Global navigation">
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-menu"></span>
+				</span>
+			</button>
+		</div>
+
+		<!-- Brand -->
+		
+		<a class="site-header-brand" itemprop="url" href="https://learn.microsoft.com/en-us/" data-bi-name="site-header-brand-learn-mobile" data-test-id="site-header-brand-mobile">
+			<span><!---->Learn<!----></span>
+		</a>
+	
+
+		<!-- MS logo -->
+		
+				<a href="https://www.microsoft.com/" aria-label="Microsoft" itemprop="url" data-bi-name="site-header-microsoft-logo-mobile" data-test-id="site-header-microsoft-logo-mobile" class="site-header-logo site-header-logo-centered">
+					
+		<svg aria-hidden="true" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" itemprop="logo" itemscope="itemscope">
+			<path d="M11.5216 0.5H0V11.9067H11.5216V0.5Z" fill="#f25022"></path>
+			<path d="M24.2418 0.5H12.7202V11.9067H24.2418V0.5Z" fill="#7fba00"></path>
+			<path d="M11.5216 13.0933H0V24.5H11.5216V13.0933Z" fill="#00a4ef"></path>
+			<path d="M24.2418 13.0933H12.7202V24.5H24.2418V13.0933Z" fill="#ffb900"></path>
+		</svg>
+	
+				</a>
+		  
+
+		<!-- Search -->
+		
+		<search-expander data-test-id="site-header-search-mobile" class="display-flex flex-grow-1 justify-content-flex-end">
+			<div hidden="" id="ms--site-header-search-mobile" class="display-flex align-items-center gap-xxs width-full padding-left-xxs">
+				
+		<form class="flex-grow-1" method="GET" role="search" id="ms--site-header-search-form-mobile" data-bi-name="site-header-search-form-mobile" name="site-header-search-form-mobile" aria-label="Search" action="https://learn.microsoft.com/en-us/search/">
+			<div class="autocomplete display-block" data-bi-name="autocomplete"><!---->
+			<div class="field-body control ">
+				<input role="combobox" maxlength="100" aria-autocomplete="list" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" id="site-header-search-autocomplete-input-mobile" data-test-id="site-header-search-autocomplete-input-mobile" class="autocomplete-input input 
+						
+						width-full" type="search" name="terms" aria-expanded="false" aria-owns="ax-1-listbox" aria-controls="ax-1-listbox" aria-activedescendant="" aria-label="Search" aria-describedby="ms--site-header-search-autocomplete-input-mobile-description" placeholder="Search" data-bi-name="site-header-search-autocomplete-input-mobile" pattern=".*">
+
+				
+
+				<span aria-hidden="true" class="autocomplete-loader loader has-text-primary " hidden=""></span>
+
+				<span hidden="" id="ms--site-header-search-autocomplete-input-mobile-description">
+					Suggestions will filter as you type
+				</span>
+			</div>
+
+			<ul role="listbox" id="ax-1-listbox" data-test-id="site-header-search-autocomplete-input-mobile-listbox" class="autocomplete-suggestions is-vertically-scrollable padding-xxs " aria-label="Suggestions" hidden="">
+				
+				
+			</ul>
+		<!----></div>
+			<!-- mobile safari will not dispatch submit event unless there's a submit button that is not display:none -->
+			<button type="submit" class="visually-hidden" tabindex="-1" aria-hidden="true"></button>
+			<input name="category" hidden="" value="Credential">
+			
+			
+		</form>
+	
+				<button data-search-expander-trigger-close="" type="button" class="button button-clear inner-focus" aria-controls="ms--site-header-search-mobile" aria-label="Close search" data-bi-name="site-header-search-close-mobile" data-test-id="site-header-search-close-mobile">
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-navigate-close"></span>
+					</span>
+				</button>
+			</div>
+			<button data-search-expander-trigger-open="" type="button" class="button button-clear inner-focus" aria-controls="ms--site-header-search-mobile" aria-label="Open search" data-bi-name="site-header-search-open-mobile" data-test-id="site-header-search-open-mobile">
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-search"></span>
+				</span>
+			</button>
+		</search-expander>
+	
+
+		<!-- User avatar/Sign in -->
+		<!---->
+		<a href="https://learn.microsoft.com/en-us/credentials/applied-skills/?wt.mc_id=appliedskills_marketingspot_webpage_wwl_learnpromo#" data-bi-name="site-header-sign-in-mobile" data-test-id="site-header-sign-in-mobile" class="link-button font-size-sm flex-shrink-0 docs-sign-in auth-status-determined not-authenticated margin-right-xs margin-left-xxs">
+			Sign in
+		</a>
+	 
+		<details data-bi-name="site-header-user-mobile" class="popover popover-right auth-status-determined authenticated margin-right-xs margin-left-xxs">
+			<summary data-bi-name="site-header-user-avatar" aria-label="Your Account" data-test-id="site-header-user-mobile">
+				<div class="persona persona-sm">
+					<figure class="persona-avatar">
+						<img alt="" data-profile-property="avatarThumbnailUrl" src="data:image/svg+xml, %3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; height=&#39;64&#39; class=&#39;font-weight-bold&#39; style=&#39;font: 600 30.11764705882353px &quot;SegoeUI&quot;, Arial&#39; width=&#39;64&#39;%3E%3Ccircle fill=&#39;hsl(236.8, 14.000000000000002%, 32%)&#39; cx=&#39;32&#39; cy=&#39;32&#39; r=&#39;32&#39; /%3E%3Ctext x=&#39;50%25&#39; y=&#39;55%25&#39; dominant-baseline=&#39;middle&#39; text-anchor=&#39;middle&#39; fill=&#39;%23FFF&#39; %3EEC%3C/text%3E%3C/svg%3E">
+					</figure>
+				</div>
+			</summary>
+			<div class="popover-content width-auto" data-bi-name="site-header-user-menu">
+				<div class="persona persona-sm">
+					<figure class="persona-avatar">
+						<img alt="" data-profile-property="avatarUrl" aria-labelledby="ms--user-display-name-mobile" src="data:image/svg+xml, %3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; height=&#39;64&#39; class=&#39;font-weight-bold&#39; style=&#39;font: 600 30.11764705882353px &quot;SegoeUI&quot;, Arial&#39; width=&#39;64&#39;%3E%3Ccircle fill=&#39;hsl(236.8, 14.000000000000002%, 32%)&#39; cx=&#39;32&#39; cy=&#39;32&#39; r=&#39;32&#39; /%3E%3Ctext x=&#39;50%25&#39; y=&#39;55%25&#39; dominant-baseline=&#39;middle&#39; text-anchor=&#39;middle&#39; fill=&#39;%23FFF&#39; %3EEC%3C/text%3E%3C/svg%3E">
+					</figure>
+					<div class="persona-details" data-test-id="persona-detail-mobile">
+						<p class="persona-name" data-profile-property="displayName" id="ms--user-display-name-mobile">Elidoras Codex</p>
+						<p data-profile-property="upn">gheddz@gmail.com</p>
+					</div>
+				</div>
+				<ul class="padding-block-xs">
+					<li class="padding-bottom-xs">
+						<a data-profile-property="profileUrl" class="font-size-sm" data-bi-name="site-header-user-profile" href="https://learn.microsoft.com/en-us/users/me/activity/">
+							Profile
+						</a>
+					</li>
+					<li>
+						<a data-profile-property="settingsUrl" class="font-size-sm" data-bi-name="site-header-user-settings" href="https://learn.microsoft.com/en-us/users/me/settings/">
+							Settings
+						</a>
+					</li>
+				</ul>
+				<div class="border-top padding-top-xs">
+					<a class="docs-sign-out font-size-sm" href="https://learn.microsoft.com/en-us/credentials/applied-skills/?wt.mc_id=appliedskills_marketingspot_webpage_wwl_learnpromo#" data-bi-name="site-header-sign-out-mobile" data-test-id="site-header-user-sign-out-mobile">
+						Sign out
+					</a>
+				</div>
+			</div>
+		</details>
+	<!---->
+	<!----></div>
+				<div id="ms--primary-nav" class="site-header display-none display-flex-tablet" data-bi-name="L1-header" data-test-id="primary-header"><!---->
+		<!-- MS logo -->
+		
+				<a href="https://www.microsoft.com/" aria-label="Microsoft" itemprop="url" data-bi-name="site-header-microsoft-logo" data-test-id="site-header-microsoft-logo" class="site-header-logo ">
+					
+		<svg aria-hidden="true" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" itemprop="logo" itemscope="itemscope">
+			<path d="M11.5216 0.5H0V11.9067H11.5216V0.5Z" fill="#f25022"></path>
+			<path d="M24.2418 0.5H12.7202V11.9067H24.2418V0.5Z" fill="#7fba00"></path>
+			<path d="M11.5216 13.0933H0V24.5H11.5216V13.0933Z" fill="#00a4ef"></path>
+			<path d="M24.2418 13.0933H12.7202V24.5H24.2418V13.0933Z" fill="#ffb900"></path>
+		</svg>
+	
+				</a>
+		  
+
+		<!-- Divider -->
+		<div class="site-header-divider"></div>
+
+		<!-- Brand -->
+		
+		<a class="site-header-brand" itemprop="url" href="https://learn.microsoft.com/en-us/" data-bi-name="site-header-brand-learn" data-test-id="site-header-brand">
+			<span><!---->Learn<!----></span>
+		</a>
+	
+
+		<div id="ms--search-expander-wrapper" class="display-flex justify-content-space-between flex-grow-1 align-items-center overflow-x-hidden height-full">
+			<!-- Main Nav -->
+			
+		<overflow-menu class="align-self-stretch" style="display: block; overflow: hidden; width: 100%;">
+			<nav class="site-header-nav" data-bi-name="primary-nav" data-overflow-menu-container="" aria-label="Global" style="visibility: visible; overflow: hidden;">
+				<button type="button" data-overflow-menu-prev-button="" data-bi-name="site-header-btn-prev" class="button button-clear button-sm inner-focus" hidden="" aria-label="Previous">
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-chevron-left-light"></span>
+					</span>
+				</button>
+
+				
+		<ul class="display-flex gap-xxs-desktop">
+			<!---->
+			<li aria-setsize="4" aria-posinset="1">
+				<panel-controller data-bi-name="site-header-btn-1-discover">
+					<button type="button" aria-expanded="false" class="site-header-button" data-overflow-menu-item="" aria-controls="ms--panel-1" data-test-id="site-header-panel-controller-1" style="white-space: nowrap;">
+						<span><!---->Discover<!----></span>
+						<span class="icon expanded-indicator" aria-hidden="true">
+							<span class="docon docon-chevron-down-light"></span>
+						</span>
+					</button>
+					<div class="site-header-panel" hidden="" id="ms--panel-1" data-bi-name="panel-1-discover" data-test-id="site-header-panel-1">
+						
+		<div class="site-header-panel-content">
+			<ul class="site-header-panel-cards">
+				<!---->
+				<li>
+					<article class="card position-relative background-color-body-accent-onhover background-color-body-medium box-shadow-none" data-bi-name="panel-card-1-documentation">
+						<div class="card-content">
+							<a class="card-title color-text background-color-transparent stretched-link" href="https://learn.microsoft.com/en-us/docs/">
+								Documentation
+							</a>
+							<p class="card-content-description line-clamp-2"><!---->In-depth articles on Microsoft developer tools and technologies<!----></p>
+						</div>
+					</article>
+				</li>
+			<!---->
+				<li>
+					<article class="card position-relative background-color-body-accent-onhover background-color-body-medium box-shadow-none" data-bi-name="panel-card-2-training">
+						<div class="card-content">
+							<a class="card-title color-text background-color-transparent stretched-link" href="https://learn.microsoft.com/en-us/training/">
+								Training
+							</a>
+							<p class="card-content-description line-clamp-2"><!---->Personalized learning paths and courses<!----></p>
+						</div>
+					</article>
+				</li>
+			<!---->
+				<li>
+					<article class="card position-relative background-color-body-accent-onhover background-color-body-medium box-shadow-none" data-bi-name="panel-card-3-credentials">
+						<div class="card-content">
+							<a class="card-title color-text background-color-transparent stretched-link" href="https://learn.microsoft.com/en-us/credentials/">
+								Credentials
+							</a>
+							<p class="card-content-description line-clamp-2"><!---->Globally recognized, industry-endorsed credentials<!----></p>
+						</div>
+					</article>
+				</li>
+			<!---->
+				<li>
+					<article class="card position-relative background-color-body-accent-onhover background-color-body-medium box-shadow-none" data-bi-name="panel-card-4-qna">
+						<div class="card-content">
+							<a class="card-title color-text background-color-transparent stretched-link" href="https://learn.microsoft.com/en-us/answers/">
+								Q&amp;A
+							</a>
+							<p class="card-content-description line-clamp-2"><!---->Technical questions and answers moderated by Microsoft<!----></p>
+						</div>
+					</article>
+				</li>
+			<!---->
+				<li>
+					<article class="card position-relative background-color-body-accent-onhover background-color-body-medium box-shadow-none" data-bi-name="panel-card-5-code-samples">
+						<div class="card-content">
+							<a class="card-title color-text background-color-transparent stretched-link" href="https://learn.microsoft.com/en-us/samples/">
+								Code Samples
+							</a>
+							<p class="card-content-description line-clamp-2"><!---->Code sample library for Microsoft developer tools and technologies<!----></p>
+						</div>
+					</article>
+				</li>
+			<!---->
+				<li>
+					<article class="card position-relative background-color-body-accent-onhover background-color-body-medium box-shadow-none" data-bi-name="panel-card-6-assessments">
+						<div class="card-content">
+							<a class="card-title color-text background-color-transparent stretched-link" href="https://learn.microsoft.com/en-us/assessments/">
+								Assessments
+							</a>
+							<p class="card-content-description line-clamp-2"><!---->Interactive, curated guidance and recommendations<!----></p>
+						</div>
+					</article>
+				</li>
+			<!---->
+				<li>
+					<article class="card position-relative background-color-body-accent-onhover background-color-body-medium box-shadow-none" data-bi-name="panel-card-7-shows">
+						<div class="card-content">
+							<a class="card-title color-text background-color-transparent stretched-link" href="https://learn.microsoft.com/en-us/shows/">
+								Shows
+							</a>
+							<p class="card-content-description line-clamp-2"><!---->Thousands of hours of original programming from Microsoft experts<!----></p>
+						</div>
+					</article>
+				</li>
+			<!---->
+			</ul>
+			
+		</div>
+		
+			<section class="site-header-panel-featured-content"><!----><!---->
+				<article class="card position-relative background-color-body-accent-onhover background-color-body-medium box-shadow-none" data-bi-name="featured-card-1-microsoft-applied-skills">
+					<div class="card-content">
+						<p class="card-supertitle line-clamp-2 line-height-normal"><!---->Microsoft Applied Skills<!----></p>
+						<a class="card-title color-text background-color-transparent stretched-link" href="https://learn.microsoft.com/en-us/credentials/applied-skills/?wt.mc_id=appliedskills_marketingspot_webpage_wwl_learnpromo">
+							Explore all Applied Skills
+						</a>
+						<p class="card-content-description line-clamp-2"><!---->Showcase real-world skills. Stand out!<!----></p>
+					</div>
+				</article>
+			<!----><!----></section>
+		
+	
+					</div>
+				</panel-controller>
+			</li>
+		<!---->
+			<li aria-setsize="4" aria-posinset="2">
+				<panel-controller data-bi-name="site-header-btn-2-product-documentation">
+					<button type="button" aria-expanded="false" class="site-header-button" data-overflow-menu-item="" aria-controls="ms--panel-2" data-test-id="site-header-panel-controller-2" style="white-space: nowrap;">
+						<span><!---->Product documentation<!----></span>
+						<span class="icon expanded-indicator" aria-hidden="true">
+							<span class="docon docon-chevron-down-light"></span>
+						</span>
+					</button>
+					<div class="site-header-panel" hidden="" id="ms--panel-2" data-bi-name="panel-2-product-documentation" data-test-id="site-header-panel-2">
+						
+		<div class="site-header-panel-content">
+			<ul class="site-header-panel-links">
+				<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/aspnet/" data-bi-name="panel-link-1-asp-dotnet">
+						ASP.NET
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/azure/" data-bi-name="panel-link-2-azure">
+						Azure
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/dynamics365/" data-bi-name="panel-link-3-dynamics365">
+						Dynamics 365
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/microsoft-365/" data-bi-name="panel-link-4-microsoft-365">
+						Microsoft 365
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/copilot/" data-bi-name="panel-link-5-copilot">
+						Microsoft Copilot
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/entra/" data-bi-name="panel-link-6-microsoft-entra">
+						Microsoft Entra
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/exchange/" data-bi-name="panel-link-7-microsoft-exchange">
+						Microsoft Exchange
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/fabric/" data-bi-name="panel-link-8-microsoft-fabric">
+						Microsoft Fabric
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/mem/" data-bi-name="panel-link-9-microsoft-intune">
+						Microsoft Intune
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/dotnet/" data-bi-name="panel-link-10-dotnet">
+						.NET
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/power-apps/" data-bi-name="panel-link-12-power-apps">
+						Power Apps
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/power-bi/" data-bi-name="panel-link-13-power-bi">
+						Power BI
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/power-platform/" data-bi-name="panel-link-14-power-platform">
+						Power Platform
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/purview/" data-bi-name="panel-link-15-microsoft-purview">
+						Microsoft Purview
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/sharepoint/" data-bi-name="panel-link-16-sharepoint">
+						SharePoint
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/sql/" data-bi-name="panel-link-17-sql">
+						SQL
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/microsoftteams/" data-bi-name="panel-link-18-microsoft-teams">
+						Microsoft Teams
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/visualstudio/" data-bi-name="panel-link-19-visual-studio">
+						Visual Studio
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/windows/" data-bi-name="panel-link-20-windows">
+						Windows
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/windows-server/" data-bi-name="panel-link-21-windows-server">
+						Windows Server
+					</a>
+				</li>
+			<!---->
+			</ul>
+			
+			<a class="button button-clear button-sm color-hyperlink justify-content-flex-start border-none background-color-transparent margin-top-sm" href="https://learn.microsoft.com/en-us/docs/" data-bi-name="panel-cta-view-all-products">
+				View all products
+			</a>
+		
+		</div>
+		
+			<section class="site-header-panel-featured-content"><!----><!---->
+				<article class="card position-relative background-color-body-accent-onhover background-color-body-medium box-shadow-none" data-bi-name="featured-card-1-microsoft-applied-skills">
+					<div class="card-content">
+						<p class="card-supertitle line-clamp-2 line-height-normal"><!---->Microsoft Applied Skills<!----></p>
+						<a class="card-title color-text background-color-transparent stretched-link" href="https://learn.microsoft.com/en-us/credentials/applied-skills/?wt.mc_id=appliedskills_marketingspot_webpage_wwl_learnpromo">
+							Explore all Applied Skills
+						</a>
+						<p class="card-content-description line-clamp-2"><!---->Showcase real-world skills. Stand out!<!----></p>
+					</div>
+				</article>
+			<!----><!----></section>
+		
+	
+					</div>
+				</panel-controller>
+			</li>
+		<!---->
+			<li aria-setsize="4" aria-posinset="3">
+				<panel-controller data-bi-name="site-header-btn-3-dev-languages">
+					<button type="button" aria-expanded="false" class="site-header-button" data-overflow-menu-item="" aria-controls="ms--panel-3" data-test-id="site-header-panel-controller-3" style="white-space: nowrap;">
+						<span><!---->Development languages<!----></span>
+						<span class="icon expanded-indicator" aria-hidden="true">
+							<span class="docon docon-chevron-down-light"></span>
+						</span>
+					</button>
+					<div class="site-header-panel" hidden="" id="ms--panel-3" data-bi-name="panel-3-dev-languages" data-test-id="site-header-panel-3">
+						
+		<div class="site-header-panel-content">
+			<ul class="site-header-panel-links">
+				<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/cpp/" data-bi-name="panel-link-1-cpp">
+						C++
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/dotnet/csharp/" data-bi-name="panel-link-2-csharp">
+						C#
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/dax/" data-bi-name="panel-link-3-dax">
+						DAX
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/dotnet/fsharp/" data-bi-name="panel-link-4-fsharp">
+						F#
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/java/" data-bi-name="panel-link-5-java">
+						Java
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/odata/" data-bi-name="panel-link-6-odata">
+						OData
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/openapi/" data-bi-name="panel-link-7-open-api">
+						OpenAPI
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/powerquery-m/" data-bi-name="panel-link-8-power-query-m">
+						Power Query M
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/office/vba/" data-bi-name="panel-link-9-vba">
+						VBA
+					</a>
+				</li>
+			<!---->
+			</ul>
+			
+		</div>
+		
+			<section class="site-header-panel-featured-content"><!----><!---->
+				<article class="card position-relative background-color-body-accent-onhover background-color-body-medium box-shadow-none" data-bi-name="featured-card-1-microsoft-applied-skills">
+					<div class="card-content">
+						<p class="card-supertitle line-clamp-2 line-height-normal"><!---->Microsoft Applied Skills<!----></p>
+						<a class="card-title color-text background-color-transparent stretched-link" href="https://learn.microsoft.com/en-us/credentials/applied-skills/?wt.mc_id=appliedskills_marketingspot_webpage_wwl_learnpromo">
+							Explore all Applied Skills
+						</a>
+						<p class="card-content-description line-clamp-2"><!---->Showcase real-world skills. Stand out!<!----></p>
+					</div>
+				</article>
+			<!----><!----></section>
+		
+	
+					</div>
+				</panel-controller>
+			</li>
+		<!---->
+			<li aria-setsize="4" aria-posinset="4">
+				<panel-controller data-bi-name="site-header-btn-4-topics">
+					<button type="button" aria-expanded="false" class="site-header-button" data-overflow-menu-item="" aria-controls="ms--panel-4" data-test-id="site-header-panel-controller-4" style="white-space: nowrap;">
+						<span><!---->Topics<!----></span>
+						<span class="icon expanded-indicator" aria-hidden="true">
+							<span class="docon docon-chevron-down-light"></span>
+						</span>
+					</button>
+					<div class="site-header-panel" hidden="" id="ms--panel-4" data-bi-name="panel-4-topics" data-test-id="site-header-panel-4">
+						
+		<div class="site-header-panel-content">
+			<ul class="site-header-panel-links">
+				<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/training/organizations/" data-bi-name="panel-link-1-microsoft-learn-for-organizations">
+						Learn for Organizations
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/ai/" data-bi-name="panel-link-2-ai">
+						Artificial intelligence
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/compliance/" data-bi-name="panel-link-3-compliance">
+						Compliance
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/devops/" data-bi-name="panel-link-4-devops">
+						DevOps
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/platform-engineering/" data-bi-name="panel-link-5-platform-engineering">
+						Platform engineering
+					</a>
+				</li>
+			<!---->
+				<li>
+					<a class="button button-clear button-sm button-block text-align-left font-weight-normal justify-content-flex-start inner-focus border-none background-color-body-accent-onhover" href="https://learn.microsoft.com/en-us/security/" data-bi-name="panel-link-6-security">
+						Security
+					</a>
+				</li>
+			<!---->
+			</ul>
+			
+		</div>
+		
+			<section class="site-header-panel-featured-content"><!----><!---->
+				<article class="card position-relative background-color-body-accent-onhover background-color-body-medium box-shadow-none" data-bi-name="featured-card-1-microsoft-applied-skills">
+					<div class="card-content">
+						<p class="card-supertitle line-clamp-2 line-height-normal"><!---->Microsoft Applied Skills<!----></p>
+						<a class="card-title color-text background-color-transparent stretched-link" href="https://learn.microsoft.com/en-us/credentials/applied-skills/?wt.mc_id=appliedskills_marketingspot_webpage_wwl_learnpromo">
+							Explore all Applied Skills
+						</a>
+						<p class="card-content-description line-clamp-2"><!---->Showcase real-world skills. Stand out!<!----></p>
+					</div>
+				</article>
+			<!----><!----></section>
+		
+	
+					</div>
+				</panel-controller>
+			</li>
+		<!---->
+		</ul>
+	
+
+				<button type="button" data-overflow-menu-next-button="" data-bi-name="site-header-btn-next" class="button button-clear button-sm inner-focus margin-left-auto" hidden="" aria-label="Next">
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-chevron-right-light"></span>
+					</span>
+				</button>
+			</nav>
+		</overflow-menu>
+	
+
+			<!-- Search -->
+			
+		<search-expander data-test-id="site-header-search" class="flex-grow-1 margin-left-xxs">
+			<div hidden="" id="ms--site-header-search" class="display-flex align-items-center gap-xxs ">
+				
+		<form class="flex-grow-1" method="GET" role="search" id="ms--site-header-search-form" data-bi-name="site-header-search-form" name="site-header-search-form" aria-label="Search" action="https://learn.microsoft.com/en-us/search/">
+			<div class="autocomplete display-block" data-bi-name="autocomplete"><!---->
+			<div class="field-body control ">
+				<input role="combobox" maxlength="100" aria-autocomplete="list" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" id="site-header-search-autocomplete-input" data-test-id="site-header-search-autocomplete-input" class="autocomplete-input input input-sm
+						
+						width-full" type="search" name="terms" aria-expanded="false" aria-owns="ax-0-listbox" aria-controls="ax-0-listbox" aria-activedescendant="" aria-label="Search" aria-describedby="ms--site-header-search-autocomplete-input-description" placeholder="Search" data-bi-name="site-header-search-autocomplete-input" pattern=".*">
+
+				
+
+				<span aria-hidden="true" class="autocomplete-loader loader has-text-primary " hidden=""></span>
+
+				<span hidden="" id="ms--site-header-search-autocomplete-input-description">
+					Suggestions will filter as you type
+				</span>
+			</div>
+
+			<ul role="listbox" id="ax-0-listbox" data-test-id="site-header-search-autocomplete-input-listbox" class="autocomplete-suggestions is-vertically-scrollable padding-xxs " aria-label="Suggestions" hidden="">
+				
+				
+			</ul>
+		<!----></div>
+			<!-- mobile safari will not dispatch submit event unless there's a submit button that is not display:none -->
+			<button type="submit" class="visually-hidden" tabindex="-1" aria-hidden="true"></button>
+			<input name="category" hidden="" value="Credential">
+			
+			
+		</form>
+	
+				<button data-search-expander-trigger-close="" type="button" class="button button-clear inner-focus" aria-controls="ms--site-header-search" aria-label="Close search" data-bi-name="site-header-search-close" data-test-id="site-header-search-close">
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-navigate-close"></span>
+					</span>
+				</button>
+			</div>
+			<button data-search-expander-trigger-open="" type="button" class="button button-clear inner-focus" aria-controls="ms--site-header-search" aria-label="Open search" data-bi-name="site-header-search-open" data-test-id="site-header-search-open">
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-search"></span>
+				</span>
+			</button>
+		</search-expander>
+	
+		</div>
+
+		<!-- User avatar/Sign in -->
+		<!---->
+		<a href="https://learn.microsoft.com/en-us/credentials/applied-skills/?wt.mc_id=appliedskills_marketingspot_webpage_wwl_learnpromo#" data-bi-name="site-header-sign-in" data-test-id="site-header-sign-in" class="link-button font-size-sm flex-shrink-0 docs-sign-in auth-status-determined not-authenticated ">
+			Sign in
+		</a>
+	 
+		<details data-bi-name="site-header-user" class="popover popover-right auth-status-determined authenticated ">
+			<summary data-bi-name="site-header-user-avatar" aria-label="Your Account" data-test-id="site-header-user">
+				<div class="persona ">
+					<figure class="persona-avatar">
+						<img alt="" data-profile-property="avatarThumbnailUrl" src="data:image/svg+xml, %3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; height=&#39;64&#39; class=&#39;font-weight-bold&#39; style=&#39;font: 600 30.11764705882353px &quot;SegoeUI&quot;, Arial&#39; width=&#39;64&#39;%3E%3Ccircle fill=&#39;hsl(236.8, 14.000000000000002%, 32%)&#39; cx=&#39;32&#39; cy=&#39;32&#39; r=&#39;32&#39; /%3E%3Ctext x=&#39;50%25&#39; y=&#39;55%25&#39; dominant-baseline=&#39;middle&#39; text-anchor=&#39;middle&#39; fill=&#39;%23FFF&#39; %3EEC%3C/text%3E%3C/svg%3E">
+					</figure>
+				</div>
+			</summary>
+			<div class="popover-content width-auto" data-bi-name="site-header-user-menu">
+				<div class="persona ">
+					<figure class="persona-avatar">
+						<img alt="" data-profile-property="avatarUrl" aria-labelledby="ms--user-display-name" src="data:image/svg+xml, %3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; height=&#39;64&#39; class=&#39;font-weight-bold&#39; style=&#39;font: 600 30.11764705882353px &quot;SegoeUI&quot;, Arial&#39; width=&#39;64&#39;%3E%3Ccircle fill=&#39;hsl(236.8, 14.000000000000002%, 32%)&#39; cx=&#39;32&#39; cy=&#39;32&#39; r=&#39;32&#39; /%3E%3Ctext x=&#39;50%25&#39; y=&#39;55%25&#39; dominant-baseline=&#39;middle&#39; text-anchor=&#39;middle&#39; fill=&#39;%23FFF&#39; %3EEC%3C/text%3E%3C/svg%3E">
+					</figure>
+					<div class="persona-details" data-test-id="persona-detail">
+						<p class="persona-name" data-profile-property="displayName" id="ms--user-display-name">Elidoras Codex</p>
+						<p data-profile-property="upn">gheddz@gmail.com</p>
+					</div>
+				</div>
+				<ul class="padding-block-xs">
+					<li class="padding-bottom-xs">
+						<a data-profile-property="profileUrl" class="font-size-sm" data-bi-name="site-header-user-profile" href="https://learn.microsoft.com/en-us/users/me/activity/">
+							Profile
+						</a>
+					</li>
+					<li>
+						<a data-profile-property="settingsUrl" class="font-size-sm" data-bi-name="site-header-user-settings" href="https://learn.microsoft.com/en-us/users/me/settings/">
+							Settings
+						</a>
+					</li>
+				</ul>
+				<div class="border-top padding-top-xs">
+					<a class="docs-sign-out font-size-sm" href="https://learn.microsoft.com/en-us/credentials/applied-skills/?wt.mc_id=appliedskills_marketingspot_webpage_wwl_learnpromo#" data-bi-name="site-header-sign-out" data-test-id="site-header-user-sign-out">
+						Sign out
+					</a>
+				</div>
+			</div>
+		</details>
+	<!---->
+	<!----></div>
+				<div id="ms--secondary-nav" class="display-none display-flex-tablet" data-bi-name="L2-header" data-test-id="secondary-header"><!----><div class="site-header width-full"><!----> 
+		<a class="site-header-brand font-size-h6 padding-inline-none margin-right-xxs" itemprop="url" href="https://learn.microsoft.com/en-us/credentials/" data-bi-name="secondary-nav-link-category-credentials">
+			<span>
+				Credentials
+				
+			</span>
+		</a>
+	 
+		
+		<nav class="site-header-nav width-auto" data-bi-name="secondary-nav" aria-label="Site">
+			<ul class="display-flex">
+				<!---->
+				<li>
+					<a data-test-id="header-link-browse-credentials" class="has-external-link-indicator site-header-button " href="https://learn.microsoft.com/en-us/credentials/browse" data-bi-name="secondary-nav-link-1-browse-credentials">
+						<span><!---->Browse Credentials<!----></span>
+					</a>
+				</li>
+		  <!---->
+				<li>
+					<a data-test-id="header-link-certification-renewals" class="has-external-link-indicator site-header-button " href="https://learn.microsoft.com/en-us/certifications/renew-your-microsoft-certification" data-bi-name="secondary-nav-link-2-certification-renewals">
+						<span><!---->Certification Renewals<!----></span>
+					</a>
+				</li>
+		  <!---->
+				<li>
+					<a data-test-id="header-link-faq-&amp;-help" class="has-external-link-indicator site-header-button " href="https://learn.microsoft.com/en-us/certifications/help/" data-bi-name="secondary-nav-link-3-faq-and-help">
+						<span><!---->FAQ &amp; Help<!----></span>
+					</a>
+				</li>
+		  <!---->
+		<li class="dropdown" hidden="">
+			<button type="button" aria-expanded="false" class="dropdown-trigger site-header-button  site-header-button-icon-chevron" aria-controls="bx-5" data-bi-name="secondary-nav-btn-more" value="undefined">
+				<span><!---->More<!----></span>
+				<span aria-hidden="true" class="icon expanded-indicator ">
+					<span class="docon docon-chevron-down-light"></span>
+				</span>
+			</button>
+			<ul class="dropdown-menu padding-bottom-xxs background-color-body-medium" id="bx-5" aria-label="More" data-bi-name="secondary-nav-menu-more">
+				<!---->
+				<li hidden="">
+					<a class="has-external-link-indicator site-header-button width-full justify-content-flex-start padding-inline-xs padding-block-xxs " href="https://learn.microsoft.com/en-us/credentials/browse" data-bi-name="secondary-nav-link-1-browse-credentials">
+						<span><!---->Browse Credentials<!----></span>
+					</a>
+				</li>
+		  <!---->
+				<li hidden="">
+					<a class="has-external-link-indicator site-header-button width-full justify-content-flex-start padding-inline-xs padding-block-xxs " href="https://learn.microsoft.com/en-us/certifications/renew-your-microsoft-certification" data-bi-name="secondary-nav-link-2-certification-renewals">
+						<span><!---->Certification Renewals<!----></span>
+					</a>
+				</li>
+		  <!---->
+				<li hidden="">
+					<a class="has-external-link-indicator site-header-button width-full justify-content-flex-start padding-inline-xs padding-block-xxs " href="https://learn.microsoft.com/en-us/certifications/help/" data-bi-name="secondary-nav-link-3-faq-and-help">
+						<span><!---->FAQ &amp; Help<!----></span>
+					</a>
+				</li>
+		  <!---->
+			</ul>
+		</li>
+	<!---->
+			</ul>
+		</nav>
+	
+		<span class="nav-bar-spacer"></span>
+		 
+	 <!----></div><!----></div>
+			</header>
+			
+		<!-- banner -->
+		<div data-banner="">
+			<div id="disclaimer-holder"></div>
+			
+		</div>
+		<!-- banner end -->
+	
+		</div>
+	</header>
+				 
+
+				<main id="main" role="main" class="layout-body-main " data-bi-name="content" lang="en-us" dir="ltr">
+					
+			<div data-main-column="" class=" ">
+				 <div id="Marketing" class="has-overflow-hidden">
+<div id="hero-product-section-0" class="hero hero-sm hero-image gradient-border-right gradient-border-body-accent background-color-body-accent  " style="
+			--hero-background-image-light: url(/en-us/credentials/applied-skills/images/mas-hero-light3-1000x400.png?branch=main);
+			--hero-background-image-dark: url(/en-us/credentials/applied-skills/images/mas-hero-dark3-1000x400.png?branch=main);
+		">
+	<div class="hero-content">
+			<p class="supertitle is-spaced font-size-sm letter-spacing-wide is-uppercase">MICROSOFT CREDENTIALS</p>
+
+		<h1 id="microsoft-applied-skills" class="title is-1 is-responsive">Microsoft Applied Skills</h1>
+
+
+			<p>Showcase your real-world skills—and stand out.</p>
+
+	<div class="buttons margin-top-md">
+			<a href="https://learn.microsoft.com/en-us/credentials/browse/?credential_types=applied%20skills" class="button button-clear border" data-linktype="absolute-path">Explore all Applied Skills</a>
+	</div>
+	</div>
+</div>
+<div id="bifold-section-1">
+	<div class="uhf-container padding-block-lg">
+		<div class="columns is-gapless-mobile has-large-gaps  ">
+				<div class="column is-half display-flex">
+					<div class="is-full-width display-flex flex-direction-column flex-grow-1 justify-content-center  padding-block-xs">
+<figure class="image  ">
+	<img src="./Microsoft Applied Skills _ Microsoft Learn_files/mas-blade-760x420.png" alt="Some cartoons holding a selfie stick." data-linktype="relative-path">
+</figure>
+					</div>
+				</div>
+				<div class="column is-half display-flex">
+					<div class="is-full-width display-flex flex-direction-column flex-grow-1 justify-content-center  padding-block-xs">
+		<h2 id="prove-your-job-ready-skills" class="title is-2 is-responsive">Prove your job-ready skills</h2>
+
+							<p class="font-size-lg"></p>
+
+	<div class="content">
+				<ul>
+						<li class="margin-bottom-xxs">Demonstrate your abilities by completing practical tasks in an interactive experience</li>
+						<li class="margin-bottom-xxs">Fast and flexible—online, on your schedule</li>
+						<li class="margin-bottom-xxs">Shareable digital micro credentials for social platforms</li>
+				</ul>
+	</div>
+
+							<div class="margin-top-xs">
+							</div>
+					</div>
+				</div>
+		</div>
+	</div>
+</div>
+<div id="cards-section-2" class="padding-block-lg">
+	<div class="uhf-container">
+		<h2 id="how-it-works" class="title is-2 is-responsive">How it works</h2>
+		<ul class="grid ">
+				<li class="grid-item">
+	<article class="media-card border-radius-lg  " data-bi-name="card">
+		<div class="media-card-content">
+					<p class="title is-5 margin-block-none">Prepare</p>
+			<div class="display-flex flex-direction-column justify-content-space-between flex-grow-1">
+					<p class="margin-bottom-xs flex-grow-1">
+						Learn at your pace with self-paced learning or instructor-led training taught by Microsoft certified trainers.
+					</p>
+			</div>
+		</div>
+	</article>
+				</li>
+				<li class="grid-item">
+	<article class="media-card border-radius-lg  " data-bi-name="card">
+		<div class="media-card-content">
+					<p class="title is-5 margin-block-none">Earn</p>
+			<div class="display-flex flex-direction-column justify-content-space-between flex-grow-1">
+					<p class="margin-bottom-xs flex-grow-1">
+						Complete and pass the assessment to earn your Microsoft-verified credential.
+					</p>
+			</div>
+		</div>
+	</article>
+				</li>
+				<li class="grid-item">
+	<article class="media-card border-radius-lg  " data-bi-name="card">
+		<div class="media-card-content">
+					<p class="title is-5 margin-block-none">Share</p>
+			<div class="display-flex flex-direction-column justify-content-space-between flex-grow-1">
+					<p class="margin-bottom-xs flex-grow-1">
+						Celebrate your new skills by sharing your credential on LinkedIn and other social platforms.
+					</p>
+			</div>
+		</div>
+	</article>
+				</li>
+		</ul>
+	</div>
+</div>
+<div id="grid-section-3" class="padding-block-md">
+	<div class="uhf-container">
+		<h2 id="explore-applied-skills-by-role" class="title is-2 is-responsive">Explore Applied Skills by role</h2>
+			<p class="margin-bottom-xs">Find credentials that match your role—or the one you want next.</p>
+		<ul class="grid is-fibonacci">
+				<li class="grid-item">
+<article class="card position-relative" data-bi-name="icon-card">
+    <div class="card-content display-flex">
+        <div class="media align-items-stretch">
+				<div class="media-left">
+<figure class="image is-64x64 ">
+	<img src="./Microsoft Applied Skills _ Microsoft Learn_files/ai-icon.png" alt="" aria-hidden="true" data-linktype="relative-path">
+</figure>
+				</div>
+            <div class="media-content">
+				<a href="https://archcenter.blob.core.windows.net/cdn/Credentials/Credential-Journey-AI-Engineer.pdf#zoom=45%" class="has-external-link-indicator card-title stretched-link" data-linktype="external">AI Engineer</a>
+            </div>
+        </div>
+    </div>
+</article>
+				</li>
+				<li class="grid-item">
+<article class="card position-relative" data-bi-name="icon-card">
+    <div class="card-content display-flex">
+        <div class="media align-items-stretch">
+				<div class="media-left">
+<figure class="image is-64x64 ">
+	<img src="./Microsoft Applied Skills _ Microsoft Learn_files/cloud-icon.png" alt="" aria-hidden="true" data-linktype="relative-path">
+</figure>
+				</div>
+            <div class="media-content">
+				<a href="https://archcenter.blob.core.windows.net/cdn/Credentials/Credential-Journey-Azure-Administrator.pdf#zoom=45%" class="has-external-link-indicator card-title stretched-link" data-linktype="external">Azure Administrator</a>
+            </div>
+        </div>
+    </div>
+</article>
+				</li>
+				<li class="grid-item">
+<article class="card position-relative" data-bi-name="icon-card">
+    <div class="card-content display-flex">
+        <div class="media align-items-stretch">
+				<div class="media-left">
+<figure class="image is-64x64 ">
+	<img src="./Microsoft Applied Skills _ Microsoft Learn_files/lightbulb-icon.png" alt="" aria-hidden="true" data-linktype="relative-path">
+</figure>
+				</div>
+            <div class="media-content">
+				<a href="https://archcenter.blob.core.windows.net/cdn/Credentials/Credential-Journey-Azure-Developer.pdf#zoom=45%" class="has-external-link-indicator card-title stretched-link" data-linktype="external">Azure Developer</a>
+            </div>
+        </div>
+    </div>
+</article>
+				</li>
+				<li class="grid-item">
+<article class="card position-relative" data-bi-name="icon-card">
+    <div class="card-content display-flex">
+        <div class="media align-items-stretch">
+				<div class="media-left">
+<figure class="image is-64x64 ">
+	<img src="./Microsoft Applied Skills _ Microsoft Learn_files/shield-icon.png" alt="" aria-hidden="true" data-linktype="relative-path">
+</figure>
+				</div>
+            <div class="media-content">
+				<a href="https://archcenter.blob.core.windows.net/cdn/Credentials/Credential-Journey-Security-Engineer.pdf#zoom=45%" class="has-external-link-indicator card-title stretched-link" data-linktype="external">Security Engineer</a>
+            </div>
+        </div>
+    </div>
+</article>
+				</li>
+				<li class="grid-item">
+<article class="card position-relative" data-bi-name="icon-card">
+    <div class="card-content display-flex">
+        <div class="media align-items-stretch">
+				<div class="media-left">
+<figure class="image is-64x64 ">
+	<img src="./Microsoft Applied Skills _ Microsoft Learn_files/lightbulb-icon.png" alt="" aria-hidden="true" data-linktype="relative-path">
+</figure>
+				</div>
+            <div class="media-content">
+				<a href="https://archcenter.blob.core.windows.net/cdn/Credentials/Credential-Journey-DevOps-Engineer.pdf#zoom=45%" class="has-external-link-indicator card-title stretched-link" data-linktype="external">DevOps Engineer</a>
+            </div>
+        </div>
+    </div>
+</article>
+				</li>
+				<li class="grid-item">
+<article class="card position-relative" data-bi-name="icon-card">
+    <div class="card-content display-flex">
+        <div class="media align-items-stretch">
+				<div class="media-left">
+<figure class="image is-64x64 ">
+	<img src="./Microsoft Applied Skills _ Microsoft Learn_files/data-icon.png" alt="" aria-hidden="true" data-linktype="relative-path">
+</figure>
+				</div>
+            <div class="media-content">
+				<a href="https://archcenter.blob.core.windows.net/cdn/Credentials/Credential-Journey-Data-Engineer-Data-Analyst.pdf#zoom=45%" class="has-external-link-indicator card-title stretched-link" data-linktype="external">Data Analyst and Data Engineer</a>
+            </div>
+        </div>
+    </div>
+</article>
+				</li>
+				<li class="grid-item">
+<article class="card position-relative" data-bi-name="icon-card">
+    <div class="card-content display-flex">
+        <div class="media align-items-stretch">
+				<div class="media-left">
+<figure class="image is-64x64 ">
+	<img src="./Microsoft Applied Skills _ Microsoft Learn_files/data-icon.png" alt="" aria-hidden="true" data-linktype="relative-path">
+</figure>
+				</div>
+            <div class="media-content">
+				<a href="https://archcenter.blob.core.windows.net/cdn/Credentials/Credential-Journey-Database-Administrator.pdf#zoom=45%" class="has-external-link-indicator card-title stretched-link" data-linktype="external">Database Administrator</a>
+            </div>
+        </div>
+    </div>
+</article>
+				</li>
+				<li class="grid-item">
+<article class="card position-relative" data-bi-name="icon-card">
+    <div class="card-content display-flex">
+        <div class="media align-items-stretch">
+				<div class="media-left">
+<figure class="image is-64x64 ">
+	<img src="./Microsoft Applied Skills _ Microsoft Learn_files/shield-icon.png" alt="" aria-hidden="true" data-linktype="relative-path">
+</figure>
+				</div>
+            <div class="media-content">
+				<a href="https://archcenter.blob.core.windows.net/cdn/Credentials/Credential-Journey-Security-Operations-Analyst.pdf#zoom=45%" class="has-external-link-indicator card-title stretched-link" data-linktype="external">Security Operations Analyst</a>
+            </div>
+        </div>
+    </div>
+</article>
+				</li>
+				<li class="grid-item">
+<article class="card position-relative" data-bi-name="icon-card">
+    <div class="card-content display-flex">
+        <div class="media align-items-stretch">
+				<div class="media-left">
+<figure class="image is-64x64 ">
+	<img src="./Microsoft Applied Skills _ Microsoft Learn_files/cloud-icon.png" alt="" aria-hidden="true" data-linktype="relative-path">
+</figure>
+				</div>
+            <div class="media-content">
+				<a href="https://archcenter.blob.core.windows.net/cdn/Credentials/Credential-Journey-Azure-Network-Engineer.pdf#zoom=45%" class="has-external-link-indicator card-title stretched-link" data-linktype="external">Azure Network Engineer</a>
+            </div>
+        </div>
+    </div>
+</article>
+				</li>
+				<li class="grid-item">
+<article class="card position-relative" data-bi-name="icon-card">
+    <div class="card-content display-flex">
+        <div class="media align-items-stretch">
+				<div class="media-left">
+<figure class="image is-64x64 ">
+	<img src="./Microsoft Applied Skills _ Microsoft Learn_files/cloud-icon.png" alt="" aria-hidden="true" data-linktype="relative-path">
+</figure>
+				</div>
+            <div class="media-content">
+				<a href="https://archcenter.blob.core.windows.net/cdn/Credentials/Credential-Journey-Windows-Server-Hybrid-Administrator.pdf#zoom=45%" class="has-external-link-indicator card-title stretched-link" data-linktype="external">Windows Server Hybrid Administrator</a>
+            </div>
+        </div>
+    </div>
+</article>
+				</li>
+				<li class="grid-item">
+<article class="card position-relative" data-bi-name="icon-card">
+    <div class="card-content display-flex">
+        <div class="media align-items-stretch">
+				<div class="media-left">
+<figure class="image is-64x64 ">
+	<img src="./Microsoft Applied Skills _ Microsoft Learn_files/briefcase-icon.png" alt="" aria-hidden="true" data-linktype="relative-path">
+</figure>
+				</div>
+            <div class="media-content">
+				<a href="https://archcenter.blob.core.windows.net/cdn/Credentials/Credential-Journey-Power-Platform-Functional-Consultant.pdf#zoom=45%" class="has-external-link-indicator card-title stretched-link" data-linktype="external">Power Platform Functional Consultant</a>
+            </div>
+        </div>
+    </div>
+</article>
+				</li>
+		</ul>
+	</div>
+</div>
+<div id="hero-section-4" class="hero is-small has-linear-gradient-background-docs has-text-docs-invert uhf-container padding-inline-none margin-block-md border-radius-lg has-overflow-hidden">
+		<div class="hero-background ">
+				<img src="./Microsoft Applied Skills _ Microsoft Learn_files/mas-whatsnew-banner.png" aria-hidden="true" data-linktype="relative-path">
+		</div>
+	<div class="hero-body padding-inline-md padding-inline-lg-tablet">
+			
+				<div class="is-reading-width has-backdrop-filter-blur">
+
+		<h2 id="new-beginner-level-applied-skills" class="title is-2 is-responsive">New! Beginner-level Applied Skills</h2>
+
+
+						<p class="font-size-md margin-top-lg is-reading-width">Starting your career or changing paths? Explore beginner-level Applied Skills to apply and validate foundational skills in cloud and emerging technologies—so you’re ready for what’s next.</p>
+
+	<div class="buttons margin-top-md">
+			<a href="https://learn.microsoft.com/en-us/credentials/browse/?credential_types=applied%20skills&amp;levels=beginner" class="button button-clear border" data-linktype="absolute-path">Learn more</a>
+	</div>
+				</div>
+			
+	</div>
+</div>
+<div id="cards-section-5" class="padding-block-lg">
+	<div class="uhf-container">
+		<h2 id="who-should-earn-an-applied-skills-credential" class="title is-2 is-responsive">Who should earn an Applied Skills credential?</h2>
+		<ul class="grid ">
+				<li class="grid-item">
+	<article class="media-card border-radius-lg  " data-bi-name="card">
+					<figure class="media-card-image">
+						<img src="./Microsoft Applied Skills _ Microsoft Learn_files/itpro-dev-image.png" alt="" data-linktype="relative-path">
+					</figure>
+		<div class="media-card-content">
+					<p class="title is-5 margin-block-none">IT professionals and developers</p>
+			<div class="display-flex flex-direction-column justify-content-space-between flex-grow-1">
+					<p class="margin-bottom-xs flex-grow-1">
+						Stay ahead in your field. Solve real cloud and AI challenges in a lab environment and prove you’re ready for the projects that matter. These credentials show employers you can hit the ground running on critical tasks.
+					</p>
+			</div>
+		</div>
+	</article>
+				</li>
+				<li class="grid-item">
+	<article class="media-card border-radius-lg  " data-bi-name="card">
+					<figure class="media-card-image">
+						<img src="./Microsoft Applied Skills _ Microsoft Learn_files/students-educators-image.png" alt="" data-linktype="relative-path">
+					</figure>
+		<div class="media-card-content">
+					<p class="title is-5 margin-block-none">Students and educators</p>
+			<div class="display-flex flex-direction-column justify-content-space-between flex-grow-1">
+					<p class="margin-bottom-xs flex-grow-1">
+						Bridge the gap between learning and doing. Students can apply what they’ve learned in class to real-world scenarios and prove they’re ready for internships or jobs in tech. Educators can use these credentials to better prepare students for real-world projects.
+					</p>
+			</div>
+		</div>
+	</article>
+				</li>
+				<li class="grid-item">
+	<article class="media-card border-radius-lg  " data-bi-name="card">
+					<figure class="media-card-image">
+						<img src="./Microsoft Applied Skills _ Microsoft Learn_files/careerchangers-builders-image.png" alt="" data-linktype="relative-path">
+					</figure>
+		<div class="media-card-content">
+					<p class="title is-5 margin-block-none">Career changers and career builders</p>
+			<div class="display-flex flex-direction-column justify-content-space-between flex-grow-1">
+					<p class="margin-bottom-xs flex-grow-1">
+						Launch or grow your career in IT with confidence. These credentials help you gain practical, job-relevant skills for your new path. Show what you can do—and step into your next role ready to succeed.
+					</p>
+			</div>
+		</div>
+	</article>
+				</li>
+		</ul>
+	</div>
+</div>
+<section id="testimonials-section" class="uhf-container" data-bi-name="testimonials-section">
+	<div class="margin-block-xl">
+		<div class="hero">
+			<div class="padding-inline-md-widescreen padding-block-lg has-z-index-one">
+				<h2 class="title is-2 text-align-center-tablet">Hear from learners</h2>
+				<ul class="grid margin-top-lg">
+						<li class="grid-item">
+							<article data-bi-name="testimonial-card" class="card">
+								<div class="card-content font-size-lg display-flex flex-direction-column">
+									<div class="media">
+										<div class="media-left">
+											<div class="image image-64x64">
+												<img class="border-radius-rounded" alt="Guellord Nzaou" src="./Microsoft Applied Skills _ Microsoft Learn_files/g-nzaou.png" data-linktype="relative-path">
+											</div>
+										</div>
+										<div class="media-content">
+											<p class="font-size-xl font-weight-semibold margin-bottom-xxs">Guellord Nzaou</p>
+											<p>IT Infrastructure and Cloud</p>
+										</div>
+									</div>
+									<p class="color-text-subtle margin-block-xs">"With the tech world changing so fast, it's important to get the knowledge required to stand out, which I did by earning Microsoft Applied Skills. I have earned 22 Applied Skills credentials so far."</p>
+										<a href="https://www.linkedin.com/posts/microsoftlearn_if-there-were-a-world-record-for-microsoft-activity-7285732592606224386-6vhk?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAADlWlQBL7dRiuUgc0IHOJGvu_5_e6-vlc0" class="has-external-link-indicator display-block margin-top-auto font-size-md" data-linktype="external">Learn more</a>
+								</div>
+							</article>
+						</li>
+						<li class="grid-item">
+							<article data-bi-name="testimonial-card" class="card">
+								<div class="card-content font-size-lg display-flex flex-direction-column">
+									<div class="media">
+										<div class="media-left">
+											<div class="image image-64x64">
+												<img class="border-radius-rounded" alt="Lucas Moraes" src="./Microsoft Applied Skills _ Microsoft Learn_files/l-moraes.png" data-linktype="relative-path">
+											</div>
+										</div>
+										<div class="media-content">
+											<p class="font-size-xl font-weight-semibold margin-bottom-xxs">Lucas Moraes</p>
+											<p>Senior Full-Stack Developer</p>
+										</div>
+									</div>
+									<p class="color-text-subtle margin-block-xs">"It's definitely a great experience that Microsoft Applied Skills gives you. Complete as many Microsoft Learn modules as you can beforehand. They really help you to prepare for the assessment, on top of showing how to make a bigger impact with this technology!"</p>
+										<a href="https://www.linkedin.com/posts/microsoftlearn_with-microsoft-applied-skills-you-can-build-activity-7324130941449228288-9bT7?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAANYl1ABMG1nhoxuEu6Nse69N3cTQU5DJTI" class="has-external-link-indicator display-block margin-top-auto font-size-md" data-linktype="external">Learn more</a>
+								</div>
+							</article>
+						</li>
+						<li class="grid-item">
+							<article data-bi-name="testimonial-card" class="card">
+								<div class="card-content font-size-lg display-flex flex-direction-column">
+									<div class="media">
+										<div class="media-left">
+											<div class="image image-64x64">
+												<img class="border-radius-rounded" alt="Purav Desai" src="./Microsoft Applied Skills _ Microsoft Learn_files/p-desai.png" data-linktype="relative-path">
+											</div>
+										</div>
+										<div class="media-content">
+											<p class="font-size-xl font-weight-semibold margin-bottom-xxs">Purav Desai</p>
+											<p>Microsoft 365 Incident Reporter</p>
+										</div>
+									</div>
+									<p class="color-text-subtle margin-block-xs">"Microsoft Applied Skills is such a great way to get experience with tooling and to build your skill set. I would encourage everyone to give it a try... You can always retake it as many times as you need. Applied Skills is a great learning opportunity, and I recommend everyone should take advantage of it."</p>
+										<a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7323345664367624192/" class="has-external-link-indicator display-block margin-top-auto font-size-md" data-linktype="external">Learn more</a>
+								</div>
+							</article>
+						</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+<div id="cards-section-7" class="padding-block-lg">
+	<div class="uhf-container">
+		<h2 id="resources-and-support" class="title is-2 is-responsive">Resources and support</h2>
+		<ul class="grid is-fibonacci">
+				<li class="grid-item">
+	<article class="media-card border-radius-lg position-relative " data-bi-name="card">
+					<figure class="media-card-image">
+						<img src="./Microsoft Applied Skills _ Microsoft Learn_files/support.png" alt="" data-linktype="relative-path">
+					</figure>
+		<div class="media-card-content">
+					<a href="https://www.aka.ms/mcpforum" class="has-external-link-indicator title is-5 margin-block-none stretched-link" data-linktype="external">Support</a>
+			<div class="display-flex flex-direction-column justify-content-space-between flex-grow-1">
+					<p class="margin-bottom-xs flex-grow-1">
+						Need help with Applied Skills? Find guidance and answers to your questions.
+					</p>
+			</div>
+		</div>
+	</article>
+				</li>
+				<li class="grid-item">
+	<article class="media-card border-radius-lg position-relative " data-bi-name="card">
+					<figure class="media-card-image">
+						<img src="./Microsoft Applied Skills _ Microsoft Learn_files/faq.png" alt="" data-linktype="relative-path">
+					</figure>
+		<div class="media-card-content">
+					<a href="https://learn.microsoft.com/en-us/credentials/support/applied-skills-faq" class="has-external-link-indicator title is-5 margin-block-none stretched-link" data-linktype="absolute-path">FAQ</a>
+			<div class="display-flex flex-direction-column justify-content-space-between flex-grow-1">
+					<p class="margin-bottom-xs flex-grow-1">
+						Quick answers to common questions about Applied Skills.
+					</p>
+			</div>
+		</div>
+	</article>
+				</li>
+				<li class="grid-item">
+	<article class="media-card border-radius-lg position-relative " data-bi-name="card">
+					<figure class="media-card-image">
+						<img src="./Microsoft Applied Skills _ Microsoft Learn_files/credentials-poster.png" alt="" data-linktype="relative-path">
+					</figure>
+		<div class="media-card-content">
+					<a href="https://go.microsoft.com/fwlink/?linkid=2321752" class="has-external-link-indicator title is-5 margin-block-none stretched-link" data-linktype="external">Digital guide</a>
+			<div class="display-flex flex-direction-column justify-content-space-between flex-grow-1">
+					<p class="margin-bottom-xs flex-grow-1">
+						Download a one-page overview of all Microsoft Credentials.
+					</p>
+			</div>
+		</div>
+	</article>
+				</li>
+				<li class="grid-item">
+	<article class="media-card border-radius-lg position-relative " data-bi-name="card">
+					<figure class="media-card-image">
+						<img src="./Microsoft Applied Skills _ Microsoft Learn_files/submit-story.png" alt="" data-linktype="relative-path">
+					</figure>
+		<div class="media-card-content">
+					<a href="https://forms.office.com/r/ZWm5S3BVM1" class="has-external-link-indicator title is-5 margin-block-none stretched-link" data-linktype="external">Submit your story</a>
+			<div class="display-flex flex-direction-column justify-content-space-between flex-grow-1">
+					<p class="margin-bottom-xs flex-grow-1">
+						Share how Applied Skills helped you and inspire others.
+					</p>
+			</div>
+		</div>
+	</article>
+				</li>
+		</ul>
+	</div>
+</div>
+<div id="social-section-8" class="border-high-contrast padding-block-sm">
+	<div class="uhf-container">
+		<div class="level">
+			<div class="level-left flex-shrink-1">
+				<div class="level-item flex-shrink-1">
+					<div class="padding-right-lg-tablet">
+		<h2 id="follow-us" class="title is-2 is-responsive">Follow us</h2>
+					</div>
+				</div>
+			</div>
+				<div class="level-right flex-shrink-1">
+					<div class="level-item flex-shrink-1">
+						<div class="buttons">
+								<a class="button button-lg" href="https://aka.ms/MicrosoftLearnX" title="Twitter" data-linktype="external">
+									<span class="docon docon-xlogo-share"></span>
+									<span class="visually-hidden">Twitter</span>
+								</a>
+								<a class="button button-lg" href="https://aka.ms/MicrosoftLearnInstagram" title="Instagram" data-linktype="external">
+									<span class="docon docon-brand-instagram"></span>
+									<span class="visually-hidden">Instagram</span>
+								</a>
+								<a class="button button-lg" href="https://aka.ms/MicrosoftLearnLinkedIn" title="LinkedIn" data-linktype="external">
+									<span class="docon docon-brand-linkedin"></span>
+									<span class="visually-hidden">LinkedIn</span>
+								</a>
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+</div>
+</div>
+
+			</div>
+		
+				</main>
+				  <div class="layout-body-footer " data-bi-name="layout-footer">
+		<footer id="footer" data-test-id="footer" data-bi-name="footer" class="footer-layout has-padding has-default-focus border-top  uhf-container" role="contentinfo">
+			<div class="display-flex gap-xs flex-wrap-wrap is-full-height padding-right-lg-desktop">
+				
+		<a data-mscc-ic="false" href="https://learn.microsoft.com/en-us/locale?target=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fcredentials%2Fapplied-skills%2F%3Fwt.mc_id%3Dappliedskills_marketingspot_webpage_wwl_learnpromo" data-bi-name="select-locale" class="locale-selector-link flex-shrink-0 button button-sm button-clear external-link-indicator" id="" title="" aria-label="Content language selector. Currently set to English (United States)."><span class="icon" aria-hidden="true"><span class="docon docon-world"></span></span><span class="local-selector-link-text">English (United States)</span></a>
+	
+				<div class="ccpa-privacy-link" data-ccpa-privacy-link="">
+		
+		<a data-mscc-ic="false" href="https://aka.ms/yourcaliforniaprivacychoices" data-bi-name="your-privacy-choices" class="button button-sm button-clear flex-shrink-0 external-link-indicator" id="" title="">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 14" xml:space="preserve" height="16" width="43" aria-hidden="true" focusable="false">
+			<path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"></path>
+			<path d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"></path>
+			<path d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z" style="fill:#fff"></path>
+			<path d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z" style="fill:#06f"></path>
+		</svg>
+	
+			<span>Your Privacy Choices</span></a>
+	
+	</div>
+				<div class="flex-shrink-0">
+		<div class="dropdown has-caret-up">
+			<button data-test-id="theme-selector-button" class="dropdown-trigger button button-clear button-sm has-inner-focus theme-dropdown-trigger" aria-controls="{{ themeMenuId }}" aria-expanded="false" title="Theme" data-bi-name="theme">
+				<span class="icon">
+					<span class="docon docon-sun" aria-hidden="true"></span>
+				</span>
+				<span>Theme</span>
+				<span class="icon expanded-indicator" aria-hidden="true">
+					<span class="docon docon-chevron-down-light"></span>
+				</span>
+			</button>
+			<div class="dropdown-menu" id="{{ themeMenuId }}" role="menu">
+				<ul class="theme-selector padding-xxs" data-test-id="theme-dropdown-menu">
+					<li class="theme display-block">
+						<button class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left" data-theme-to="light" aria-pressed="false">
+							<span class="theme-light margin-right-xxs">
+								<span class="theme-selector-icon border display-inline-block has-body-background" aria-hidden="true">
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background"></rect>
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+									</svg>
+								</span>
+							</span>
+							<span role="menuitem"> Light </span>
+						</button>
+					</li>
+					<li class="theme display-block">
+						<button class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left is-selected" data-theme-to="dark" aria-pressed="true">
+							<span class="theme-dark margin-right-xxs">
+								<span class="border theme-selector-icon display-inline-block has-body-background" aria-hidden="true">
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background"></rect>
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+									</svg>
+								</span>
+							</span>
+							<span role="menuitem"> Dark </span>
+						</button>
+					</li>
+					<li class="theme display-block">
+						<button class="button button-clear button-sm theme-control button-block justify-content-flex-start text-align-left" data-theme-to="high-contrast" aria-pressed="false">
+							<span class="theme-high-contrast margin-right-xxs">
+								<span class="border theme-selector-icon display-inline-block has-body-background" aria-hidden="true">
+									<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+										<rect width="22" height="14" class="has-fill-body-background"></rect>
+										<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+										<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+										<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+										<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+										<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+										<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+										<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+									</svg>
+								</span>
+							</span>
+							<span role="menuitem"> High contrast </span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+			</div>
+			<ul class="links" data-bi-name="footerlinks">
+				<li class="manage-cookies-holder" hidden=""></li>
+				<li>
+		
+		<a data-mscc-ic="false" href="https://learn.microsoft.com/en-us/principles-for-ai-generated-content" data-bi-name="aiDisclaimer" class=" external-link-indicator" id="" title="">AI Disclaimer</a>
+	
+	</li><li>
+		
+		<a data-mscc-ic="false" href="https://learn.microsoft.com/en-us/previous-versions/" data-bi-name="archivelink" class=" external-link-indicator" id="" title="">Previous Versions</a>
+	
+	</li> <li>
+		
+		<a data-mscc-ic="false" href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog" data-bi-name="bloglink" class=" external-link-indicator" id="" title="">Blog</a>
+	
+	</li> <li>
+		
+		<a data-mscc-ic="false" href="https://learn.microsoft.com/en-us/contribute" data-bi-name="contributorGuide" class=" external-link-indicator" id="" title="">Contribute</a>
+	
+	</li><li>
+		
+		<a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy" class=" external-link-indicator" id="" title="">Privacy</a>
+	
+	</li><li>
+		
+		<a data-mscc-ic="false" href="https://learn.microsoft.com/en-us/legal/termsofuse" data-bi-name="termsofuse" class=" external-link-indicator" id="" title="">Terms of Use</a>
+	
+	</li><li>
+		
+		<a data-mscc-ic="false" href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/" data-bi-name="trademarks" class=" external-link-indicator" id="" title="">Trademarks</a>
+	
+	</li>
+				<li>© Microsoft 2025</li>
+			</ul>
+		</footer>
+	
+			
+		</div><div role="alert" aria-live="assertive" aria-relevant="additions" aria-atomic="true" class="visually-hidden" id="assertive-live-region"></div><div role="status" aria-live="polite" aria-relevant="additions" aria-atomic="true" class="visually-hidden" id="polite-live-region"></div></body><hubspot-everywhere-sidebar-toggle id="hs-everywhere-sidebar-toggle" style="border: none;"><div><template shadowrootmode="open"><div><div class="hubspot"><link rel="stylesheet" href="https://static.hsappstatic.net/everywhere-content/ex/everywhere-content.css"><div class="SidePanelToggleButton__StyledToggleContainer-sc-4e2cf3-0 hSiaQc" style="top: 375px;"><div draggable="false" data-test-id="side-panel-sprocket-icon" style="transition: 0.2s; background-color: rgb(255, 255, 255); height: 40px; width: 56px; border-radius: 999999px 0px 0px 999999px; display: flex; align-items: center; justify-content: space-between; margin-right: -14px; border: 1px solid rgb(203, 214, 226); border-inline-end: none;"><div style="flex: 1 1 auto; display: flex; flex-direction: row; align-items: center; justify-content: center; height: 100%;"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" focusable="false" data-icon-name="Sprocket" class="StyledIcon-sc-1foba59-0 kqeIgh"><path d="M23.2 11.21V7.88c.88-.42 1.48-1.29 1.48-2.31V5.5c0-1.41-1.15-2.56-2.56-2.56h-.07c-1.41 0-2.56 1.15-2.56 2.56v.07c0 1.02.6 1.9 1.46 2.31h.02v3.34c-1.33.2-2.5.74-3.47 1.53h.01L8.37 5.63c.06-.22.1-.47.11-.73 0-1.6-1.29-2.89-2.89-2.89S2.7 3.3 2.7 4.9a2.89 2.89 0 0 0 2.88 2.89c.53 0 1.02-.15 1.44-.4h-.01l8.99 7c-.76 1.13-1.21 2.53-1.21 4.03s.5 3.03 1.35 4.22l-.02-.02-2.78 2.73c-.18-.05-.38-.08-.59-.08-1.31 0-2.37 1.06-2.37 2.37s1.06 2.37 2.37 2.37 2.37-1.06 2.37-2.37v-.03c0-.24-.05-.47-.12-.69v.02l2.67-2.66c1.2.9 2.72 1.45 4.36 1.45 4.03 0 7.3-3.27 7.3-7.3a7.29 7.29 0 0 0-6.06-7.19h-.04Zm-1.12 10.95c-2.07 0-3.75-1.68-3.75-3.75s1.68-3.75 3.75-3.75 3.75 1.68 3.75 3.75c0 2.08-1.68 3.75-3.74 3.75Z"></path></svg></div><div class="fETFib" style="width: 14px; height: 40px; display: block;"></div></div><div style="transition: 0.2s; background: transparent; overflow: hidden; height: 0px; display: flex; align-items: center; justify-content: space-between; position: absolute; bottom: 48px; right: 0px; flex-direction: column-reverse;"><div style="background-color: rgb(255, 255, 255); height: 75px; width: 38px; border-radius: 18px; padding: 0px; flex-direction: column; border: 1px solid rgb(203, 214, 226);"><button tabindex="0" id="hs-side-panel-copilot-icon" data-test-id="side-panel-copilot-icon" aria-disabled="false" data-fnd-button="t" data-button-use="transparent" type="button" class="PrivateButton__StyledButton-sc-5mtsqy-0 gTvmeY"><span class="PrivateButton__StyledButtonTextContainer-sc-5mtsqy-2 jErAJC"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" focusable="false" data-icon-name="BreezeSingleStar" class="StyledIcon-sc-1foba59-0 imdcvX"><path d="M29.62 15.12c-6.94 0-12.74-5.79-12.74-12.73 0-.48-.4-.88-.88-.88s-.88.4-.88.88c0 6.94-5.8 12.73-12.74 12.73-.49 0-.88.4-.88.88 0 .49.39.88.88.88 6.94 0 12.74 5.79 12.74 12.73 0 .48.4.88.88.88s.88-.4.88-.88c0-6.94 5.8-12.73 12.74-12.73.49 0 .88-.4.88-.88 0-.49-.39-.88-.88-.88"></path></svg></span></button><hr style="width: 50%; margin: auto; border-width: 1px 0px 0px; border-top-style: solid; border-right-style: initial; border-bottom-style: initial; border-left-style: initial; border-top-color: rgb(81, 111, 144); border-right-color: initial; border-bottom-color: initial; border-left-color: initial; border-image: initial;"><button tabindex="0" data-test-id="side-panel-settings-icon" aria-disabled="false" data-fnd-button="t" data-button-use="transparent" type="button" class="PrivateButton__StyledButton-sc-5mtsqy-0 gTvmeY"><span class="PrivateButton__StyledButtonTextContainer-sc-5mtsqy-2 jErAJC"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" focusable="false" data-icon-name="Settings" class="StyledIcon-sc-1foba59-0 imdcvX"><path d="M27.88 13.38h-2.55c-.21-.79-.49-1.47-.84-2.12l.02.05 1.8-1.8c.4-.38.65-.93.65-1.52s-.24-1.14-.65-1.52l-.73-.77c-.38-.39-.93-.65-1.52-.65s-1.14.24-1.52.65l-1.83 1.8c-.57-.32-1.23-.6-1.93-.8l-.06-.02V4.12c0-1.17-.96-2.13-2.13-2.13h-1.06c-1.18 0-2.13.96-2.13 2.13v2.55c-.79.21-1.48.49-2.13.84l.05-.02-1.8-1.8c-.38-.4-.94-.66-1.54-.66s-1.16.26-1.54.66l-.73.73c-.4.38-.65.93-.65 1.52s.24 1.14.65 1.52l1.8 1.83c-.32.57-.6 1.23-.8 1.93l-.02.06H4.15c-1.17 0-2.13.96-2.13 2.13v1.14c0 1.18.95 2.13 2.13 2.13H6.7c.21.76.49 1.41.83 2.04l-.02-.05-1.8 1.8c-.4.38-.65.93-.65 1.52s.24 1.14.65 1.52l.77.77c.38.4.93.65 1.52.65s1.14-.24 1.52-.65l1.8-1.79c.56.32 1.23.6 1.93.8l.06.02v2.55c0 1.17.96 2.13 2.13 2.13h1.06c1.17 0 2.13-.96 2.13-2.13v-2.55a9.7 9.7 0 0 0 2.13-.84l-.05.02 1.8 1.8c.38.4.93.65 1.52.65s1.14-.24 1.52-.65l.77-.77c.4-.38.65-.93.65-1.53s-.24-1.14-.65-1.52l-1.8-1.81c.32-.57.6-1.23.8-1.93l.02-.06h2.55c1.17 0 2.13-.96 2.13-2.13v-1.06c0-1.18-.96-2.13-2.13-2.13v.02Zm-5.41 3.17a6.7 6.7 0 0 1-.38 1.72c-.05.15-.12.29-.18.44a6.56 6.56 0 0 1-3.15 3.17l-.04.02-.45.18c-.5.19-1.09.33-1.69.38h-1.11a6.7 6.7 0 0 1-1.72-.38l-.44-.18a6.56 6.56 0 0 1-3.17-3.15l-.02-.04c-.06-.15-.13-.3-.18-.45-.19-.5-.33-1.09-.38-1.69v-1.11c.03-.39.1-.76.18-1.11.06-.26.14-.46.21-.66v.04c.04-.15.11-.3.17-.45a6.56 6.56 0 0 1 3.15-3.17l.04-.02.45-.18c.5-.19 1.09-.33 1.69-.38h1.11c.62.05 1.19.19 1.72.38l.44.18c1.41.66 2.53 1.78 3.17 3.15l.02.04c.06.15.13.3.18.45.19.5.33 1.09.38 1.69v1.11Zm-6.46-4.72c-2.31 0-4.18 1.87-4.18 4.18s1.87 4.18 4.18 4.18 4.18-1.87 4.18-4.18-1.87-4.18-4.18-4.18"></path></svg></span></button></div><div style="background-color: rgb(234, 240, 246); height: 26px; width: 26px; border-radius: 13px; padding: 0px; display: flex; align-items: flex-start;"><button tabindex="0" id="hs-side-panel-exclude-icon" data-test-id="side-panel-exclude-icon" aria-disabled="false" data-fnd-button="t" data-button-use="tertiary-light" type="button" class="PrivateButton__StyledButton-sc-5mtsqy-0 kJwUsc"><span class="PrivateButton__StyledButtonTextContainer-sc-5mtsqy-2 fDVBaz"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" focusable="false" data-icon-name="Block" class="StyledIcon-sc-1foba59-0 imdcvX"><path d="M16 2C8.27 2 2 8.27 2 16s6.27 14 14 14 14-6.27 14-14S23.73 2 16 2m9.69 14c0 1.91-.57 3.68-1.53 5.17l.02-.04L10.86 7.82c1.45-.94 3.23-1.5 5.14-1.51 5.35 0 9.69 4.34 9.69 9.69M6.31 16c0-1.91.57-3.68 1.53-5.17l-.02.04 13.32 13.3a9.47 9.47 0 0 1-5.13 1.53c-5.35 0-9.69-4.34-9.69-9.69Z"></path></svg></span></button></div></div></div></div><style data-hubspot-styled-components="active" data-styled-version="5.0.1"></style></div></template></div></hubspot-everywhere-sidebar-toggle><style>/* !Email Widget */
+.ch-sonic-email-box-wrap {
+  position: relative;
+  z-index: 2;
+}
+
+.ch-sonic-email-widget {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  column-gap: 10px;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.ch-sonic-email-widget-gen {
+  position: relative;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 108px;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #705cf6;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.ch-sonic-email-widget-close {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0px;
+  top: 0px;
+  transform: translate(50%, -50%);
+  background: white;
+  z-index: 2;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  border-radius: 50%;
+}
+
+.ch-sonic-email-widget-close svg {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.ch-sonic-email-widget-close svg path {
+  stroke: #705cf6 !important;
+}
+
+.ch-sonic-email-widget:hover .ch-sonic-email-widget-close {
+  visibility: visible;
+  opacity: 1;
+}
+
+.ch-sonic-email-widget:has(.chromane-sonic-active) .ch-sonic-email-widget-close {
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+.ch-sonic-email-widget-gen:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.ch-sonic-email-widget-gen-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #705cf6;
+}
+.ch-sonic-email-widget-gen-icon + span:not(:empty) {
+  margin-left: 8px;
+}
+
+.ch-sonic-email-widget-gen-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.ch-sonic-email-widget-gen span {
+  color: #705cf6;
+  font-weight: 500;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: "Inter";
+  user-select: none;
+}
+
+.ch-sonic-email-widget-box {
+  flex: 0 1 auto;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.ch-sonic-email-widget-box span {
+  position: absolute;
+  top: 4px;
+  left: -1px;
+  width: fit-content;
+  padding: 0px 6px;
+  height: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e5e7eb;
+  border-radius: 6px;
+  border-bottom-left-radius: 0px;
+  font-family: Inter;
+  font-size: inherit;
+  font-weight: 600;
+  line-height: inherit;
+  color: #1f2937;
+  white-space: nowrap;
+}
+
+.ch-sonic-email-widget-textarea {
+  width: 100%;
+  border: 0px;
+  border-bottom: 1px solid #d1d5db;
+  outline: none !important;
+  resize: none;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  font-family: Inter;
+  font-size: inherit;
+  font-weight: 400;
+  line-height: 19px;
+  padding: 6px 0px;
+  color: #1f2937;
+  text-indent: 114px;
+  word-break: break-all;
+}
+
+.ch-sonic-email-widget-textarea > * {
+  text-indent: 0px !important;
+}
+
+.ch-sonic-email-widget-textarea[contenteditable][aria-placeholder]:empty:before {
+  content: attr(aria-placeholder);
+  position: absolute;
+  background-color: transparent;
+  color: rgb(75 85 99);
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: 400;
+  cursor: text;
+  text-indent: 0px;
+  max-width: var(--cwidth);
+  visibility: hidden;
+  visibility: var(--cvis);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* !Select mood */
+
+/*! Mood Component */
+.ch-sonic-email-widget-mood {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+  margin-top: 10px;
+  background: #e5e7eb;
+  padding: 4px 6px 4px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 17px;
+  box-sizing: border-box;
+  color: #1f2937;
+}
+.ch-sonic-email-widget-mood > span {
+  font-family: "Inter";
+  font-weight: 600;
+}
+
+.ch-sonic-mood-select {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  column-gap: 3px;
+  padding: 0px 4px;
+  cursor: pointer;
+  font-family: "Inter";
+  font-weight: 400;
+  height: 28px;
+  position: relative;
+  z-index: 2;
+  user-select: none;
+}
+
+.ch-sonic-email-widget-mood.chips {
+  width: 100%;
+  align-items: baseline;
+  padding: 6px;
+  background: transparent;
+  margin-top: 0px;
+}
+
+.ch-sonic-chip-default {
+  overflow-x: scroll;
+  padding-bottom: 6px;
+}
+
+/* *Scrollbar */
+.ch-sonic-chip-default::-webkit-scrollbar {
+  width: 5px;
+  height: 4px;
+}
+.ch-sonic-chip-default::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ch-sonic-chip-default::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 13px;
+  cursor: pointer;
+}
+
+.ch-sonic-mood-select > svg {
+  margin: -3px;
+  width: 19px;
+  height: 19px;
+  fill: black;
+  transition: all 0.3s ease;
+}
+
+.ch-sonic-mood-select-items {
+  position: absolute;
+  background: white;
+  left: 0px;
+  top: 32px;
+  z-index: 999999;
+  min-width: calc(100% + 6px);
+  padding: 7px 4px;
+  display: flex;
+  flex-direction: column;
+  color: #1f2937;
+  font-size: inherit;
+  row-gap: 4px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  font-family: "Inter";
+  cursor: default;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.ch-sonic-mood-select-item {
+  padding: 3px 2px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  width: 100%;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.ch-sonic-mood-select-item:hover {
+  background: #e5e7eb;
+}
+
+.ch-sonic-mood-select.chromane-sonic-active .ch-sonic-mood-select-items {
+  visibility: visible;
+  opacity: 1;
+}
+.ch-sonic-mood-select.chromane-sonic-active > svg {
+  transform: rotate(180deg);
+}
+.ch-sonic-email-widget-mood.emotion {
+  background: transparent;
+  padding: 0px;
+  margin-top: 12px;
+}
+
+/*!Chip Emotions Component-------------------------------------------------------------  */
+.ch-sonic-chip-emotions,
+.ch-sonic-chip-default {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+}
+
+.ch-sonic-chip-default {
+  padding: 3px 0px 3px 0px;
+}
+
+.ch-sonic-chip-emotions-chip,
+.ch-sonic-chip-default-chip {
+  background: #e5e7eb;
+  border-radius: 6px;
+  padding: 2px 4px;
+  color: #1f2937;
+  font-family: Inter;
+  font-size: inherit;
+  font-weight: 400;
+  line-height: inherit;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+.ch-sonic-chip-default-chip {
+  white-space: nowrap;
+  padding: 4px 6px;
+}
+
+.ch-sonic-chip-emotions-chip.chromane-sonic-active,
+.ch-sonic-chip-default-chip.chromane-sonic-active {
+  background: #d7d6fe;
+}
+
+/* !WIDGET DARK MODE STYLESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS ----------------------------------------------------------*/
+.ch-sonic-email-widget-mood.dark .ch-sonic-chip-default::-webkit-scrollbar-thumb {
+  background: #6b7280;
+}
+
+.ch-sonic-email-widget-mood.dark .ch-sonic-chip-emotions-chip,
+.ch-sonic-email-widget-mood.dark .ch-sonic-chip-default-chip {
+  background: #1f2937;
+  color: #e5e7eb;
+}
+.ch-sonic-email-widget-mood.dark .ch-sonic-chip-emotions-chip.chromane-sonic-active,
+.ch-sonic-email-widget-mood.dark .ch-sonic-chip-default-chip.chromane-sonic-active {
+  background: #6b7280;
+}
+
+.ch-sonic-email-widget.dark .ch-sonic-email-widget-box span {
+  background: #34383f;
+  color: #e5e7eb;
+}
+
+.ch-sonic-email-widget.dark .ch-sonic-email-widget-textarea {
+  color: #e5e7eb;
+  border-bottom-color: #34383f;
+}
+.ch-sonic-email-widget.dark .ch-sonic-email-widget-close {
+  background: #1f2937;
+}
+
+.ch-sonic-email-widget.dark .ch-sonic-email-widget-textarea[contenteditable][aria-placeholder]:empty:before {
+  color: #4b5563;
+}
+
+.ch-sonic-email-widget-mood.dark {
+  background: #34383f;
+  color: #e5e7eb;
+}
+
+.ch-sonic-email-widget-mood.dark.chips {
+  background: transparent;
+}
+.ch-sonic-email-widget-mood.dark .ch-sonic-mood-select {
+  background: #4b5563;
+}
+.ch-sonic-email-widget-mood.dark .ch-sonic-mood-select-input {
+  color: #e5e7eb;
+}
+.ch-sonic-email-widget-mood.dark .ch-sonic-mood-select-items {
+  background: #34383f;
+  color: #e5e7eb;
+}
+.ch-sonic-email-widget-mood.dark .ch-sonic-mood-select-item:hover {
+  background: #4b5563;
+}
+
+/* !SIZE MODIFIERS------------------------------------------------------------------------------------------------------------ */
+.ch-sonic-email-widget.s-small {
+  font-size: 12px;
+  line-height: 14px;
+  column-gap: 4px;
+}
+
+.ch-sonic-email-widget.s-small .ch-sonic-email-widget-gen {
+  flex: 0 0 80px;
+  width: 80px;
+  font-size: 11px;
+  line-height: 14px;
+}
+.ch-sonic-email-widget.s-small .ch-sonic-email-widget-gen-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.ch-sonic-email-widget.s-small .ch-sonic-email-widget-gen-icon svg {
+  width: 9px;
+  height: 9px;
+}
+
+.ch-sonic-email-widget.s-small .ch-sonic-email-widget-close {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+.ch-sonic-email-widget.s-small .ch-sonic-email-widget-box {
+  flex: 0 0 auto;
+  width: calc(100% - 85px);
+  max-width: calc(100% - 85px);
+}
+.ch-sonic-email-widget.s-small .ch-sonic-email-widget-box span {
+  height: 19px;
+  top: 3px;
+  padding: 0px 6px;
+}
+
+.ch-sonic-email-widget.s-small .ch-sonic-email-widget-textarea {
+  font-size: 12px;
+  line-height: 18px;
+  text-indent: 112px;
+  padding: 3px 0px;
+}
+
+.ch-sonic-email-widget-mood.s-small {
+  font-size: 11px;
+  line-height: 14px;
+  margin-top: 5px;
+  padding: 6px;
+}
+
+.ch-sonic-email-widget-mood.s-small.chips {
+  padding: 3px 6px 0px 6px;
+  margin-top: 0px;
+}
+
+.ch-sonic-email-widget-mood.s-small .ch-sonic-mood-select {
+  height: 20px;
+}
+.ch-sonic-email-widget-mood.s-small .ch-sonic-mood-select > svg {
+  width: 16px;
+  height: 16px;
+}
+.ch-sonic-email-widget-mood.s-small .ch-sonic-chip-default-chip {
+  padding: 3px 5px;
+  font-size: 10px;
+}
+
+/* !MAIL TYPE MODIFIERS------------------------------------------------------------------- */
+
+/* ?Default-size */
+.ch-sonic-email-widget.reply .ch-sonic-email-widget-textarea {
+  text-indent: 88px;
+}
+
+.ch-sonic-email-widget.message .ch-sonic-email-widget-textarea {
+  text-indent: 129px;
+}
+.ch-sonic-email-widget.short .ch-sonic-email-widget-textarea {
+  text-indent: 62px;
+}
+
+/* ?Smaill-size */
+.ch-sonic-email-widget.s-small .ch-sonic-email-widget-textarea {
+  text-indent: 112px;
+}
+ /* !Widget BTN */
+#sonic-chromane-btn-widget {
+  width: fit-content;
+  padding: 0px 6px;
+  height: 36px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  justify-content: center;
+  z-index: 99999999999999999999999;
+  bottom: 30px;
+  left: 30px;
+  background: #111827;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  visibility: visible;
+  opacity: 0.1;
+  cursor: pointer;
+  transition: visibility 0.2s ease, opacity 0.2s ease;
+}
+
+#sonic-chromane-btn-widget .sonic-chromane-btn-widget-img {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sonic-chromane-btn-widget .sonic-chromane-btn-widget-text {
+  user-select: none;
+  font-family: "Inter", sans-serif !important;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 600;
+  color: #f4f4f6;
+}
+#sonic-chromane-btn-widget .sonic-chromane-btn-widget-close {
+  position: absolute;
+  flex: 0 0 15px;
+  width: 15px !important;
+  height: 15px !important;
+  top: 0px;
+  right: 0px;
+  transform: translate(50%, -50%);
+  border-radius: 50%;
+  background: #ff76df;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+#sonic-chromane-btn-widget:hover {
+  opacity: 1;
+}
+#sonic-chromane-btn-widget:hover .sonic-chromane-btn-widget-close {
+  visibility: visible;
+  opacity: 1;
+}
+#sonic-chromane-btn-widget .sonic-chromane-btn-widget-close svg {
+  width: 10px !important;
+  height: 10px !important;
+}
+
+#sonic-chromane-btn-widget.sonic-chromane-btn-widget-hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* !BUTTON GENERETIONS MANAGE */
+
+.ch-sonic-gen-man {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+}
+
+button.ch-sonic-gen-man-btn {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: #705cf6;
+  border-radius: 50%;
+  border: none !important;
+  padding: 0px !important;
+  margin: 0px !important;
+  border: none !important;
+  outline: none;
+}
+
+button.ch-sonic-gen-man-stop {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+.ch-sonic-gen-man.chromane-sonic-active button.ch-sonic-gen-man-stop {
+  transform: translate(-120%, -50%);
+}
+button.ch-sonic-gen-man-stop svg.ch-sonic-gen-man-icon {
+  height: 22px !important;
+  width: 22px !important;
+}
+
+.ch-sonic-gen-man-rewrite {
+  z-index: 2;
+  transition: all 0.2s ease;
+}
+.ch-sonic-gen-man-rewrite .ch-sonic-gen-man-icon {
+  width: 14px !important;
+  height: 14px !important;
+  flex: 0 0 14px;
+}
+.ch-sonic-gen-man-rewrite .ch-sonic-gen-man-icon * {
+  stroke: white !important;
+}
+
+svg.ch-sonic-gen-man-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  height: 100% !important;
+  width: 100% !important;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.ch-sonic-gen-man.chromane-sonic-active .ch-sonic-gen-man-rewrite svg.ch-sonic-gen-man-loader {
+  visibility: visible;
+  opacity: 1;
+}
+
+.ch-sonic-gen-man.chromane-sonic-active .ch-sonic-gen-man-rewrite .ch-sonic-gen-man-icon {
+  opacity: 0;
+  visibility: hidden !important;
+}
+.ch-sonic-gen-man.chromane-sonic-active .ch-sonic-gen-man-rewrite {
+  background: transparent !important;
+  cursor: default;
+  box-shadow: none !important;
+}
+
+.ch-sonic-gen-man-ttip {
+  color: white;
+  background: rgb(99 102 241);
+  white-space: nowrap;
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  z-index: 99999999;
+  border-radius: 6px;
+  padding: 4px 6px;
+  font-family: "Satoshi";
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 10px;
+  color: white;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.ch-sonic-gen-man-ttip svg {
+  width: 11px;
+  height: 5px;
+  position: absolute;
+  bottom: 1px;
+  transform: translate(-50%, 100%) rotate(180deg);
+  left: 50%;
+}
+
+.ch-sonic-gen-man-ttip.chromane-sonic-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.ch-sonic-gen-man.chromane-sonic-active .ch-sonic-gen-man-rewrite .ch-sonic-gen-man-ttip {
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/*! CHROMANE SONIC LOGO BTN */
+.ch-sonic-logo-btn {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 0px;
+  cursor: pointer;
+  border: none !important;
+  outline: none !important;
+}
+
+.ch-sonic-logo-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* !NOTIFICATION */
+.chat-sonic-chromane-notification-wrap {
+  height: fit-content;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  row-gap: 10px;
+  bottom: 30px;
+  right: 0px;
+  width: 400px;
+  background: transparent;
+  z-index: 999999999;
+  pointer-events: none;
+}
+
+.chat-sonic-chromane-notification {
+  margin-right: 20px;
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
+  background-color: #111827;
+  border-radius: 12px;
+  padding: 10px 16px;
+  z-index: 99999999999;
+  transform: translateX(0px);
+  transition: all 0.3s ease;
+  width: fit-content;
+  height: fit-content;
+}
+
+.chat-sonic-chromane-notification span {
+  padding: 0px !important;
+  margin: 0px !important;
+  color: white !important;
+  font-weight: 700 !important;
+  font-family: "Satoshi" !important;
+  font-size: 13px !important;
+  line-height: 20px !important;
+  letter-spacing: 0.2px;
+}
+
+.chat-sonic-chromane-notification svg {
+  width: 24px !important;
+  height: 24px !important;
+  flex: 0 0 24px;
+}
+
+.chat-sonic-chromane-notification.chromane-hide {
+  transform: translateX(calc(100% + 20px));
+}
+
+/* !Chromane More btn */
+.ch-sonic-ad-more-btn {
+  height: 35px;
+  color: #705cf6;
+  padding: 10px 20px 10px 10px;
+  border-radius: 6px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  background: transparent;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #705cf6 !important;
+  outline: none !important;
+  transition: all 0.2s ease;
+}
+
+.ch-sonic-ad-more-btn-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #705cf6;
+}
+
+.ch-sonic-ad-more-btn-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.ch-sonic-ad-more-btn:hover {
+  background: rgba(26, 115, 232, 0.1);
+}
+
+/* !CUSTOM TOOLTIP */
+
+.ch-sonic-tooltip {
+  color: white;
+  background: rgb(99 102 241);
+  white-space: nowrap;
+  position: fixed;
+  top: 194px;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  z-index: 99999999;
+  border-radius: 6px;
+  padding: 4px 6px;
+  font-family: "Satoshi";
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 10px;
+  color: white;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.3s ease;
+  animation: tooltipkeys 0.5s 1;
+}
+
+.ch-sonic-tooltip svg {
+  position: absolute;
+  bottom: 1px;
+  transform: translate(-50%, 100%) rotate(180deg);
+  left: 50%;
+  width: 11px !important;
+  height: 5px !important;
+}
+
+@keyframes tooltipkeys {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+ /* !SONIC Iframe */
+.ch-sonic-iframe {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 670px;
+  max-height: calc(100vh - 30px);
+  z-index: 99999999999999;
+  visibility: visible;
+  opacity: 1;
+  border: 1px solid #e5e7eb;
+  min-height: 48px;
+  box-shadow: rgb(17 17 26 / 20%) 0px 4px 16px, rgb(17 17 26 / 20%) 0px 8px 24px, rgb(17 17 26 / 20%) 0px 16px 56px;
+  border-radius: 12px;
+  background: white;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.3s ease;
+}
+
+.ch-sonic-iframe.chromane-hide {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  transform: translate(-50%, 20%) scale(0) !important;
+}
+
+html.chromane-sonic-dark .ch-sonic-iframe {
+  border-color: #1f2937;
+}
+
+/* !Iframe Command */
+#chat-sonic-command-iframe,
+#chromane-sonic-google-home-iframe {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 670px;
+  max-height: calc(100vh - 30px);
+  z-index: 99999999999999;
+  visibility: visible;
+  opacity: 1;
+  border: 1px solid #e5e7eb;
+  min-height: 48px;
+  box-shadow: rgb(17 17 26 / 20%) 0px 4px 16px, rgb(17 17 26 / 20%) 0px 8px 24px, rgb(17 17 26 / 20%) 0px 16px 56px;
+  border-radius: 12px;
+  background: white;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.3s ease;
+}
+
+#chat-sonic-command-iframe.chromane-hide {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  transform: translate(-50%, 20%) scale(0) !important;
+}
+
+#chat-sonic-command-iframe.chat-sonic-unauth {
+  width: 489px;
+}
+
+html.chromane-sonic-dark #chat-sonic-command-iframe {
+  border-color: #1f2937;
+}
+
+.chat-sonic-command-iframe-hide {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  transform: translate(-50%, 20%) scale(0) !important;
+}
+
+/* !Invisible paste input */
+.chromane-sonic-input-invisible {
+  position: fixed;
+  /* left: -1000000px; */
+  left: 100px;
+  top: 100px;
+  z-index: 999999999999999999999;
+}
+
+/* !Social IFrame */
+#ch-sonic-social-iframe {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 560px;
+  height: 306px;
+  max-height: calc(100vh - 30px);
+  z-index: 99999999999999;
+  visibility: visible;
+  opacity: 1;
+  border: 1px solid #e5e7eb;
+  box-shadow: rgb(17 17 26 / 20%) 0px 4px 16px, rgb(17 17 26 / 20%) 0px 8px 24px, rgb(17 17 26 / 20%) 0px 16px 56px;
+  border-radius: 12px;
+  background: white;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.3s ease, height 0.1s;
+  background: rgb(17 24 39);
+}
+
+#ch-sonic-social-iframe.chromane-hide {
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(-50%, 20%) scale(0);
+}
+
+html.chromane-sonic-dark #ch-sonic-social-iframe {
+  border-color: #1f2937;
+}
+
+/* !Summarise Iframe */
+#chromane-sonic-summarise-iframe {
+  position: fixed;
+  bottom: 0px;
+  right: 30px;
+  width: 504px;
+  height: 444px;
+  transform: translate(0px, 0px);
+  z-index: 99999999;
+  transition: all 0.2s ease;
+  border: none;
+  box-shadow: -8px -11px 68px rgba(0, 0, 0, 0.25);
+}
+
+#chromane-sonic-summarise-iframe.chromane-hide {
+  transform: translate(0px, calc(100% + 20px));
+}
+
+/* !Summarise widget open styles*/
+body.chromane-sonic-summarise-iframe-open .ch-sonic-email-widget-gen {
+  opacity: 0.6 !important;
+  cursor: default;
+}
+
+body.chromane-sonic-summarise-iframe-open .ch-sonic-logo-btn img {
+  filter: grayscale(100%);
+  opacity: 0.5 !important;
+}
+body.chromane-sonic-summarise-iframe-open .ch-sonic-logo-btn {
+  cursor: default;
+}
+body.chromane-sonic-summarise-iframe-open .ch-sonic-logo-btn:hover {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* !Multi Iframe */
+
+.ch-sonic-multi-iframe-overlay.chromane-hide {
+  visibility: hidden;
+  opacity: 0;
+}
+.ch-sonic-multi-iframe-overlay {
+  position: fixed;
+  z-index: 9999999;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  bottom: 0px;
+  background: #111827;
+  visibility: visible;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+/* !Summarise thread iframe  */
+#chromane-sonic-sumtext-iframe[data-page="summarize"] {
+  height: 300px;
+}
+#chromane-sonic-sumtext-iframe[data-page="word_count"] {
+  height: 175px;
+  width: 450px;
+}
+
+/* !Styles When words expired  */
+/* search */
+
+html.ch-words-expired #ch-sonic-search-iframe:not(.ch-sonic-search-iframe-manual) {
+  height: 495px !important;
+}
+html.ch-words-expired #ch-sonic-search-iframe iframe,
+html.ch-words-expired #ch-sonic-youtube-cmd-iframe {
+  border-color: #e5e7eb !important;
+}
+html.ch-words-expired #ch-sonic-search-iframe.ch-sonic-search-iframe-close {
+  background: transparent;
+}
+
+html.ch-words-expired #ch-sonic-youtube-cmd-iframe {
+  border-radius: 12px;
+}
+
+/* command and other */
+html.ch-words-expired .ch-sonic-iframe,
+html.ch-words-expired #chromane-sonic-summarise-iframe,
+html.ch-words-expired #chat-sonic-command-iframe {
+  width: 400px !important;
+  height: 495px !important;
+  border-color: transparent !important;
+}
+/* !Styles When user unauth  */
+
+html.ch-sonic-unauth .ch-sonic-iframe {
+  height: 630px !important;
+  width: 489px !important;
+}
+
+html.ch-sonic-unauth #chat-sonic-command-iframe {
+  height: 630px !important;
+}
+</style><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration><link rel="stylesheet" href="./Microsoft Applied Skills _ Microsoft Learn_files/css2" type="text/css"><script src="chrome-extension://kchaponcodemjigejilffhfchecpgdpf/js/injected_improver.js"></script><div class="ch-sonic-improver"></div><link rel="stylesheet" type="text/css" href="chrome-extension://kchaponcodemjigejilffhfchecpgdpf/css/content_autoimprover.css"><grammarly-assistant-notch-view role="presentation" data-grammarly-shadow-root="true" class="dnXmp" style="--rem: 16;"><template shadowrootmode="open"><style>.ymqHP{visibility:hidden;position:fixed;}.ymqHP:after{content:'';position:absolute;visibility:visible;height:3px;bottom:0;border-radius:10px;background:#488cc8;animation:JQguZ 1.3s ease forwards}.ymqHP.ExcM8:after{animation:JQguZ .2s ease forwards}@keyframes JQguZ{0%{width:0%}100%{width:100%}}
+</style><link rel="stylesheet" type="text/css" href="chrome-extension://kbfnbcaeplbcioakkpcpgfkobkghlhen/src/css/designSystem.styles.css"><link rel="stylesheet" type="text/css" href="chrome-extension://kbfnbcaeplbcioakkpcpgfkobkghlhen/src/css/AAA-initAssistant.styles.css"><div aria-label="grammarly-global-assistant-notch" role="group" tabindex="-1"></div><div data-gds-theme="dark"><div data-testid="assistant-notch-container" class="g0Vgr" style="--hidden-percent: 100%;"><div class="nQgcx MB55l" data-testid="assistant-notch"><button class="K9COx" data-testid="assistant-notch-button" aria-label="Start a chat with Grammarly AI"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 32 32" aria-hidden="true" data-icon="LogoLogomarkColorDefault" stroke="transparent" focusable="false" role="img" stroke-width="1px" class="gds-icon"><path fill="var(--green-60)" d="M0 16C0 7.163 7.162 0 16.001 0s16 7.163 16 16c0 7.732-5.482 14.183-12.773 15.676-1.042.213-2.121.324-3.222.324H0z"></path><path fill="var(--white)" d="m19.876 14.484-1.788 2.94h6.02c-.93 5.116-6.62 8.599-12.304 5.653a6.7 6.7 0 0 1-2.861-2.834c-3.27-6.226 1.197-12.49 7.093-12.49a8.19 8.19 0 0 1 6.2 2.839l1.58-2.6a11.08 11.08 0 0 0-8.566-3.148c-5.562.384-10.071 4.994-10.342 10.56-.309 6.393 4.8 11.688 11.124 11.688s11.14-4.999 11.14-11.14c0-.5-.038-.989-.1-1.468z"></path></svg><input aria-hidden="true" tabindex="-1" style="position: absolute; inset: 0px; opacity: 0; cursor: inherit;"></button></div></div></div></template></grammarly-assistant-notch-view><div style="all: initial !important;"><template shadowrootmode="closed"><div id="root"><style data-emotion="pie" data-s=""></style><div class="pie-s0yh1f"><div></div></div><style data-emotion="pie-global" data-s=""></style><style data-emotion="pie" data-s=""></style></div></template></div></html>

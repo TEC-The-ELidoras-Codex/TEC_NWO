@@ -1,7 +1,7 @@
 sources:
   - type: fs
     path: ./data/raw
-    patterns: ["**/*.md","**/*.txt","**/*.pdf","**/*.docx"]
+    patterns: ["**/*.md","**/*.txt","**/*.pdf","**/*.docx","**/*.html","**/*.json"]
 dedupe:
   min_similarity: 0.92
 embedding:

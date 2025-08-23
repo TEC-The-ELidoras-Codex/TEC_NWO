@@ -18,11 +18,17 @@ from tec_datacore.ingest.gdrive_loader import list_docs_by_names
 from tec_datacore.ingest.gmail_loader import list_messages_snippets
 
 load_dotenv()
-cfg = yaml.safe_load(Path("ingest/config.yaml").read_text())
+# Resolve config relative to this file unless overridden by INGEST_CONFIG
+_default_cfg_path = Path(__file__).resolve().parent / "config.yaml"
+cfg_path = Path(os.getenv("INGEST_CONFIG", str(_default_cfg_path)))
+cfg = yaml.safe_load(cfg_path.read_text())
 
 DBPATH = os.getenv("VECTOR_ROOT","./datastore/chroma")
 client = PersistentClient(path=DBPATH)
 coll = client.get_or_create_collection("tec")
+PKG_ROOT = Path(__file__).resolve().parents[1]
+RAW_ROOT = (PKG_ROOT / "data" / "raw").resolve()
+PROJECT_NAME = os.getenv("PROJECT_NAME", "TEC_NWO")
 
 BLOCKLIST = [g.strip() for g in os.getenv("BLOCKLIST_GLOBS","**/secrets/**,**/*.key,**/.env").split(',') if g.strip()]
 SCRUB = os.getenv("SCRUB_PII","true").lower() in ("1","true","yes")
@@ -36,11 +42,21 @@ def blocked(path: str) -> bool:
 def doc_id(s: str)->str:
     return hashlib.sha1(s.encode("utf-8")).hexdigest()
 
+def path_category(name: str) -> str:
+    try:
+        p = Path(name).resolve()
+        rel = p.relative_to(RAW_ROOT)
+        parts = rel.parts
+        return parts[0] if len(parts) > 1 else "misc"
+    except Exception:
+        return "misc"
+
 def ingest_fs():
     for src in cfg.get("sources", []):
         if src.get("type") == "fs":
-            base = Path(src["path"]).resolve()
-            patterns = src.get("patterns", ["**/*.md","**/*.txt"]) 
+            # Allow relative paths in config to be relative to tec_datacore package root
+            base = (PKG_ROOT / src["path"]).resolve() if not Path(src["path"]).is_absolute() else Path(src["path"]).resolve()
+            patterns = src.get("patterns", ["**/*.md","**/*.txt"])
             for name, b in load_fs(base, patterns):
                 if blocked(name):
                     continue
@@ -55,7 +71,8 @@ def ingest_fs():
                 ids = [doc_id(name+f"#{k}") for k,_ in enumerate(chunks)]
                 embs_list = embed(chunks)
                 embs = np.array(embs_list, dtype=np.float32)
-                metas = [{"source": name} for _ in chunks]
+                cat = path_category(name)
+                metas = [{"source": name, "project": PROJECT_NAME, "category": cat} for _ in chunks]
                 coll.upsert(documents=chunks, embeddings=embs, metadatas=metas, ids=ids)  # type: ignore[arg-type]
     # optional: transcripts folder
     tdir = Path(os.getenv("DATA_ROOT","./data")).joinpath("transcripts")
@@ -75,7 +92,8 @@ def ingest_fs():
             ids = [doc_id(name+f"#{k}") for k,_ in enumerate(chunks)]
             embs_list = embed(chunks)
             embs = np.array(embs_list, dtype=np.float32)
-            metas = [{"source": name} for _ in chunks]
+            cat = path_category(name)
+            metas = [{"source": name, "project": PROJECT_NAME, "category": cat} for _ in chunks]
             coll.upsert(documents=chunks, embeddings=embs, metadatas=metas, ids=ids)  # type: ignore[arg-type]
 
 def ingest_github():
@@ -96,7 +114,8 @@ def ingest_github():
             continue
         ids = [doc_id(name+f"#{k}") for k,_ in enumerate(chunks)]
         embs = np.array(embed(chunks), dtype=np.float32)
-        metas = [{"source": name} for _ in chunks]
+        cat = path_category(name)
+        metas = [{"source": name, "project": PROJECT_NAME, "category": cat} for _ in chunks]
         coll.upsert(documents=chunks, embeddings=embs, metadatas=metas, ids=ids)  # type: ignore[arg-type]
 
 def ingest_gdrive():
@@ -116,7 +135,8 @@ def ingest_gdrive():
             continue
         ids = [doc_id(name+f"#{k}") for k,_ in enumerate(chunks)]
         embs = np.array(embed(chunks), dtype=np.float32)
-        metas = [{"source": name} for _ in chunks]
+        cat = path_category(name)
+        metas = [{"source": name, "project": PROJECT_NAME, "category": cat} for _ in chunks]
         coll.upsert(documents=chunks, embeddings=embs, metadatas=metas, ids=ids)  # type: ignore[arg-type]
 
 def ingest_gmail():
