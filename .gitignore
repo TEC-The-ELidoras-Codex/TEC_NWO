@@ -69,22 +69,31 @@ coverage/
 tmp/
 temp/
 
-# Python virtualenvs and caches
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
 .venv/
 venv/
-__pycache__/
 .pytest_cache/
 .mypy_cache/
+.ruff_cache/
+
+# Jupyter
 .ipynb_checkpoints/
 
-# Local data/artifacts (not for Git)
-datastore/
+# Local data stores
+tec_datacore/datastore/
+tec_datacore/data/
+
+# Orchestration artifacts
 artifacts/
 
-# Drive sync noise
-.tmp.driveupload/
+# Local credentials (never commit)
+tec_datacore/google_creds.json
 
-# Generic backups
-*.bak
-*.tmp
-*.orig
+# Drive temporary staging (cleanup + ignore)
+.tmp.driveupload/
+.tmp.drivedownload/
