@@ -1,4 +1,4 @@
-# ingest/pipeline.py
+Get-ChildItem -Force tec_datacore\datastore -ErrorAction SilentlyContinue | Format-Table -AutoSize# ingest/pipeline.py
 import os
 import yaml
 import hashlib
