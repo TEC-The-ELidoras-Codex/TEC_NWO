@@ -58,6 +58,20 @@ mcp:
             default: 10
         required: ["query"]
 
+    - name: "datacore_search"
+      description: "Query the local Datacore RAG API for relevant chunks"
+      inputSchema:
+        type: "object"
+        properties:
+          query:
+            type: "string"
+            description: "Search query"
+          k:
+            type: "integer"
+            description: "Number of results to return"
+            default: 8
+        required: ["query"]
+
     - name: "generate_lore"
       description: "Generate structured lore entries for The Elidoras Codex universe"
       inputSchema:
@@ -141,6 +155,8 @@ runtime:
   env:
     - name: "TEC_MODE"
       value: "mcp"
+    - name: "DATACORE_URL"
+      value: "http://127.0.0.1:8765/search"
     - name: "PYTHONPATH"
       value: "/app"
     - name: "TEC_LOG_LEVEL"

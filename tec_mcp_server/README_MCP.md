@@ -77,6 +77,7 @@ servers:
 When running in MCP mode, the following tools are available:
 
 - **validate_axioms**: Content validation against TEC principles
+- **datacore_search**: Query the local Datacore RAG API for relevant chunks
 - **query_memory**: Historical context and precedent lookup
 - **generate_lore**: Structured worldbuilding and narrative creation
 - **process_asset**: Analysis of multimedia TEC assets
@@ -92,6 +93,7 @@ When running in MCP mode, the following tools are available:
 
 #### Optional
 - `TEC_MODE`: Server mode (`flask` or `mcp`, default: `flask`)
+- `DATACORE_URL`: The Datacore RAG endpoint for `datacore_search` (default: `http://127.0.0.1:8765/search`)
 - `TEC_HOST`: Server host (default: `0.0.0.0`)
 - `TEC_PORT`: Server port (default: `5000`)
 - `TEC_DEBUG`: Debug mode (`true` or `false`)

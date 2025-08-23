@@ -9,11 +9,13 @@ allowing any MCP client to access our sovereign tools and knowledge base.
 
 import asyncio
 import json
+import os
 import logging
 import sys
 from typing import Any, Dict, List, Optional
 from pathlib import Path
 from datetime import datetime
+import requests
 
 # Add the tec_core to the path
 sys.path.insert(0, str(Path(__file__).parent))
@@ -29,7 +31,7 @@ try:
     from mcp.types import (
         Resource,
         Tool,
-        TextContent,
+    TextContent,
         ImageContent,
         EmbeddedResource,
     )
@@ -55,6 +57,7 @@ class TECMCPServer:
         self.axiom_engine = AxiomEngine()
         self.memory_core = MemoryCore()
         self.tool_orchestrator = ToolOrchestrator()
+        self.datacore_url = os.getenv("DATACORE_URL", "http://127.0.0.1:8765/search")
         
         # Register MCP tools
         self._register_tools()
@@ -102,6 +105,25 @@ class TECMCPServer:
                                 "type": "string",
                                 "description": "Type of context to search",
                                 "enum": ["general", "lore", "character", "faction", "timeline", "axiom"]
+                            }
+                        },
+                        "required": ["query"]
+                    }
+                ),
+                Tool(
+                    name="datacore_search",
+                    description="Query the local TEC Datacore (RAG) for relevant context",
+                    inputSchema={
+                        "type": "object",
+                        "properties": {
+                            "query": {
+                                "type": "string",
+                                "description": "Search query"
+                            },
+                            "k": {
+                                "type": "integer",
+                                "description": "Number of results",
+                                "default": 8
                             }
                         },
                         "required": ["query"]
@@ -185,6 +207,8 @@ class TECMCPServer:
             try:
                 if name == "validate_axioms":
                     result = await self._validate_axioms(arguments)
+                elif name == "datacore_search":
+                    result = await self._datacore_search(arguments)
                 elif name == "query_memory":
                     result = await self._query_memory(arguments)
                 elif name == "generate_lore":
@@ -327,6 +351,24 @@ class TECMCPServer:
             "memory_context": memory_context,
             "timestamp": datetime.now().isoformat()
         }
+
+    async def _datacore_search(self, args: Dict[str, Any]) -> Dict[str, Any]:
+        """Proxy a search query to the local Datacore RAG API."""
+        query = (args.get("query") or "").strip()
+        k = int(args.get("k", 8) or 8)
+        if not query:
+            return {"results": [], "note": "empty query"}
+
+        url = self.datacore_url
+        try:
+            resp = requests.post(url, json={"q": query, "k": k}, timeout=15)
+            resp.raise_for_status()
+            data = resp.json()
+            results = data.get("results", [])
+            return {"results": results, "query": query, "k": k, "source": "datacore"}
+        except Exception as e:
+            logger.error(f"Datacore search error: {e}")
+            return {"error": str(e), "query": query, "k": k, "datacore_url": url}
     
     async def initialize(self):
         """Initialize all TEC components"""
