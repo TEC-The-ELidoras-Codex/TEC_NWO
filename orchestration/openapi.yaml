@@ -1,0 +1,86 @@
+openapi: 3.1.0
+info:
+  title: TEC Agent Bridge
+  version: 0.1.0
+servers:
+  - url: http://localhost:8787
+paths:
+  /search:
+    post:
+      summary: Query local Datacore RAG
+      operationId: search
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                q:
+                  type: string
+                  description: Query text
+                k:
+                  type: integer
+                  minimum: 1
+                  maximum: 50
+                  default: 8
+              required: [q]
+      responses:
+        "200":
+          description: Results
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  query:
+                    type: string
+                  results:
+                    type: array
+                    items:
+                      type: object
+  /plan:
+    post:
+      summary: Produce a minimal multi-agent plan
+      operationId: plan
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                goal:
+                  type: string
+                  description: High-level objective
+              required: [goal]
+      responses:
+        "200":
+          description: Plan
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  steps:
+                    type: array
+                    items:
+                      type: string
+  /health:
+    get:
+      summary: Health check
+      operationId: health
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  version:
+                    type: string
+                  datacore_url:
+                    type: string

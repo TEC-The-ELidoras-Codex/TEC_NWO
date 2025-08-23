@@ -68,3 +68,23 @@ coverage/
 # Temporary files
 tmp/
 temp/
+
+# Python virtualenvs and caches
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Local data/artifacts (not for Git)
+datastore/
+artifacts/
+
+# Drive sync noise
+.tmp.driveupload/
+
+# Generic backups
+*.bak
+*.tmp
+*.orig
