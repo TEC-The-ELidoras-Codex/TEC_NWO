@@ -159,3 +159,19 @@ Ingest → Analyze → Connect → Validate → Store → Version, with provenan
 ---
 
 Final Word: Operationalize a universe—ethically, profitably, and with receipts. Build. Validate. Commit. Ship.
+
+---
+
+Annex — Operational Prompts for Copilot
+
+- Daily Maintenance Loop
+  - Use VS Code tasks: “TEC: Clean→Copy→Ingest (local)” to purge saved-page junk, curated-copy research, and re-index with local embeddings.
+  - Inputs live under `tec_datacore/data/raw/research`; vectors live under `datastore/chroma` (gitignored).
+  - Never use paid APIs unless explicitly asked; default to MODEL_EMBED=local.
+
+- Project: Poppysellium & Cyberpunk Confessional
+  - Instruction doc: `docs/projects/poppysellium/COPILOT_PROMPT.md` (goals, sample image prompt, workflow).
+  - Linear bootstrap: `docs/projects/poppysellium/LINEAR_BOOTSTRAP.md` (create project, issues, cross-links).
+  - When asked to “setup in Linear,” open the bootstrap doc, create the project, add the four issues, and paste links back to GitHub doc locations.
+
+Note: Respect TEC Axioms and avoid generating harmful content; keep references factual and non-graphic.
