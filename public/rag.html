@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TEC RAG Search — Visual Prompts</title>
+  <style>
+    body { font-family: Segoe UI, Arial, sans-serif; background:#0b1020; color:#eef; margin:0; }
+    header { padding:20px; border-bottom:1px solid #203058; }
+    h1 { margin:0; font-size:22px; }
+    .wrap { max-width:1000px; margin:0 auto; padding:20px; }
+    .card { background:#111833; border:1px solid #203058; border-radius:10px; padding:16px; }
+  .row { display:flex; gap:12px; flex-wrap:wrap; }
+  .flex1 { flex: 1; }
+  .mt10 { margin-top: 10px; }
+  .w90 { width: 90px; }
+    input, button { padding:10px; border-radius:8px; border:1px solid #203058; background:#0e1730; color:#eef; }
+    button { cursor:pointer; background:#304a9a; border-color:#3a5ac1; }
+    button:hover { background:#3a5ac1; }
+    .results { margin-top:16px; display:grid; gap:10px; }
+    .item { background:#0e1630; border:1px solid #233564; border-left:4px solid #6ea2ff; padding:12px; border-radius:8px; }
+    .meta { font-size:12px; color:#aac; margin-bottom:6px; }
+    .score { color:#9fda8f; font-weight:600; }
+  </style>
+  <script>
+    async function searchRag() {
+      const q = document.getElementById('q').value.trim();
+      const k = parseInt(document.getElementById('k').value || '8', 10);
+      const api = (localStorage.getItem('ragUrl') || 'http://127.0.0.1:8765') + '/search';
+      const btn = document.getElementById('btn');
+      const out = document.getElementById('out');
+      if (!q) return;
+      btn.disabled = true;
+      out.innerHTML = 'Searching...';
+      try {
+        const res = await fetch(api, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ q, k })});
+        const data = await res.json();
+        const rows = (data.results || []).map(r => `
+          <div class="item">
+            <div class="meta">Source: <code>${(r.source||'n/a')}</code> — Score: <span class="score">${(r.score||0).toFixed(3)}</span></div>
+            <div>${(r.text||'').replace(/</g,'&lt;')}</div>
+          </div>
+        `).join('');
+        out.innerHTML = rows || '<div class="item">No results.</div>';
+      } catch (e) {
+        out.innerHTML = `<div class="item">Error: ${e.message}</div>`;
+      } finally {
+        btn.disabled = false;
+      }
+    }
+    function saveUrl(){ const u=document.getElementById('url').value.trim(); if(u){ localStorage.setItem('ragUrl', u); } }
+    window.addEventListener('DOMContentLoaded', ()=>{ const saved=localStorage.getItem('ragUrl'); if(saved){ document.getElementById('url').value=saved; } });
+  </script>
+</head>
+<body>
+  <header><div class="wrap"><h1>TEC RAG Search — Visual Prompts</h1></div></header>
+  <main class="wrap">
+    <div class="card">
+      <div class="row">
+  <input id="q" class="flex1" placeholder="Search query (e.g., TEC_HORRORIFIC_MASTERCLASS overview)" aria-label="Query" />
+  <input id="k" class="w90" type="number" value="8" min="1" max="50" aria-label="Top K" title="Top K" />
+        <button id="btn" onclick="searchRag()">Search</button>
+      </div>
+      <div class="row mt10">
+        <input id="url" class="flex1" placeholder="RAG base URL (default http://127.0.0.1:8765)" aria-label="RAG URL" />
+        <button onclick="saveUrl()">Save URL</button>
+      </div>
+      <div id="out" class="results"></div>
+    </div>
+  </main>
+</body>
+</html>

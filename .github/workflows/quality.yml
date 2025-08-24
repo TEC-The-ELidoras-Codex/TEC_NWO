@@ -1,0 +1,55 @@
+name: Quality
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
+jobs:
+  lint-and-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install linters
+        run: |
+          npm i -g markdownlint-cli2
+          python -m pip install --upgrade pip
+          pip install yamllint
+
+      - name: Markdownlint
+        run: |
+          markdownlint-cli2 "**/*.md" "!**/node_modules/**" "!external/**" || true
+
+      - name: YAML Lint
+        run: |
+          yamllint -s . || true
+
+      - name: Hadolint
+        uses: hadolint/hadolint-action@v3.1.0
+        with:
+          dockerfile: Dockerfile
+          failure-threshold: error
+        continue-on-error: true
+
+      - name: Gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITLEAKS_CONFIG: ''
+        continue-on-error: true
+
+      - name: Checkov (IaC scan)
+        uses: bridgecrewio/checkov-action@v12
+        with:
+          directory: .
+          quiet: true
+        continue-on-error: true

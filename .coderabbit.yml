@@ -1,0 +1,22 @@
+# CodeRabbit configuration (org-level defaults may override)
+# Do not place secrets in this file. See app.coderabbit.ai for auth.
+
+version: 1
+review:
+  language: en-US
+  tone: concise
+  rules:
+    - typescript
+    - python
+    - security
+    - performance
+    - best-practices
+  auto_request: true
+  auto_review_on_pr_update: true
+  require_approval: false
+
+chat:
+  enabled: true
+
+code_generation:
+  enabled: false
